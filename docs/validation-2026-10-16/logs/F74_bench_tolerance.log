@@ -1,0 +1,25 @@
+{"plant": 0, "misplaced": 0, "orbits_up_to_rotation": 49, "solved": true, "found_score": -5.605, "seconds": 76.9}
+{"plant": 0, "misplaced": 2, "orbits_up_to_rotation": 23, "solved": false, "found_score": -6.0261, "seconds": 77.5}
+{"plant": 0, "misplaced": 4, "orbits_up_to_rotation": 48, "solved": true, "found_score": -5.8273, "seconds": 75.7}
+{"plant": 0, "misplaced": 6, "orbits_up_to_rotation": 18, "solved": false, "found_score": -6.4122, "seconds": 82.0}
+{"plant": 0, "misplaced": 8, "orbits_up_to_rotation": 16, "solved": false, "found_score": -6.1779, "seconds": 79.4}
+{"plant": 0, "misplaced": 12, "orbits_up_to_rotation": 20, "solved": false, "found_score": -6.3667, "seconds": 67.7}
+{"plant": 1, "misplaced": 0, "orbits_up_to_rotation": 49, "solved": true, "found_score": -5.6815, "seconds": 63.5}
+{"plant": 1, "misplaced": 2, "orbits_up_to_rotation": 15, "solved": false, "found_score": -6.1383, "seconds": 75.0}
+{"plant": 1, "misplaced": 4, "orbits_up_to_rotation": 17, "solved": false, "found_score": -6.2668, "seconds": 68.0}
+{"plant": 1, "misplaced": 6, "orbits_up_to_rotation": 18, "solved": false, "found_score": -6.2649, "seconds": 70.4}
+{"plant": 1, "misplaced": 8, "orbits_up_to_rotation": 14, "solved": false, "found_score": -6.2958, "seconds": 77.3}
+{"plant": 1, "misplaced": 12, "orbits_up_to_rotation": 15, "solved": false, "found_score": -6.3823, "seconds": 86.6}
+{"plant": 2, "misplaced": 0, "orbits_up_to_rotation": 49, "solved": true, "found_score": -5.7817, "seconds": 76.7}
+{"plant": 2, "misplaced": 2, "orbits_up_to_rotation": 18, "solved": false, "found_score": -6.1135, "seconds": 79.8}
+{"plant": 2, "misplaced": 4, "orbits_up_to_rotation": 48, "solved": true, "found_score": -5.873, "seconds": 81.8}
+{"plant": 2, "misplaced": 6, "orbits_up_to_rotation": 18, "solved": false, "found_score": -6.3867, "seconds": 81.6}
+{"plant": 2, "misplaced": 8, "orbits_up_to_rotation": 18, "solved": false, "found_score": -6.351, "seconds": 79.3}
+{"plant": 2, "misplaced": 12, "orbits_up_to_rotation": 20, "solved": false, "found_score": -6.4526, "seconds": 67.5}
+{"plant": 3, "misplaced": 0, "orbits_up_to_rotation": 49, "solved": true, "found_score": -5.5264, "seconds": 65.5}
+{"plant": 3, "misplaced": 2, "orbits_up_to_rotation": 49, "solved": true, "found_score": -5.7806, "seconds": 69.4}
+{"plant": 3, "misplaced": 4, "orbits_up_to_rotation": 17, "solved": false, "found_score": -6.0576, "seconds": 69.4}
+{"plant": 3, "misplaced": 6, "orbits_up_to_rotation": 16, "solved": false, "found_score": -6.1948, "seconds": 80.3}
+{"plant": 3, "misplaced": 8, "orbits_up_to_rotation": 20, "solved": false, "found_score": -6.4813, "seconds": 84.6}
+{"plant": 3, "misplaced": 12, "orbits_up_to_rotation": 14, "solved": false, "found_score": -6.3832, "seconds": 76.7}
+{"0": {"solved": 4, "of": 4, "mean_orbits": 49.0}, "2": {"solved": 1, "of": 4, "mean_orbits": 26.2}, "4": {"solved": 2, "of": 4, "mean_orbits": 32.5}, "6": {"solved": 0, "of": 4, "mean_orbits": 17.5}, "8": {"solved": 0, "of": 4, "mean_orbits": 17.0}, "12": {"solved": 0, "of": 4, "mean_orbits": 17.2}}

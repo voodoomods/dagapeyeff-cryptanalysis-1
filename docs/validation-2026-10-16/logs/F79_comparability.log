@@ -1,0 +1,366 @@
+mass A {'tables': 306, 'mass_min': 2.100722, 'mass_max': 2.110753, 'log10_mass_spread': 0.0020689}
+{"corpus": "A", "score": "joint", "truth": 0, "neighbors": 305, "beat_truth": {"182": 2, "1092": 0, "10000": 0, "100000": 0}, "best_neighbor_minus_truth": {"182": 0.001709, "1092": -0.000738, "10000": -0.00285, "100000": -0.002079}, "seconds": 3.0}
+{"corpus": "A", "score": "joint", "truth": 1, "neighbors": 305, "beat_truth": {"182": 10, "1092": 0, "10000": 0, "100000": 0}, "best_neighbor_minus_truth": {"182": 0.036646, "1092": -0.000447, "10000": -0.002224, "100000": -0.002019}, "seconds": 3.0}
+{"corpus": "A", "score": "joint", "truth": 2, "neighbors": 305, "beat_truth": {"182": 1, "1092": 0, "10000": 0, "100000": 0}, "best_neighbor_minus_truth": {"182": 0.003661, "1092": -0.001924, "10000": -0.003271, "100000": -0.002252}, "seconds": 3.1}
+{"corpus": "A", "score": "joint", "truth": 3, "neighbors": 305, "beat_truth": {"182": 2, "1092": 0, "10000": 0, "100000": 0}, "best_neighbor_minus_truth": {"182": 0.016669, "1092": -0.004545, "10000": -0.003796, "100000": -0.003566}, "seconds": 3.0}
+{"corpus": "A", "score": "joint", "truth": 4, "neighbors": 305, "beat_truth": {"182": 11, "1092": 1, "10000": 0, "100000": 0}, "best_neighbor_minus_truth": {"182": 0.018963, "1092": 0.001635, "10000": -0.001166, "100000": -0.002543}, "seconds": 3.1}
+{"corpus": "A", "score": "jointn", "truth": 0, "neighbors": 305, "beat_truth": {"182": 2, "1092": 0, "10000": 0, "100000": 0}, "best_neighbor_minus_truth": {"182": 0.001734, "1092": -0.000704, "10000": -0.002836, "100000": -0.002079}, "seconds": 3.0}
+{"corpus": "A", "score": "jointn", "truth": 1, "neighbors": 305, "beat_truth": {"182": 10, "1092": 0, "10000": 0, "100000": 0}, "best_neighbor_minus_truth": {"182": 0.036723, "1092": -0.000443, "10000": -0.002224, "100000": -0.002019}, "seconds": 3.0}
+{"corpus": "A", "score": "jointn", "truth": 2, "neighbors": 305, "beat_truth": {"182": 1, "1092": 0, "10000": 0, "100000": 0}, "best_neighbor_minus_truth": {"182": 0.003776, "1092": -0.0019, "10000": -0.003248, "100000": -0.002227}, "seconds": 3.0}
+{"corpus": "A", "score": "jointn", "truth": 3, "neighbors": 305, "beat_truth": {"182": 2, "1092": 0, "10000": 0, "100000": 0}, "best_neighbor_minus_truth": {"182": 0.016798, "1092": -0.004547, "10000": -0.003797, "100000": -0.003568}, "seconds": 3.0}
+{"corpus": "A", "score": "jointn", "truth": 4, "neighbors": 305, "beat_truth": {"182": 11, "1092": 1, "10000": 0, "100000": 0}, "best_neighbor_minus_truth": {"182": 0.018928, "1092": 0.001605, "10000": -0.001196, "100000": -0.002573}, "seconds": 3.0}
+{"corpus": "A", "score": "cond", "truth": 0, "neighbors": 305, "beat_truth": {"182": 9, "1092": 0, "10000": 0, "100000": 0}, "best_neighbor_minus_truth": {"182": 0.006268, "1092": -0.000111, "10000": -0.001142, "100000": -0.000829}, "seconds": 4.7}
+{"corpus": "A", "score": "cond", "truth": 1, "neighbors": 305, "beat_truth": {"182": 12, "1092": 0, "10000": 0, "100000": 0}, "best_neighbor_minus_truth": {"182": 0.010691, "1092": -8.5e-05, "10000": -0.000762, "100000": -0.000788}, "seconds": 4.7}
+{"corpus": "A", "score": "cond", "truth": 2, "neighbors": 305, "beat_truth": {"182": 2, "1092": 0, "10000": 0, "100000": 0}, "best_neighbor_minus_truth": {"182": 0.002035, "1092": -0.000834, "10000": -0.001258, "100000": -0.000949}, "seconds": 4.7}
+{"corpus": "A", "score": "cond", "truth": 3, "neighbors": 305, "beat_truth": {"182": 6, "1092": 0, "10000": 0, "100000": 0}, "best_neighbor_minus_truth": {"182": 0.010834, "1092": -0.002198, "10000": -0.001792, "100000": -0.001548}, "seconds": 4.7}
+{"corpus": "A", "score": "cond", "truth": 4, "neighbors": 305, "beat_truth": {"182": 11, "1092": 1, "10000": 0, "100000": 0}, "best_neighbor_minus_truth": {"182": 0.006575, "1092": 0.00034, "10000": -0.000693, "100000": -0.001139}, "seconds": 4.7}
+mass B {'tables': 306, 'mass_min': 1.446968, 'mass_max': 1.453651, 'log10_mass_spread': 0.0020014}
+{"corpus": "B", "score": "joint", "truth": 0, "neighbors": 305, "beat_truth": {"182": 0, "1092": 0, "10000": 0, "100000": 0}, "best_neighbor_minus_truth": {"182": -0.000131, "1092": -0.010649, "10000": -0.003803, "100000": -0.004314}, "seconds": 6.6}
+{"corpus": "B", "score": "joint", "truth": 1, "neighbors": 305, "beat_truth": {"182": 7, "1092": 1, "10000": 0, "100000": 0}, "best_neighbor_minus_truth": {"182": 0.019402, "1092": 0.000412, "10000": -0.001942, "100000": -0.004086}, "seconds": 6.6}
+{"corpus": "B", "score": "joint", "truth": 2, "neighbors": 305, "beat_truth": {"182": 3, "1092": 0, "10000": 0, "100000": 0}, "best_neighbor_minus_truth": {"182": 0.008706, "1092": -0.002302, "10000": -0.003499, "100000": -0.002878}, "seconds": 6.6}
+{"corpus": "B", "score": "joint", "truth": 3, "neighbors": 305, "beat_truth": {"182": 6, "1092": 0, "10000": 0, "100000": 0}, "best_neighbor_minus_truth": {"182": 0.004999, "1092": -0.007794, "10000": -0.005814, "100000": -0.005004}, "seconds": 6.6}
+{"corpus": "B", "score": "joint", "truth": 4, "neighbors": 305, "beat_truth": {"182": 5, "1092": 0, "10000": 0, "100000": 0}, "best_neighbor_minus_truth": {"182": 0.005001, "1092": -0.007451, "10000": -0.005504, "100000": -0.004391}, "seconds": 6.6}
+{"corpus": "B", "score": "jointn", "truth": 0, "neighbors": 305, "beat_truth": {"182": 0, "1092": 0, "10000": 0, "100000": 0}, "best_neighbor_minus_truth": {"182": -0.000161, "1092": -0.010678, "10000": -0.003812, "100000": -0.004325}, "seconds": 6.6}
+{"corpus": "B", "score": "jointn", "truth": 1, "neighbors": 305, "beat_truth": {"182": 7, "1092": 1, "10000": 0, "100000": 0}, "best_neighbor_minus_truth": {"182": 0.01942, "1092": 0.000404, "10000": -0.001949, "100000": -0.004094}, "seconds": 6.5}
+{"corpus": "B", "score": "jointn", "truth": 2, "neighbors": 305, "beat_truth": {"182": 3, "1092": 0, "10000": 0, "100000": 0}, "best_neighbor_minus_truth": {"182": 0.00858, "1092": -0.002292, "10000": -0.003489, "100000": -0.002868}, "seconds": 6.5}
+{"corpus": "B", "score": "jointn", "truth": 3, "neighbors": 305, "beat_truth": {"182": 6, "1092": 0, "10000": 0, "100000": 0}, "best_neighbor_minus_truth": {"182": 0.004674, "1092": -0.007786, "10000": -0.005815, "100000": -0.005004}, "seconds": 6.5}
+{"corpus": "B", "score": "jointn", "truth": 4, "neighbors": 305, "beat_truth": {"182": 5, "1092": 0, "10000": 0, "100000": 0}, "best_neighbor_minus_truth": {"182": 0.004683, "1092": -0.007449, "10000": -0.0055, "100000": -0.004387}, "seconds": 6.5}
+{"corpus": "B", "score": "cond", "truth": 0, "neighbors": 305, "beat_truth": {"182": 4, "1092": 0, "10000": 0, "100000": 0}, "best_neighbor_minus_truth": {"182": 0.000702, "1092": -0.004393, "10000": -0.001831, "100000": -0.001876}, "seconds": 10.9}
+{"corpus": "B", "score": "cond", "truth": 1, "neighbors": 305, "beat_truth": {"182": 5, "1092": 0, "10000": 0, "100000": 0}, "best_neighbor_minus_truth": {"182": 0.002868, "1092": -0.000307, "10000": -0.001142, "100000": -0.001865}, "seconds": 10.9}
+{"corpus": "B", "score": "cond", "truth": 2, "neighbors": 305, "beat_truth": {"182": 3, "1092": 0, "10000": 0, "100000": 0}, "best_neighbor_minus_truth": {"182": 0.002849, "1092": -0.000184, "10000": -0.001174, "100000": -0.001268}, "seconds": 10.9}
+{"corpus": "B", "score": "cond", "truth": 3, "neighbors": 305, "beat_truth": {"182": 4, "1092": 0, "10000": 0, "100000": 0}, "best_neighbor_minus_truth": {"182": 0.007951, "1092": -0.002512, "10000": -0.002214, "100000": -0.002041}, "seconds": 10.8}
+{"corpus": "B", "score": "cond", "truth": 4, "neighbors": 305, "beat_truth": {"182": 8, "1092": 0, "10000": 0, "100000": 0}, "best_neighbor_minus_truth": {"182": 0.003543, "1092": -0.002439, "10000": -0.002052, "100000": -0.001916}, "seconds": 10.8}
+{"corpus": "A", "score": "jointn", "plant": 0, "L": 182, "wrong_found": 0, "exact": true, "truth_beaten": false}
+{"corpus": "A", "score": "jointn", "plant": 0, "L": 546, "wrong_found": 0, "exact": true, "truth_beaten": false}
+{"corpus": "A", "score": "jointn", "plant": 1, "L": 182, "wrong_found": 3, "exact": false, "truth_beaten": true}
+{"corpus": "A", "score": "jointn", "plant": 1, "L": 546, "wrong_found": 0, "exact": true, "truth_beaten": false}
+{"corpus": "A", "score": "jointn", "plant": 2, "L": 182, "wrong_found": 2, "exact": false, "truth_beaten": true}
+{"corpus": "A", "score": "jointn", "plant": 2, "L": 546, "wrong_found": 0, "exact": true, "truth_beaten": false}
+{"corpus": "A", "score": "jointn", "plant": 3, "L": 182, "wrong_found": 2, "exact": false, "truth_beaten": true}
+{"corpus": "A", "score": "jointn", "plant": 3, "L": 546, "wrong_found": 0, "exact": true, "truth_beaten": false}
+{"corpus": "A", "score": "jointn", "plant": 4, "L": 182, "wrong_found": 2, "exact": false, "truth_beaten": true}
+{"corpus": "A", "score": "jointn", "plant": 4, "L": 546, "wrong_found": 0, "exact": true, "truth_beaten": false}
+{"corpus": "A", "score": "jointn", "plant": 5, "L": 182, "wrong_found": 3, "exact": false, "truth_beaten": true}
+{"corpus": "A", "score": "jointn", "plant": 5, "L": 546, "wrong_found": 2, "exact": false, "truth_beaten": true}
+{"corpus": "A", "score": "jointn", "plant": 6, "L": 182, "wrong_found": 4, "exact": false, "truth_beaten": true}
+{"corpus": "A", "score": "jointn", "plant": 6, "L": 546, "wrong_found": 0, "exact": true, "truth_beaten": false}
+{"corpus": "A", "score": "jointn", "plant": 7, "L": 182, "wrong_found": 2, "exact": false, "truth_beaten": true}
+{"corpus": "A", "score": "jointn", "plant": 7, "L": 546, "wrong_found": 2, "exact": false, "truth_beaten": true}
+{"corpus": "A", "score": "jointn", "plant": 8, "L": 182, "wrong_found": 7, "exact": false, "truth_beaten": true}
+{"corpus": "A", "score": "jointn", "plant": 8, "L": 546, "wrong_found": 2, "exact": false, "truth_beaten": true}
+{"corpus": "A", "score": "jointn", "plant": 9, "L": 182, "wrong_found": 5, "exact": false, "truth_beaten": true}
+{"corpus": "A", "score": "jointn", "plant": 9, "L": 546, "wrong_found": 0, "exact": true, "truth_beaten": false}
+{"corpus": "A", "score": "jointn", "plant": 10, "L": 182, "wrong_found": 4, "exact": false, "truth_beaten": true}
+{"corpus": "A", "score": "jointn", "plant": 10, "L": 546, "wrong_found": 0, "exact": true, "truth_beaten": false}
+{"corpus": "A", "score": "jointn", "plant": 11, "L": 182, "wrong_found": 0, "exact": true, "truth_beaten": false}
+{"corpus": "A", "score": "jointn", "plant": 11, "L": 546, "wrong_found": 0, "exact": true, "truth_beaten": false}
+{"corpus": "A", "score": "jointn", "plant": 12, "L": 182, "wrong_found": 4, "exact": false, "truth_beaten": true}
+{"corpus": "A", "score": "jointn", "plant": 12, "L": 546, "wrong_found": 2, "exact": false, "truth_beaten": true}
+{"corpus": "A", "score": "jointn", "plant": 13, "L": 182, "wrong_found": 4, "exact": false, "truth_beaten": true}
+{"corpus": "A", "score": "jointn", "plant": 13, "L": 546, "wrong_found": 2, "exact": false, "truth_beaten": true}
+{"corpus": "A", "score": "jointn", "plant": 14, "L": 182, "wrong_found": 2, "exact": false, "truth_beaten": true}
+{"corpus": "A", "score": "jointn", "plant": 14, "L": 546, "wrong_found": 2, "exact": false, "truth_beaten": true}
+{"corpus": "A", "score": "jointn", "plant": 15, "L": 182, "wrong_found": 2, "exact": false, "truth_beaten": true}
+{"corpus": "A", "score": "jointn", "plant": 15, "L": 546, "wrong_found": 0, "exact": true, "truth_beaten": false}
+{"corpus": "A", "score": "jointn", "plant": 16, "L": 182, "wrong_found": 0, "exact": true, "truth_beaten": false}
+{"corpus": "A", "score": "jointn", "plant": 16, "L": 546, "wrong_found": 2, "exact": false, "truth_beaten": true}
+{"corpus": "A", "score": "jointn", "plant": 17, "L": 182, "wrong_found": 2, "exact": false, "truth_beaten": true}
+{"corpus": "A", "score": "jointn", "plant": 17, "L": 546, "wrong_found": 0, "exact": true, "truth_beaten": false}
+{"corpus": "A", "score": "jointn", "plant": 18, "L": 182, "wrong_found": 0, "exact": true, "truth_beaten": false}
+{"corpus": "A", "score": "jointn", "plant": 18, "L": 546, "wrong_found": 0, "exact": true, "truth_beaten": false}
+{"corpus": "A", "score": "jointn", "plant": 19, "L": 182, "wrong_found": 3, "exact": false, "truth_beaten": true}
+{"corpus": "A", "score": "jointn", "plant": 19, "L": 546, "wrong_found": 2, "exact": false, "truth_beaten": true}
+{"corpus": "A", "score": "jointn", "plant": 20, "L": 182, "wrong_found": 2, "exact": false, "truth_beaten": true}
+{"corpus": "A", "score": "jointn", "plant": 20, "L": 546, "wrong_found": 2, "exact": false, "truth_beaten": true}
+{"corpus": "A", "score": "jointn", "plant": 21, "L": 182, "wrong_found": 2, "exact": false, "truth_beaten": true}
+{"corpus": "A", "score": "jointn", "plant": 21, "L": 546, "wrong_found": 2, "exact": false, "truth_beaten": true}
+{"corpus": "A", "score": "jointn", "plant": 22, "L": 182, "wrong_found": 2, "exact": false, "truth_beaten": true}
+{"corpus": "A", "score": "jointn", "plant": 22, "L": 546, "wrong_found": 0, "exact": true, "truth_beaten": false}
+{"corpus": "A", "score": "jointn", "plant": 23, "L": 182, "wrong_found": 5, "exact": false, "truth_beaten": true}
+{"corpus": "A", "score": "jointn", "plant": 23, "L": 546, "wrong_found": 2, "exact": false, "truth_beaten": true}
+{"corpus": "A", "score": "jointn", "plant": 24, "L": 182, "wrong_found": 2, "exact": false, "truth_beaten": true}
+{"corpus": "A", "score": "jointn", "plant": 24, "L": 546, "wrong_found": 2, "exact": false, "truth_beaten": true}
+{"corpus": "A", "score": "jointn", "plant": 25, "L": 182, "wrong_found": 4, "exact": false, "truth_beaten": true}
+{"corpus": "A", "score": "jointn", "plant": 25, "L": 546, "wrong_found": 0, "exact": true, "truth_beaten": false}
+{"corpus": "A", "score": "jointn", "plant": 26, "L": 182, "wrong_found": 6, "exact": false, "truth_beaten": true}
+{"corpus": "A", "score": "jointn", "plant": 26, "L": 546, "wrong_found": 3, "exact": false, "truth_beaten": true}
+{"corpus": "A", "score": "jointn", "plant": 27, "L": 182, "wrong_found": 2, "exact": false, "truth_beaten": true}
+{"corpus": "A", "score": "jointn", "plant": 27, "L": 546, "wrong_found": 0, "exact": true, "truth_beaten": false}
+{"corpus": "A", "score": "jointn", "plant": 28, "L": 182, "wrong_found": 4, "exact": false, "truth_beaten": true}
+{"corpus": "A", "score": "jointn", "plant": 28, "L": 546, "wrong_found": 2, "exact": false, "truth_beaten": true}
+{"corpus": "A", "score": "jointn", "plant": 29, "L": 182, "wrong_found": 2, "exact": false, "truth_beaten": true}
+{"corpus": "A", "score": "jointn", "plant": 29, "L": 546, "wrong_found": 0, "exact": true, "truth_beaten": false}
+{"corpus": "A", "score": "jointn", "plant": 30, "L": 182, "wrong_found": 2, "exact": false, "truth_beaten": true}
+{"corpus": "A", "score": "jointn", "plant": 30, "L": 546, "wrong_found": 0, "exact": true, "truth_beaten": false}
+{"corpus": "A", "score": "jointn", "plant": 31, "L": 182, "wrong_found": 3, "exact": false, "truth_beaten": true}
+{"corpus": "A", "score": "jointn", "plant": 31, "L": 546, "wrong_found": 2, "exact": false, "truth_beaten": true}
+{"corpus": "A", "score": "jointn", "plant": 32, "L": 182, "wrong_found": 0, "exact": true, "truth_beaten": false}
+{"corpus": "A", "score": "jointn", "plant": 32, "L": 546, "wrong_found": 2, "exact": false, "truth_beaten": true}
+{"corpus": "A", "score": "jointn", "plant": 33, "L": 182, "wrong_found": 5, "exact": false, "truth_beaten": true}
+{"corpus": "A", "score": "jointn", "plant": 33, "L": 546, "wrong_found": 2, "exact": false, "truth_beaten": true}
+{"corpus": "A", "score": "jointn", "plant": 34, "L": 182, "wrong_found": 2, "exact": false, "truth_beaten": true}
+{"corpus": "A", "score": "jointn", "plant": 34, "L": 546, "wrong_found": 2, "exact": false, "truth_beaten": true}
+{"corpus": "A", "score": "jointn", "plant": 35, "L": 182, "wrong_found": 0, "exact": true, "truth_beaten": false}
+{"corpus": "A", "score": "jointn", "plant": 35, "L": 546, "wrong_found": 2, "exact": false, "truth_beaten": true}
+{"corpus": "A", "score": "jointn", "plant": 36, "L": 182, "wrong_found": 3, "exact": false, "truth_beaten": true}
+{"corpus": "A", "score": "jointn", "plant": 36, "L": 546, "wrong_found": 2, "exact": false, "truth_beaten": true}
+{"corpus": "A", "score": "jointn", "plant": 37, "L": 182, "wrong_found": 0, "exact": true, "truth_beaten": false}
+{"corpus": "A", "score": "jointn", "plant": 37, "L": 546, "wrong_found": 0, "exact": true, "truth_beaten": false}
+{"corpus": "A", "score": "jointn", "plant": 38, "L": 182, "wrong_found": 0, "exact": true, "truth_beaten": false}
+{"corpus": "A", "score": "jointn", "plant": 38, "L": 546, "wrong_found": 0, "exact": true, "truth_beaten": false}
+{"corpus": "A", "score": "jointn", "plant": 39, "L": 182, "wrong_found": 2, "exact": false, "truth_beaten": true}
+{"corpus": "A", "score": "jointn", "plant": 39, "L": 546, "wrong_found": 2, "exact": false, "truth_beaten": true}
+{"corpus": "A", "score": "jointn", "plant": 40, "L": 182, "wrong_found": 5, "exact": false, "truth_beaten": true}
+{"corpus": "A", "score": "jointn", "plant": 40, "L": 546, "wrong_found": 0, "exact": true, "truth_beaten": false}
+{"corpus": "A", "score": "jointn", "plant": 41, "L": 182, "wrong_found": 3, "exact": false, "truth_beaten": true}
+{"corpus": "A", "score": "jointn", "plant": 41, "L": 546, "wrong_found": 0, "exact": true, "truth_beaten": false}
+{"corpus": "A", "score": "jointn", "plant": 42, "L": 182, "wrong_found": 2, "exact": false, "truth_beaten": true}
+{"corpus": "A", "score": "jointn", "plant": 42, "L": 546, "wrong_found": 2, "exact": false, "truth_beaten": true}
+{"corpus": "A", "score": "jointn", "plant": 43, "L": 182, "wrong_found": 6, "exact": false, "truth_beaten": true}
+{"corpus": "A", "score": "jointn", "plant": 43, "L": 546, "wrong_found": 0, "exact": true, "truth_beaten": false}
+{"corpus": "A", "score": "jointn", "plant": 44, "L": 182, "wrong_found": 2, "exact": false, "truth_beaten": true}
+{"corpus": "A", "score": "jointn", "plant": 44, "L": 546, "wrong_found": 2, "exact": false, "truth_beaten": true}
+{"corpus": "A", "score": "jointn", "plant": 45, "L": 182, "wrong_found": 2, "exact": false, "truth_beaten": true}
+{"corpus": "A", "score": "jointn", "plant": 45, "L": 546, "wrong_found": 2, "exact": false, "truth_beaten": true}
+{"corpus": "A", "score": "jointn", "plant": 46, "L": 182, "wrong_found": 2, "exact": false, "truth_beaten": true}
+{"corpus": "A", "score": "jointn", "plant": 46, "L": 546, "wrong_found": 0, "exact": true, "truth_beaten": false}
+{"corpus": "A", "score": "jointn", "plant": 47, "L": 182, "wrong_found": 2, "exact": false, "truth_beaten": true}
+{"corpus": "A", "score": "jointn", "plant": 47, "L": 546, "wrong_found": 0, "exact": true, "truth_beaten": false}
+{"corpus": "A", "score": "jointn", "plant": 48, "L": 182, "wrong_found": 2, "exact": false, "truth_beaten": true}
+{"corpus": "A", "score": "jointn", "plant": 48, "L": 546, "wrong_found": 2, "exact": false, "truth_beaten": true}
+{"corpus": "A", "score": "jointn", "plant": 49, "L": 182, "wrong_found": 0, "exact": true, "truth_beaten": false}
+{"corpus": "A", "score": "jointn", "plant": 49, "L": 546, "wrong_found": 0, "exact": true, "truth_beaten": false}
+{"corpus": "B", "score": "jointn", "plant": 0, "L": 182, "wrong_found": 3, "exact": false, "truth_beaten": true}
+{"corpus": "B", "score": "jointn", "plant": 0, "L": 546, "wrong_found": 0, "exact": true, "truth_beaten": false}
+{"corpus": "B", "score": "jointn", "plant": 1, "L": 182, "wrong_found": 0, "exact": true, "truth_beaten": false}
+{"corpus": "B", "score": "jointn", "plant": 1, "L": 546, "wrong_found": 2, "exact": false, "truth_beaten": true}
+{"corpus": "B", "score": "jointn", "plant": 2, "L": 182, "wrong_found": 3, "exact": false, "truth_beaten": true}
+{"corpus": "B", "score": "jointn", "plant": 2, "L": 546, "wrong_found": 2, "exact": false, "truth_beaten": true}
+{"corpus": "B", "score": "jointn", "plant": 3, "L": 182, "wrong_found": 3, "exact": false, "truth_beaten": true}
+{"corpus": "B", "score": "jointn", "plant": 3, "L": 546, "wrong_found": 2, "exact": false, "truth_beaten": true}
+{"corpus": "B", "score": "jointn", "plant": 4, "L": 182, "wrong_found": 2, "exact": false, "truth_beaten": true}
+{"corpus": "B", "score": "jointn", "plant": 4, "L": 546, "wrong_found": 2, "exact": false, "truth_beaten": true}
+{"corpus": "B", "score": "jointn", "plant": 5, "L": 182, "wrong_found": 2, "exact": false, "truth_beaten": true}
+{"corpus": "B", "score": "jointn", "plant": 5, "L": 546, "wrong_found": 0, "exact": true, "truth_beaten": false}
+{"corpus": "B", "score": "jointn", "plant": 6, "L": 182, "wrong_found": 2, "exact": false, "truth_beaten": true}
+{"corpus": "B", "score": "jointn", "plant": 6, "L": 546, "wrong_found": 2, "exact": false, "truth_beaten": true}
+{"corpus": "B", "score": "jointn", "plant": 7, "L": 182, "wrong_found": 2, "exact": false, "truth_beaten": true}
+{"corpus": "B", "score": "jointn", "plant": 7, "L": 546, "wrong_found": 0, "exact": true, "truth_beaten": false}
+{"corpus": "B", "score": "jointn", "plant": 8, "L": 182, "wrong_found": 3, "exact": false, "truth_beaten": true}
+{"corpus": "B", "score": "jointn", "plant": 8, "L": 546, "wrong_found": 2, "exact": false, "truth_beaten": true}
+{"corpus": "B", "score": "jointn", "plant": 9, "L": 182, "wrong_found": 5, "exact": false, "truth_beaten": true}
+{"corpus": "B", "score": "jointn", "plant": 9, "L": 546, "wrong_found": 2, "exact": false, "truth_beaten": true}
+{"corpus": "B", "score": "jointn", "plant": 10, "L": 182, "wrong_found": 3, "exact": false, "truth_beaten": true}
+{"corpus": "B", "score": "jointn", "plant": 10, "L": 546, "wrong_found": 2, "exact": false, "truth_beaten": true}
+{"corpus": "B", "score": "jointn", "plant": 11, "L": 182, "wrong_found": 3, "exact": false, "truth_beaten": true}
+{"corpus": "B", "score": "jointn", "plant": 11, "L": 546, "wrong_found": 0, "exact": true, "truth_beaten": false}
+{"corpus": "B", "score": "jointn", "plant": 12, "L": 182, "wrong_found": 2, "exact": false, "truth_beaten": true}
+{"corpus": "B", "score": "jointn", "plant": 12, "L": 546, "wrong_found": 0, "exact": true, "truth_beaten": false}
+{"corpus": "B", "score": "jointn", "plant": 13, "L": 182, "wrong_found": 4, "exact": false, "truth_beaten": true}
+{"corpus": "B", "score": "jointn", "plant": 13, "L": 546, "wrong_found": 0, "exact": true, "truth_beaten": false}
+{"corpus": "B", "score": "jointn", "plant": 14, "L": 182, "wrong_found": 3, "exact": false, "truth_beaten": true}
+{"corpus": "B", "score": "jointn", "plant": 14, "L": 546, "wrong_found": 0, "exact": true, "truth_beaten": false}
+{"corpus": "B", "score": "jointn", "plant": 15, "L": 182, "wrong_found": 4, "exact": false, "truth_beaten": true}
+{"corpus": "B", "score": "jointn", "plant": 15, "L": 546, "wrong_found": 2, "exact": false, "truth_beaten": true}
+{"corpus": "B", "score": "jointn", "plant": 16, "L": 182, "wrong_found": 2, "exact": false, "truth_beaten": true}
+{"corpus": "B", "score": "jointn", "plant": 16, "L": 546, "wrong_found": 2, "exact": false, "truth_beaten": true}
+{"corpus": "B", "score": "jointn", "plant": 17, "L": 182, "wrong_found": 2, "exact": false, "truth_beaten": true}
+{"corpus": "B", "score": "jointn", "plant": 17, "L": 546, "wrong_found": 0, "exact": true, "truth_beaten": false}
+{"corpus": "B", "score": "jointn", "plant": 18, "L": 182, "wrong_found": 2, "exact": false, "truth_beaten": true}
+{"corpus": "B", "score": "jointn", "plant": 18, "L": 546, "wrong_found": 3, "exact": false, "truth_beaten": true}
+{"corpus": "B", "score": "jointn", "plant": 19, "L": 182, "wrong_found": 2, "exact": false, "truth_beaten": true}
+{"corpus": "B", "score": "jointn", "plant": 19, "L": 546, "wrong_found": 2, "exact": false, "truth_beaten": true}
+{"corpus": "B", "score": "jointn", "plant": 20, "L": 182, "wrong_found": 0, "exact": true, "truth_beaten": false}
+{"corpus": "B", "score": "jointn", "plant": 20, "L": 546, "wrong_found": 0, "exact": true, "truth_beaten": false}
+{"corpus": "B", "score": "jointn", "plant": 21, "L": 182, "wrong_found": 2, "exact": false, "truth_beaten": true}
+{"corpus": "B", "score": "jointn", "plant": 21, "L": 546, "wrong_found": 0, "exact": true, "truth_beaten": false}
+{"corpus": "B", "score": "jointn", "plant": 22, "L": 182, "wrong_found": 2, "exact": false, "truth_beaten": true}
+{"corpus": "B", "score": "jointn", "plant": 22, "L": 546, "wrong_found": 2, "exact": false, "truth_beaten": true}
+{"corpus": "B", "score": "jointn", "plant": 23, "L": 182, "wrong_found": 5, "exact": false, "truth_beaten": true}
+{"corpus": "B", "score": "jointn", "plant": 23, "L": 546, "wrong_found": 0, "exact": true, "truth_beaten": false}
+{"corpus": "B", "score": "jointn", "plant": 24, "L": 182, "wrong_found": 2, "exact": false, "truth_beaten": true}
+{"corpus": "B", "score": "jointn", "plant": 24, "L": 546, "wrong_found": 2, "exact": false, "truth_beaten": true}
+{"corpus": "B", "score": "jointn", "plant": 25, "L": 182, "wrong_found": 0, "exact": true, "truth_beaten": false}
+{"corpus": "B", "score": "jointn", "plant": 25, "L": 546, "wrong_found": 0, "exact": true, "truth_beaten": false}
+{"corpus": "B", "score": "jointn", "plant": 26, "L": 182, "wrong_found": 4, "exact": false, "truth_beaten": true}
+{"corpus": "B", "score": "jointn", "plant": 26, "L": 546, "wrong_found": 3, "exact": false, "truth_beaten": true}
+{"corpus": "B", "score": "jointn", "plant": 27, "L": 182, "wrong_found": 2, "exact": false, "truth_beaten": true}
+{"corpus": "B", "score": "jointn", "plant": 27, "L": 546, "wrong_found": 2, "exact": false, "truth_beaten": true}
+{"corpus": "B", "score": "jointn", "plant": 28, "L": 182, "wrong_found": 5, "exact": false, "truth_beaten": true}
+{"corpus": "B", "score": "jointn", "plant": 28, "L": 546, "wrong_found": 2, "exact": false, "truth_beaten": true}
+{"corpus": "B", "score": "jointn", "plant": 29, "L": 182, "wrong_found": 3, "exact": false, "truth_beaten": true}
+{"corpus": "B", "score": "jointn", "plant": 29, "L": 546, "wrong_found": 2, "exact": false, "truth_beaten": true}
+{"corpus": "B", "score": "jointn", "plant": 30, "L": 182, "wrong_found": 0, "exact": true, "truth_beaten": false}
+{"corpus": "B", "score": "jointn", "plant": 30, "L": 546, "wrong_found": 0, "exact": true, "truth_beaten": false}
+{"corpus": "B", "score": "jointn", "plant": 31, "L": 182, "wrong_found": 2, "exact": false, "truth_beaten": true}
+{"corpus": "B", "score": "jointn", "plant": 31, "L": 546, "wrong_found": 2, "exact": false, "truth_beaten": true}
+{"corpus": "B", "score": "jointn", "plant": 32, "L": 182, "wrong_found": 3, "exact": false, "truth_beaten": true}
+{"corpus": "B", "score": "jointn", "plant": 32, "L": 546, "wrong_found": 2, "exact": false, "truth_beaten": true}
+{"corpus": "B", "score": "jointn", "plant": 33, "L": 182, "wrong_found": 2, "exact": false, "truth_beaten": true}
+{"corpus": "B", "score": "jointn", "plant": 33, "L": 546, "wrong_found": 0, "exact": true, "truth_beaten": false}
+{"corpus": "B", "score": "jointn", "plant": 34, "L": 182, "wrong_found": 2, "exact": false, "truth_beaten": true}
+{"corpus": "B", "score": "jointn", "plant": 34, "L": 546, "wrong_found": 2, "exact": false, "truth_beaten": true}
+{"corpus": "B", "score": "jointn", "plant": 35, "L": 182, "wrong_found": 2, "exact": false, "truth_beaten": true}
+{"corpus": "B", "score": "jointn", "plant": 35, "L": 546, "wrong_found": 0, "exact": true, "truth_beaten": false}
+{"corpus": "B", "score": "jointn", "plant": 36, "L": 182, "wrong_found": 3, "exact": false, "truth_beaten": true}
+{"corpus": "B", "score": "jointn", "plant": 36, "L": 546, "wrong_found": 2, "exact": false, "truth_beaten": true}
+{"corpus": "B", "score": "jointn", "plant": 37, "L": 182, "wrong_found": 2, "exact": false, "truth_beaten": true}
+{"corpus": "B", "score": "jointn", "plant": 37, "L": 546, "wrong_found": 0, "exact": true, "truth_beaten": false}
+{"corpus": "B", "score": "jointn", "plant": 38, "L": 182, "wrong_found": 0, "exact": true, "truth_beaten": false}
+{"corpus": "B", "score": "jointn", "plant": 38, "L": 546, "wrong_found": 0, "exact": true, "truth_beaten": false}
+{"corpus": "B", "score": "jointn", "plant": 39, "L": 182, "wrong_found": 2, "exact": false, "truth_beaten": true}
+{"corpus": "B", "score": "jointn", "plant": 39, "L": 546, "wrong_found": 2, "exact": false, "truth_beaten": true}
+{"corpus": "B", "score": "jointn", "plant": 40, "L": 182, "wrong_found": 4, "exact": false, "truth_beaten": true}
+{"corpus": "B", "score": "jointn", "plant": 40, "L": 546, "wrong_found": 0, "exact": true, "truth_beaten": false}
+{"corpus": "B", "score": "jointn", "plant": 41, "L": 182, "wrong_found": 2, "exact": false, "truth_beaten": true}
+{"corpus": "B", "score": "jointn", "plant": 41, "L": 546, "wrong_found": 0, "exact": true, "truth_beaten": false}
+{"corpus": "B", "score": "jointn", "plant": 42, "L": 182, "wrong_found": 2, "exact": false, "truth_beaten": true}
+{"corpus": "B", "score": "jointn", "plant": 42, "L": 546, "wrong_found": 2, "exact": false, "truth_beaten": true}
+{"corpus": "B", "score": "jointn", "plant": 43, "L": 182, "wrong_found": 3, "exact": false, "truth_beaten": true}
+{"corpus": "B", "score": "jointn", "plant": 43, "L": 546, "wrong_found": 2, "exact": false, "truth_beaten": true}
+{"corpus": "B", "score": "jointn", "plant": 44, "L": 182, "wrong_found": 2, "exact": false, "truth_beaten": true}
+{"corpus": "B", "score": "jointn", "plant": 44, "L": 546, "wrong_found": 2, "exact": false, "truth_beaten": true}
+{"corpus": "B", "score": "jointn", "plant": 45, "L": 182, "wrong_found": 2, "exact": false, "truth_beaten": true}
+{"corpus": "B", "score": "jointn", "plant": 45, "L": 546, "wrong_found": 0, "exact": true, "truth_beaten": false}
+{"corpus": "B", "score": "jointn", "plant": 46, "L": 182, "wrong_found": 2, "exact": false, "truth_beaten": true}
+{"corpus": "B", "score": "jointn", "plant": 46, "L": 546, "wrong_found": 0, "exact": true, "truth_beaten": false}
+{"corpus": "B", "score": "jointn", "plant": 47, "L": 182, "wrong_found": 5, "exact": false, "truth_beaten": true}
+{"corpus": "B", "score": "jointn", "plant": 47, "L": 546, "wrong_found": 2, "exact": false, "truth_beaten": true}
+{"corpus": "B", "score": "jointn", "plant": 48, "L": 182, "wrong_found": 0, "exact": true, "truth_beaten": false}
+{"corpus": "B", "score": "jointn", "plant": 48, "L": 546, "wrong_found": 0, "exact": true, "truth_beaten": false}
+{"corpus": "B", "score": "jointn", "plant": 49, "L": 182, "wrong_found": 2, "exact": false, "truth_beaten": true}
+{"corpus": "B", "score": "jointn", "plant": 49, "L": 546, "wrong_found": 2, "exact": false, "truth_beaten": true}
+{
+ "truth_start_normalized": {
+  "A:jointn prose L182": {
+   "plants": 50,
+   "exact": 9,
+   "truth_beaten": 41
+  },
+  "A:jointn prose L546": {
+   "plants": 50,
+   "exact": 25,
+   "truth_beaten": 25
+  },
+  "B:jointn prose L182": {
+   "plants": 50,
+   "exact": 6,
+   "truth_beaten": 44
+  },
+  "B:jointn prose L546": {
+   "plants": 50,
+   "exact": 22,
+   "truth_beaten": 28
+  }
+ },
+ "neighbors_beating_truth": {
+  "A:joint": {
+   "182": [
+    26,
+    1525
+   ],
+   "1092": [
+    1,
+    1525
+   ],
+   "10000": [
+    0,
+    1525
+   ],
+   "100000": [
+    0,
+    1525
+   ]
+  },
+  "A:jointn": {
+   "182": [
+    26,
+    1525
+   ],
+   "1092": [
+    1,
+    1525
+   ],
+   "10000": [
+    0,
+    1525
+   ],
+   "100000": [
+    0,
+    1525
+   ]
+  },
+  "A:cond": {
+   "182": [
+    40,
+    1525
+   ],
+   "1092": [
+    1,
+    1525
+   ],
+   "10000": [
+    0,
+    1525
+   ],
+   "100000": [
+    0,
+    1525
+   ]
+  },
+  "B:joint": {
+   "182": [
+    21,
+    1525
+   ],
+   "1092": [
+    1,
+    1525
+   ],
+   "10000": [
+    0,
+    1525
+   ],
+   "100000": [
+    0,
+    1525
+   ]
+  },
+  "B:jointn": {
+   "182": [
+    21,
+    1525
+   ],
+   "1092": [
+    1,
+    1525
+   ],
+   "10000": [
+    0,
+    1525
+   ],
+   "100000": [
+    0,
+    1525
+   ]
+  },
+  "B:cond": {
+   "182": [
+    24,
+    1525
+   ],
+   "1092": [
+    0,
+    1525
+   ],
+   "10000": [
+    0,
+    1525
+   ],
+   "100000": [
+    0,
+    1525
+   ]
+  }
+ }
+}

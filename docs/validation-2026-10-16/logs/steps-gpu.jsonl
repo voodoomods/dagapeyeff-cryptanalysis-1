@@ -1,0 +1,9 @@
+{"step": "F71_bench2", "exit": 0, "seconds": 2168, "command": "python grille/bench2.py"}
+{"step": "F78_bench_ngram", "exit": 0, "seconds": 1490, "command": "python grille/bench_ngram.py"}
+{"step": "F74_bench_tolerance", "exit": 0, "seconds": 1840, "command": "python grille/bench_tolerance.py"}
+{"step": "I47_table_validate", "exit": 0, "seconds": 1312, "command": "python round11/table_test.py validate"}
+{"step": "F76_identifiability_A", "exit": 0, "seconds": 3018, "command": "python round11/identifiability.py A 100 182,273,364,455,546,728,1092 -val"}
+{"step": "F76_identifiability_B", "exit": 0, "seconds": 5806, "command": "python round11/identifiability.py B 100 182,273,364,455,546,728,1092 -val"}
+{"step": "F77_robustness", "exit": 0, "seconds": 8489, "command": "python round12/review_checks.py ident 50 182,273,364,546 -val"}
+{"step": "F79_comparability", "exit": 0, "seconds": 725, "command": "python round12/comparability.py -val"}
+done gpu

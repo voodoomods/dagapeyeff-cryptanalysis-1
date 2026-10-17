@@ -1,0 +1,445 @@
+{
+ "The Solving of a Fleissner Grille during an Exercise by the Royal Netherlands Army in 1913": {
+  "title": "The Solving of a Fleissner Grille during an Exercise by the Royal Netherlands Army in 1913",
+  "authors": [
+   "Karl de Leeuw",
+   "B. Megyesi"
+  ],
+  "year": 2018,
+  "venue": "UvA-DARE (University of Amsterdam)",
+  "url": "https://openalex.org/W2893019229",
+  "source": "openalex",
+  "citations": 0
+ },
+ "Encryption Using a Variant of the Turning-Grille Method": {
+  "title": "Encryption Using a Variant of the Turning-Grille Method",
+  "authors": [
+   "Stephen Fratini"
+  ],
+  "year": 2002,
+  "venue": "Mathematics Magazine",
+  "doi": "10.1080/0025570x.2002.11953934",
+  "url": "https://openalex.org/W1976217077",
+  "source": "openalex",
+  "citations": 2
+ },
+ "A TURNING GRILLE FROM THE ANCESTRAL CASTLE OF THE DUTCH STADTHOLDERS": {
+  "title": "A TURNING GRILLE FROM THE ANCESTRAL CASTLE OF THE DUTCH STADTHOLDERS",
+  "authors": [
+   "Karl de Leeuw",
+   "Hans van der Meer"
+  ],
+  "year": 1995,
+  "venue": "Cryptologia",
+  "doi": "10.1080/0161-119591883854",
+  "url": "https://openalex.org/W2012705235",
+  "source": "openalex",
+  "citations": 3
+ },
+ "William Shakespeare A Study of the Poet and Five Famous Contemporaries who between them used the Rune Ciphers ": {
+  "title": "William Shakespeare A Study of the Poet and Five Famous Contemporaries who between them used the Rune Ciphers to reveal his True Identity",
+  "authors": [
+   "David L. Roper"
+  ],
+  "year": 2017,
+  "venue": "Journal of Scientific Exploration",
+  "url": "https://openalex.org/W3107246495",
+  "source": "openalex",
+  "citations": 2
+ },
+ "Excluding Classical Cipher Families for the 1939 D'Agapeyeff Challenge: Key-Free Counts and Searches with Demo": {
+  "title": "Excluding Classical Cipher Families for the 1939 D'Agapeyeff Challenge: Key-Free Counts and Searches with Demonstrated Power",
+  "authors": [
+   "Chase Hendrick"
+  ],
+  "year": 2026,
+  "venue": "Zenodo (CERN European Organization for Nuclear Research)",
+  "doi": "10.5281/zenodo.23241303",
+  "url": "https://openalex.org/W7221005031",
+  "source": "openalex",
+  "citations": 0
+ },
+ "Bibliography": {
+  "title": "Bibliography",
+  "authors": [
+   "Benedek Láng"
+  ],
+  "year": 2018,
+  "venue": "Amsterdam University Press eBooks",
+  "doi": "10.1515/9789048536696-016",
+  "url": "https://openalex.org/W4236114452",
+  "source": "openalex",
+  "citations": 0
+ },
+ "Some Notes on a Formal Algebraic Structure of Cryptology": {
+  "title": "Some Notes on a Formal Algebraic Structure of Cryptology",
+  "authors": [
+   "Vicente Jara Vera",
+   "Carmen Sánchez Ávila"
+  ],
+  "year": 2021,
+  "venue": "Mathematics",
+  "doi": "10.3390/math9182183",
+  "url": "https://openalex.org/W3198828278",
+  "source": "openalex",
+  "citations": 4
+ },
+ "2.The Arrest of a Postmaster: InformationSovereignty in the Italian Wars": {
+  "title": "2.The Arrest of a Postmaster: InformationSovereignty in the Italian Wars",
+  "authors": [
+   "Rachel Midura"
+  ],
+  "year": 2025,
+  "venue": "Cornell University Press eBooks",
+  "doi": "10.1515/9781501779947-007",
+  "url": "https://openalex.org/W4407717600",
+  "source": "openalex",
+  "citations": 0
+ },
+ "Trappes en cryptographie basée sur les réseaux euclidiens : applications et implémentation": {
+  "title": "Trappes en cryptographie basée sur les réseaux euclidiens : applications et implémentation",
+  "authors": [
+   "Lucas Prabel"
+  ],
+  "year": 2023,
+  "venue": "theses.fr (ABES)",
+  "url": "https://openalex.org/W4404751885",
+  "source": "openalex",
+  "citations": 1
+ },
+ "Unicity Distance of the Zodiac-340 Cipher": {
+  "title": "Unicity Distance of the Zodiac-340 Cipher",
+  "authors": [
+   "Joachim von zur Gathen"
+  ],
+  "year": 2022,
+  "venue": "Linköping electronic conference proceedings",
+  "doi": "10.3384/ecp188395",
+  "url": "https://openalex.org/W4281842270",
+  "source": "openalex",
+  "citations": 0
+ },
+ "Universal homophonic coding": {
+  "title": "Universal homophonic coding",
+  "authors": [
+   "Charles Cater Stevens"
+  ],
+  "year": 1996,
+  "venue": "Unisa Institutional Repository (University of South Africa)",
+  "url": "https://openalex.org/W784512654",
+  "source": "openalex",
+  "citations": 0
+ },
+ "On the minimum redundancy of homophonic coding": {
+  "title": "On the minimum redundancy of homophonic coding",
+  "authors": [
+   "Valdemar C. da Rocha"
+  ],
+  "year": 2002,
+  "venue": "Anais do 2002 International Telecommunications Symposium",
+  "doi": "10.14209/its.2002.309",
+  "url": "https://openalex.org/W4313287268",
+  "source": "openalex",
+  "citations": 1
+ },
+ "A fast homophonic coding algorithm based on arithmetic coding": {
+  "title": "A fast homophonic coding algorithm based on arithmetic coding",
+  "authors": [
+   "W.T. Penzhorn"
+  ],
+  "year": 1995,
+  "venue": "Lecture notes in computer science",
+  "doi": "10.1007/3-540-60590-8_25",
+  "url": "https://openalex.org/W1870606456",
+  "source": "openalex",
+  "citations": 3
+ },
+ "Bridging the Low Resource Gap in Historical Cryptology: A Multilingual Diachronic Synthetic Dataset for Reprod": {
+  "title": "Bridging the Low Resource Gap in Historical Cryptology: A Multilingual Diachronic Synthetic Dataset for Reproducible Cryptanalysis",
+  "authors": [
+   "Micaella Bruton",
+   "Meriem Beloucif",
+   "Beáta Megyesi"
+  ],
+  "year": 2026,
+  "venue": "Language Resources and Evaluation Conference (LREC)",
+  "doi": "10.63317/2twwf4kj3cgk",
+  "url": "https://openalex.org/W7166521366",
+  "source": "openalex",
+  "citations": 0
+ },
+ "Geospatial Constraint Satisfaction in the Zodiac Z32 Cipher": {
+  "title": "Geospatial Constraint Satisfaction in the Zodiac Z32 Cipher",
+  "authors": [
+   "David Stampher"
+  ],
+  "year": 2026,
+  "venue": "SSRN Electronic Journal",
+  "doi": "10.2139/ssrn.6266638",
+  "url": "https://openalex.org/W7152990311",
+  "source": "openalex",
+  "citations": 0
+ },
+ "A Survey on Cryptography and Steganography Methods for Information Security": {
+  "title": "A Survey on Cryptography and Steganography Methods for Information Security",
+  "authors": [
+   "Ravindra Babu Kallam",
+   "S. Udaya Kumar",
+   "A. Vinaya Babu"
+  ],
+  "year": 2010,
+  "venue": "International Journal of Computer Applications",
+  "doi": "10.5120/1660-2235",
+  "url": "https://openalex.org/W2143083103",
+  "source": "openalex",
+  "citations": 27
+ },
+ "Enhancing Secrecy by Data Compression: Theoretical and Practical Aspects": {
+  "title": "Enhancing Secrecy by Data Compression: Theoretical and Practical Aspects",
+  "authors": [
+   "Colin Boyd"
+  ],
+  "year": 2007,
+  "venue": "Springer eBooks",
+  "doi": "10.1007/3-540-46416-6_23",
+  "url": "https://openalex.org/W1593649671",
+  "source": "openalex",
+  "citations": 6
+ },
+ "Unuberwachtes Lernen mit Anwendungen bei der Verarbeitung naturlicher Sprache": {
+  "title": "Unuberwachtes Lernen mit Anwendungen bei der Verarbeitung naturlicher Sprache",
+  "authors": [
+   "Malte Nuhn"
+  ],
+  "year": 2019,
+  "venue": "RWTH Publications (RWTH Aachen)",
+  "doi": "10.18154/rwth-2019-10638",
+  "url": "https://openalex.org/W3001379634",
+  "source": "openalex",
+  "citations": 3
+ },
+ "Decolonising the concept of solemnity in the Roman Catholic Liturgy of Igbo Land: A compositional study": {
+  "title": "Decolonising the concept of solemnity in the Roman Catholic Liturgy of Igbo Land: A compositional study",
+  "authors": [
+   "Benedict Nwabugwu Agbo"
+  ],
+  "year": 2021,
+  "venue": "IKENGA International Journal of Institute of African Studies",
+  "doi": "10.53836/ijia/2021/22/3/009",
+  "url": "https://openalex.org/W4289539563",
+  "source": "openalex",
+  "citations": 1
+ },
+ "Experimental Analysis of the Dorabella Cipher with Statistical Language Models": {
+  "title": "Experimental Analysis of the Dorabella Cipher with Statistical Language Models",
+  "authors": [
+   "Bradley D. Hauer",
+   "Colin Choi",
+   "Anirudh Sundar",
+   "Abram Hindle",
+   "Scott Smallwood",
+   "Grzegorz Kondrak"
+  ],
+  "year": 2021,
+  "venue": "Linköping electronic conference proceedings",
+  "doi": "10.3384/ecp183159",
+  "url": "https://openalex.org/W3190354679",
+  "source": "openalex",
+  "citations": 0
+ },
+ "Deciphering papal ciphers from the 16th to the 18th Century": {
+  "title": "Deciphering papal ciphers from the 16th to the 18th Century",
+  "authors": [
+   "George Lasry",
+   "Beáta Megyesi",
+   "Nils Kopal"
+  ],
+  "year": 2020,
+  "venue": "Cryptologia",
+  "doi": "10.1080/01611194.2020.1755915",
+  "url": "https://openalex.org/W3037531128",
+  "source": "openalex",
+  "citations": 23
+ },
+ "The cipher of Emperor Rudolf II’s “Alchemical Hand Bell”": {
+  "title": "The cipher of Emperor Rudolf II’s “Alchemical Hand Bell”",
+  "authors": [
+   "Richard Winston Bean",
+   "Corinna Gannon",
+   "Sarah A. Lang"
+  ],
+  "year": 2023,
+  "venue": "Linköping electronic conference proceedings",
+  "doi": "10.3384/ecp195690",
+  "url": "https://openalex.org/W4381279416",
+  "source": "openalex",
+  "citations": 1
+ },
+ "Armand de Bourbon’s Poly-Homophonic Cipher – 1649": {
+  "title": "Armand de Bourbon’s Poly-Homophonic Cipher – 1649",
+  "authors": [
+   "George Lasry"
+  ],
+  "year": 2023,
+  "venue": "Linköping electronic conference proceedings",
+  "doi": "10.3384/ecp195699",
+  "url": "https://openalex.org/W4381277923",
+  "source": "openalex",
+  "citations": 0
+ },
+ "Another Polyphonic Cipher": {
+  "title": "Another Polyphonic Cipher",
+  "authors": [
+   "A. Ross Eckler"
+  ],
+  "year": 1978,
+  "venue": "Digital Commons @ Butler University (Butler University)",
+  "url": "https://openalex.org/W1502408510",
+  "source": "openalex",
+  "citations": 0
+ },
+ "Beyond the Caesar Cipher: A Comparative Analysis of Mlecchita-vikalpa and Katapayadi Systems.": {
+  "title": "Beyond the Caesar Cipher: A Comparative Analysis of Mlecchita-vikalpa and Katapayadi Systems.",
+  "authors": [
+   "Mudusu Mahesh Kumar"
+  ],
+  "year": 2026,
+  "venue": "INTERNATIONAL JOURNAL OF CREATIVE RESEARCH THOUGHTS",
+  "doi": "10.56975/ijcrt.v14i3.303416",
+  "url": "https://openalex.org/W7140214122",
+  "source": "openalex",
+  "citations": 0
+ },
+ "Double Layer Cryptography using Multiplicative Cipher and Chemical Periodic Table": {
+  "title": "Double Layer Cryptography using Multiplicative Cipher and Chemical Periodic Table",
+  "authors": [
+   "Anurag Sinha",
+   "Amrit Kumar Bhadani"
+  ],
+  "year": 2021,
+  "venue": "Indian Journal of Data Communication and Networking",
+  "doi": "10.35940/ijdcn.b5008.041221",
+  "url": "https://openalex.org/W3157370319",
+  "source": "openalex",
+  "citations": 0
+ },
+ "The Dorabella Cipher Solved: A Polyphonic Musical Encoding (1897)": {
+  "title": "The Dorabella Cipher Solved: A Polyphonic Musical Encoding (1897)",
+  "authors": [
+   "Turaq Roan"
+  ],
+  "year": 2026,
+  "venue": "Zenodo (CERN European Organization for Nuclear Research)",
+  "doi": "10.5281/zenodo.19407352",
+  "url": "https://openalex.org/W7149029653",
+  "source": "openalex",
+  "citations": 0
+ },
+ "4. Theory and practice of cryptography in early modern Europe": {
+  "title": "4. Theory and practice of cryptography in early modern Europe",
+  "authors": [
+   "Benedek Láng"
+  ],
+  "year": 2018,
+  "venue": "Amsterdam University Press eBooks",
+  "doi": "10.1515/9789048536696-007",
+  "url": "https://openalex.org/W3173634673",
+  "source": "openalex",
+  "citations": 0
+ },
+ "The unsolved d'Agapeyeff cipher": {
+  "title": "The unsolved d'Agapeyeff cipher",
+  "authors": [
+   "Wayne G. Barker"
+  ],
+  "year": 1989,
+  "venue": "Artech House, Inc. eBooks",
+  "url": "https://openalex.org/W2172791417",
+  "source": "openalex",
+  "citations": 0
+ },
+ "THE UNSOLVED D'AGAPEYEFF CIPHER": {
+  "title": "THE UNSOLVED D'AGAPEYEFF CIPHER",
+  "authors": [
+   "Wayne G. Barker"
+  ],
+  "year": 1978,
+  "venue": "Cryptologia",
+  "doi": "10.1080/0161-117891852901",
+  "url": "https://openalex.org/W2027049076",
+  "source": "openalex",
+  "citations": 0
+ },
+ "A Computational Approach to the D'Agapeyeff Cipher: The Dual-Block Homophonic Transposition Hypothesis": {
+  "title": "A Computational Approach to the D'Agapeyeff Cipher: The Dual-Block Homophonic Transposition Hypothesis",
+  "authors": [
+   "Ender UYGUN"
+  ],
+  "year": 2026,
+  "venue": "OSF Preprints (OSF Preprints)",
+  "doi": "10.5281/zenodo.18639389",
+  "url": "https://openalex.org/W7128916337",
+  "source": "openalex",
+  "citations": 0
+ },
+ "A Proposed Solution to the d'Agapeyeff Cipher (1939): Reconstruction of the Polybius Square, Rail Fence Transp": {
+  "title": "A Proposed Solution to the d'Agapeyeff Cipher (1939): Reconstruction of the Polybius Square, Rail Fence Transposition, Periodic Nulls, and Uniqueness under Structural Irrecoverability",
+  "authors": [
+   "Brandon Caillahua Mendoza"
+  ],
+  "year": 2026,
+  "venue": "Zenodo (CERN European Organization for Nuclear Research)",
+  "doi": "10.5281/zenodo.20565170",
+  "url": "https://openalex.org/W7163748896",
+  "source": "openalex",
+  "citations": 0
+ },
+ "The D'Agapeyeff Resolution": {
+  "title": "The D'Agapeyeff Resolution",
+  "authors": [
+   "Keenan Leggett"
+  ],
+  "year": 2025,
+  "venue": "Zenodo (CERN European Organization for Nuclear Research)",
+  "doi": "10.5281/zenodo.17991353",
+  "url": "https://openalex.org/W7116442490",
+  "source": "openalex",
+  "citations": 0
+ },
+ "The D'Agapeyeff Cryptogram (1939) : Anatomy, Reconstruction of a Solver, and Statistical Assessment": {
+  "title": "The D'Agapeyeff Cryptogram (1939) : Anatomy, Reconstruction of a Solver, and Statistical Assessment",
+  "authors": [
+   "Ruben Gariazzo"
+  ],
+  "year": 2026,
+  "venue": "Zenodo (CERN European Organization for Nuclear Research)",
+  "doi": "10.5281/zenodo.22011905",
+  "url": "https://openalex.org/W7203733102",
+  "source": "openalex",
+  "citations": 0
+ },
+ "Data and code of computational cryptanalysis of the D'Agapeyeff cryptogram (1939)": {
+  "title": "Data and code of computational cryptanalysis of the D'Agapeyeff cryptogram (1939)",
+  "authors": [
+   "Ruben Gariazzo"
+  ],
+  "year": 2026,
+  "venue": "Zenodo (CERN European Organization for Nuclear Research)",
+  "doi": "10.5281/zenodo.21970477",
+  "url": "https://openalex.org/W7203588814",
+  "source": "openalex",
+  "citations": 0
+ },
+ "Données et code de cryptanalyse computationnelle du cryptogramme de D'Agapeyeff (1939)": {
+  "title": "Données et code de cryptanalyse computationnelle du cryptogramme de D'Agapeyeff (1939)",
+  "authors": [
+   "Ruben Gariazzo"
+  ],
+  "year": 2026,
+  "venue": "Zenodo (CERN European Organization for Nuclear Research)",
+  "doi": "10.5281/zenodo.21970728",
+  "url": "https://openalex.org/W7203589704",
+  "source": "openalex",
+  "citations": 0
+ }
+}

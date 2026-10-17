@@ -1,0 +1,1 @@
+{"step": "F68_power", "exit": 0, "seconds": 4686, "command": "python compound/compound_engine.py compound/results/power-rerun.cfg.json"}

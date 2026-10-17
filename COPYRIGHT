@@ -1,0 +1,26 @@
+Copyright (c) 2026 VoodooMods LLC. Author: Nicolas Houghtaling.
+
+WHAT IS CLAIMED. VoodooMods LLC claims copyright in this project's own contribution, to the extent copyright subsists in it:
+the report and its figures, the documents and records written for this project, the selection and arrangement of its
+results and evidence, the research data the project produced, and the source code.
+
+TERMS.
+* report/, figures, results (lab/cipher/**/*.json), evidence/ and the documents in docs/ written for this project:
+  licensed under the Creative Commons Attribution 4.0 International license (CC BY 4.0; LICENSE-CC-BY-4.0.md,
+  https://creativecommons.org/licenses/by/4.0/). You may share and adapt them for any purpose, including
+  commercially, provided you credit Nicolas Houghtaling and VoodooMods LLC, link to the license and indicate any changes.
+* Source code (*.py): licensed under the Apache License, Version 2.0 (LICENSE). Copies and derivative works must keep
+  this copyright notice and the attribution in NOTICE.
+
+WHAT IS NOT CLAIMED.
+* Third-party material, which keeps its own license — see NOTICE.
+* Short quotations from other works (for example from A. D'Agapeyeff's *Codes and Ciphers*, 1939, and from published
+  papers) reproduced in the case file and documents for criticism and review; they remain their owners' property.
+* Facts, numbers and ideas as such, the ciphertext itself, and the names of historical figures used as names for the
+  project's AI agents (which imply no association with, or endorsement by, those people or their estates).
+
+AI ASSISTANCE. Much of the text and code was produced with AI systems (Anthropic's Claude, and AI agents running on
+DeepSeek, Kimi and Qwen models) under the direction of Nicolas Houghtaling. Rights are claimed only to the extent the law
+recognizes them in such material.
+
+No right is granted to the names "VoodooMods" or "PegasusDMZ", or to any other name or mark of VoodooMods LLC.

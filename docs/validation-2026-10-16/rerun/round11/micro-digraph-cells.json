@@ -1,0 +1,21 @@
+{
+ "plants_per_system": 2000,
+ "real": {
+  "distinct_cells": 13,
+  "chi2_p_uniform": 0.73
+ },
+ "four": {
+  "distinct_cells_min": 22,
+  "distinct_cells_median": 25.0,
+  "distinct_cells_max": 25,
+  "plants_with_13_or_fewer": 0,
+  "plants_with_13_and_flat": 0
+ },
+ "two": {
+  "distinct_cells_min": 22,
+  "distinct_cells_median": 25.0,
+  "distinct_cells_max": 25,
+  "plants_with_13_or_fewer": 0,
+  "plants_with_13_and_flat": 0
+ }
+}

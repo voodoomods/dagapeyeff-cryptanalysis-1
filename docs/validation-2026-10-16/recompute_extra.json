@@ -1,0 +1,56 @@
+{
+ "F4": {
+  "rare_occurrences": 8,
+  "rare_positions_0based": [
+   41,
+   55,
+   97,
+   111,
+   125,
+   139,
+   167,
+   195
+  ],
+  "statistic": "max_p(top residue share - 1/p), p = 2..20",
+  "real_statistic": 0.9286,
+  "exact_union_bound_p": 1.8183324943854527e-09,
+  "exact_one_in": 549954424,
+  "shuffles": 200000,
+  "shuffles_reaching_real": 0,
+  "note": "A cruder statistic - 'all eight on one residue for ANY p in 2..20' - is reached by chance in about 0.7% of shuffles, almost all at p = 2 (same parity, 1 in 64); the real text meets it at p = 2, 7, 14. The published odds rest on the excess-over-1/p statistic.",
+  "claim": "odds below 1 in 20,000 after allowing for every row length from 2 to 20",
+  "pass": true
+ },
+ "F32_layout": {
+  "rows_p": 0.087,
+  "columns_p": 0.304,
+  "top_vs_bottom_p": 0.094,
+  "left_vs_right_p": 0.494,
+  "published": {
+   "rows": 0.08,
+   "columns": 0.3,
+   "top_vs_bottom": 0.1,
+   "left_vs_right": 0.6
+  },
+  "note": "left vs right = columns 1-6 vs 8-13 (the published split of 13 columns is not recorded)",
+  "pass": true
+ },
+ "F32_lag_component": {
+  "reading_order_max_mi_p": 0.903,
+  "column_order_max_mi_p": 0.7125,
+  "family_p": 0.9022,
+  "shuffles": 5000,
+  "claim": "no lagged dependence at lags 1-26 in reading or column order, family-wise p = 0.91",
+  "note": "case F32: the family-wise 0.91 is the lag-dependence family (lags 1-26, reading and column order); rows, columns and halves are reported separately in F32_layout",
+  "pass": true
+ },
+ "R29": {
+  "planted_texts": 40,
+  "p_below_0.05": 39,
+  "p_below_0.01": 38,
+  "real_message_lag1_p": 0.716,
+  "shuffles_each": 400,
+  "claim": "40 of 40 planted texts show lag-1 dependence beyond shuffles (p < 0.01 in 39); real message p = 0.70",
+  "pass": true
+ }
+}

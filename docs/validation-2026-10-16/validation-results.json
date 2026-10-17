@@ -1,0 +1,812 @@
+{
+ "validation_date": "2026-10-16",
+ "release_candidate": {
+  "repository": "voodoomods/dagapeyeff-cryptanalysis",
+  "commit": "44f7b233d76744e98b5ed164d4144a93f6f0cd0d",
+  "branch": "main",
+  "manifest_check": "130/130 files OK (sha256sum -c MANIFEST.sha256 on a fresh clone)"
+ },
+ "performed_by": "the project's developer (Claude Opus 5.5) at the author's request - internal, not independent replication",
+ "environment": {
+  "host": "Windows 11 Home 10.0.26200, Podman 5.8.2 (WSL2 machine)",
+  "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU, driver 596.08",
+  "rerun_image": {
+   "name": "localhost/pegasus-lab:latest",
+   "id": "6b9a93a61331789f99538e4ab6099656a11077a2c41f71a3549af17d29298710",
+   "python": "3.12.13",
+   "numpy": "2.5.2",
+   "scipy": "1.18.1",
+   "torch": "2.11.0+cu128",
+   "cuda": "12.8",
+   "used_for": "run_all.sh (gpu, cpu), F68"
+  },
+  "recompute_image": {
+   "name": "localhost/pegasus-dmz-ui:latest",
+   "id": "fa819128b7e80847a2ee5cb9771a227cdffdbdec8ba6656b8220d1d42bcc8c1e",
+   "python": "3.12.13",
+   "numpy": "2.5.3",
+   "scipy": "1.18.1",
+   "wordfreq": "3.1.1",
+   "used_for": "flatness_standalone.py, recompute_extra.py, run_f66.sh"
+  },
+  "network": "none (podman --network none) for every rerun and recomputation",
+  "user": "UID 1002 for the lab image"
+ },
+ "steps": [
+  {
+   "step": "R35_digraph_5x5",
+   "exit": 0,
+   "seconds": 6,
+   "command": "python round11/micro_digraph_cells.py 2000"
+  },
+  {
+   "step": "R35_digraph_4x5",
+   "exit": 0,
+   "seconds": 4,
+   "command": "python round11/micro_digraph_cells_4x5.py"
+  },
+  {
+   "step": "O34_fsq_search",
+   "exit": 0,
+   "seconds": 2757,
+   "command": "python round12/review_checks.py fsq 100 10 -val 50000"
+  },
+  {
+   "step": "O34_fsq_order",
+   "exit": 0,
+   "seconds": 351,
+   "command": "python round12/fsq_order.py 2000"
+  },
+  {
+   "step": "F68_power",
+   "exit": 0,
+   "seconds": 4686,
+   "command": "python compound/compound_engine.py compound/results/power-rerun.cfg.json"
+  },
+  {
+   "step": "F71_bench2",
+   "exit": 0,
+   "seconds": 2168,
+   "command": "python grille/bench2.py"
+  },
+  {
+   "step": "F78_bench_ngram",
+   "exit": 0,
+   "seconds": 1490,
+   "command": "python grille/bench_ngram.py"
+  },
+  {
+   "step": "F74_bench_tolerance",
+   "exit": 0,
+   "seconds": 1840,
+   "command": "python grille/bench_tolerance.py"
+  },
+  {
+   "step": "I47_table_validate",
+   "exit": 0,
+   "seconds": 1312,
+   "command": "python round11/table_test.py validate"
+  },
+  {
+   "step": "F76_identifiability_A",
+   "exit": 0,
+   "seconds": 3018,
+   "command": "python round11/identifiability.py A 100 182,273,364,455,546,728,1092 -val"
+  },
+  {
+   "step": "F76_identifiability_B",
+   "exit": 0,
+   "seconds": 5806,
+   "command": "python round11/identifiability.py B 100 182,273,364,455,546,728,1092 -val"
+  },
+  {
+   "step": "F77_robustness",
+   "exit": 0,
+   "seconds": 8489,
+   "command": "python round12/review_checks.py ident 50 182,273,364,546 -val"
+  },
+  {
+   "step": "F79_comparability",
+   "exit": 0,
+   "seconds": 725,
+   "command": "python round12/comparability.py -val"
+  }
+ ],
+ "totals": {
+  "steps": 13,
+  "exit_nonzero": 0,
+  "seconds": 32652
+ },
+ "comparison_summary": {
+  "PASS": 17,
+  "PARTIAL": 2,
+  "FAIL": 1,
+  "NOT RUN": 0
+ },
+ "checks": [
+  {
+   "id": "F71",
+   "claim": "Turning grille recovered in practice ciphers when the letter key is known",
+   "status": "PARTIAL",
+   "source_inspection": "PASS",
+   "note": ""
+  },
+  {
+   "id": "F78",
+   "claim": "Six-symbol scoring recovers 6/6 grilles (5 exact); five-symbol 6/6 (47-49, 3 exact); four-symbol 2/6",
+   "status": "PASS",
+   "source_inspection": "PASS",
+   "note": ""
+  },
+  {
+   "id": "F74",
+   "claim": "True table 4/4; 2 misplaced 1/4; 4 misplaced 2/4; 6, 8, 12 misplaced 0/12",
+   "status": "PASS",
+   "source_inspection": "PASS",
+   "note": ""
+  },
+  {
+   "id": "I47",
+   "claim": "Table repair from 2 wrong letters ends further away (5 wrong)",
+   "status": "PASS",
+   "source_inspection": "PASS",
+   "note": ""
+  },
+  {
+   "id": "F76-A",
+   "claim": "Truth kept, corpus A, 100 practice ciphers per length (%)",
+   "status": "PASS",
+   "source_inspection": "PASS",
+   "note": ""
+  },
+  {
+   "id": "F76-B",
+   "claim": "Truth kept, corpus B, 100 practice ciphers per length (%)",
+   "status": "PASS",
+   "source_inspection": "PASS",
+   "note": ""
+  },
+  {
+   "id": "F76-both",
+   "claim": "Both corpora (%); 178 of 200 beaten at 182; one in two at roughly 420 symbols",
+   "status": "PASS",
+   "source_inspection": "PASS"
+  },
+  {
+   "id": "F77",
+   "claim": "Ten setups x four lengths (2,000 runs): lowest/highest/pooled truth kept; 171/248 other corpus; 82/427 fresh passage",
+   "status": "PASS",
+   "source_inspection": "PASS",
+   "note": ""
+  },
+  {
+   "id": "F79",
+   "claim": "Model mass 2.10 (A') / 1.45 (B), spread 0.002 log10; 0 of 9,150 neighbors beat the truth at 10k/100k symbols",
+   "status": "PASS",
+   "source_inspection": "PASS",
+   "note": ""
+  },
+  {
+   "id": "R35-5x5",
+   "claim": "5x5 four-square and two-square: 22-25 distinct symbols, none <= 13 (2 x 2,000 plants)",
+   "status": "PASS",
+   "source_inspection": "PASS",
+   "note": ""
+  },
+  {
+   "id": "R35-4x5",
+   "claim": "4x5 squares 18-20 symbols; 5x5 with 13-letter text 20-25; none <= 13 (3 x 2,000 plants)",
+   "status": "PASS",
+   "source_inspection": "PASS",
+   "note": "expected filled from the published file; the paper prints the ranges 18-20 and 20-25 and 'none'"
+  },
+  {
+   "id": "O34-search",
+   "claim": "Purpose-built four-square reaches 13 symbols in 13 of 100 passages, all as flat as the cipher (p 0.85-1.0)",
+   "status": "PASS",
+   "source_inspection": "PASS",
+   "note": "windows_13 and the flat-p range are taken from the published file"
+  },
+  {
+   "id": "O34-order",
+   "claim": "Order test: purpose-built 12/100 vs random 52/100 flagged; 3 of 13 flat (34, 77, 95); 7 of 13 pair stats; real p = 0.999",
+   "status": "PASS",
+   "source_inspection": "PASS",
+   "note": ""
+  },
+  {
+   "id": "F4",
+   "kind": "independent recomputation",
+   "claim": "All 8 rare symbols in column 14; odds below 1 in 20,000 after scanning row lengths 2-20",
+   "status": "PASS",
+   "note": "A cruder statistic - 'all eight on one residue for ANY p in 2..20' - is reached by chance in about 0.7% of shuffles, almost all at p = 2 (same parity, 1 in 64); the real text meets it at p = 2, 7, 14. The published odds rest on the excess-over-1/p statistic."
+  },
+  {
+   "id": "F32",
+   "kind": "independent recomputation",
+   "claim": "No order: rows p 0.08, columns 0.30, halves 0.10 / 0.60; lags 1-26 family-wise p 0.91",
+   "status": "PASS",
+   "note": "left vs right = columns 1-6 vs 8-13 (the published split of 13 columns is not recorded)"
+  },
+  {
+   "id": "R29",
+   "kind": "independent recomputation",
+   "claim": "Polyphonic table without transposition: lag-1 dependence in 40 of 40 planted texts; real message p = 0.70",
+   "status": "PARTIAL",
+   "note": "new seeds and new code: 39 of 40 here against 40 of 40 printed; the conclusion holds, the exact count is seed-dependent"
+  },
+  {
+   "id": "F66",
+   "kind": "rerun of the original script (unseeded) from a copy writing elsewhere",
+   "claim": "Hendrick's 30-statistic no-message test replicated: family-wise p = 0.29 (Hendrick 0.28)",
+   "status": "PASS",
+   "note": "the script draws its 1,000 dealings without a seed, so 0.29 is one draw; 20 reruns give the spread"
+  },
+  {
+   "id": "F31/F80",
+   "kind": "standalone recomputation (validation/flatness_standalone.py; wordfreq 3.1.1 + scipy only)",
+   "claim": "Balanced table as flat as the cipher: English 364/1,000; Latin 345-374 (ten editions), 167-182 (six without English notes)",
+   "status": "PASS"
+  },
+  {
+   "id": "S2-letters",
+   "kind": "standalone recomputation",
+   "claim": "Section 2: natural passages use 17 to 22 different letters",
+   "status": "FAIL",
+   "note": "182-letter windows of the English and Latin streams use about 18-26 letters, median 22"
+  },
+  {
+   "id": "F68",
+   "kind": "rerun of the original lab job's configuration with the platform engine (not in this repository)",
+   "claim": "Joint grille-and-table search recovers 0 of 3 practice ciphers at every budget (60, 300, 1,200 s per phase)",
+   "status": "PASS",
+   "note": "budgets are wall-clock seconds, so the outcome depends on the hardware; the original ran on the same GPU"
+  }
+ ],
+ "failures": [
+  "S2-letters"
+ ],
+ "not_run": [],
+ "files": [
+  {
+   "path": "rerun/grille/bench-2.json",
+   "bytes": 1712,
+   "sha256": "6aa65f4adde5dc773b58b3b5263c7de0217bd2bbc5625270c711fe5b194c1da1",
+   "claim": "F71"
+  },
+  {
+   "path": "rerun/grille/bench-ngram.json",
+   "bytes": 3114,
+   "sha256": "86dc9248c4d88731237acad96318cbc62ae7d0e8f74efae06d40d21cb03308a6",
+   "claim": "F78"
+  },
+  {
+   "path": "rerun/grille/bench-tolerance.json",
+   "bytes": 3844,
+   "sha256": "b0b750be5b44f80bc1fe99247c0948068389254c57d32b8b8fb3fdb3c252c71c",
+   "claim": "F74"
+  },
+  {
+   "path": "rerun/round11/validate.json",
+   "bytes": 1680,
+   "sha256": "110893aba406a145aaba45bc4b331f1641d5673eb3e8c7f2a6571f866bd8cb83",
+   "claim": "I47"
+  },
+  {
+   "path": "rerun/round11/identifiability-A-val.json",
+   "bytes": 329019,
+   "sha256": "cb7727501dd210e621d34cf3274b83aff2b2182bb5b133993f2aeb5fc45f58d2",
+   "claim": "F76"
+  },
+  {
+   "path": "rerun/round11/identifiability-B-val.json",
+   "bytes": 329067,
+   "sha256": "6ab8d990b698e19443912c3de45bdcc15d09e8659321778d1a262094b5c406ac",
+   "claim": "F76"
+  },
+  {
+   "path": "rerun/round12/ident-val.json",
+   "bytes": 528215,
+   "sha256": "612a585e0f55ab36d3cd10d48aac229d7dbbb12a0cfd353892569e744172c307",
+   "claim": "F77"
+  },
+  {
+   "path": "rerun/round12/comparability-val.json",
+   "bytes": 39823,
+   "sha256": "9ee167ff4b895d1a9b3278e0da1e4035c87c451ca4a8b8625e4dd216620e2888",
+   "claim": "F79"
+  },
+  {
+   "path": "rerun/round11/micro-digraph-cells.json",
+   "bytes": 427,
+   "sha256": "ea0c8709e669b75a31ea1fc074488e64aed58bcec51ce6bf94fb5d663670ddbe",
+   "claim": "R35"
+  },
+  {
+   "path": "rerun/round11/micro-digraph-cells-4x5.json",
+   "bytes": 481,
+   "sha256": "ab9aa0c03425536d20d73842cf92628bab040b6d4eccbec5ce4f075ba9a3ec0f",
+   "claim": "R35"
+  },
+  {
+   "path": "rerun/round12/fsq-val.json",
+   "bytes": 36953,
+   "sha256": "8a7bfbdf0a0ede1968a8cda56375da4d2b38e0b12696bf382a343c6c98b70d65",
+   "claim": "O34"
+  },
+  {
+   "path": "rerun/round12/fsq-order.json",
+   "bytes": 27663,
+   "sha256": "ca1074a493f8a1977f87a9ea299fa351ae5d7832b88d8444f858ae4226af12fe",
+   "claim": "O34"
+  },
+  {
+   "path": "logs/F68_power.log",
+   "bytes": 389,
+   "sha256": "6c54d97d9578ed65ff66d05275c3cb358d8c8986db5645faa72d9c5e42eff7c2"
+  },
+  {
+   "path": "logs/F71_bench2.cmd",
+   "bytes": 24,
+   "sha256": "2e6fc5b2044f3ebb6221efdf893a70f6e74fa9eeaaf361352b9398e2397c5693"
+  },
+  {
+   "path": "logs/F71_bench2.log",
+   "bytes": 1589,
+   "sha256": "fba2102c4d8fa77b273d554aa3b1f325fb1d2bc089e30b828edb3c994a43df0a"
+  },
+  {
+   "path": "logs/F74_bench_tolerance.cmd",
+   "bytes": 33,
+   "sha256": "732fd4ab90810b7e7f9fbca814c760288f47b911641e358ec631bbc0132628b8"
+  },
+  {
+   "path": "logs/F74_bench_tolerance.log",
+   "bytes": 3080,
+   "sha256": "1ecd1d6134c50e41980858c5a1ed9eb81b13982c21517ad6b9a218bb78c8ed7c"
+  },
+  {
+   "path": "logs/F76_identifiability_A.cmd",
+   "bytes": 74,
+   "sha256": "9cd3168b0eefdb36fce7e3a1f1358a9b73fb3525fa1c1081c78af191c2f8cc2d"
+  },
+  {
+   "path": "logs/F76_identifiability_A.log",
+   "bytes": 272665,
+   "sha256": "8c32263d24a77d1700fea69da49db977a73a1e5a3ee77f80e9296f37ddb2a742"
+  },
+  {
+   "path": "logs/F76_identifiability_B.cmd",
+   "bytes": 74,
+   "sha256": "36c004a8da570c441e3f6c50407e642b1fca8491e85513ccc8c8800ad45bf93c"
+  },
+  {
+   "path": "logs/F76_identifiability_B.log",
+   "bytes": 272717,
+   "sha256": "10b78013c235931c27ad2b8d0f2fbdd295d1e533571b89a36e267f41c03386f5"
+  },
+  {
+   "path": "logs/F77_robustness.cmd",
+   "bytes": 62,
+   "sha256": "7223d1e5522e2ee0d7856c859b182d77c89b5054afd2bab0aa7b454b6816de73"
+  },
+  {
+   "path": "logs/F77_robustness.log",
+   "bytes": 444109,
+   "sha256": "bae39ac12719f420a959248b1a6a00a95c5420458592239040d13fb38c88c3ae"
+  },
+  {
+   "path": "logs/F78_bench_ngram.cmd",
+   "bytes": 29,
+   "sha256": "9fa65cd67fa51d52fb3b4cd3ca94f90aaf1f32d59aa82235ae5d68dd8ba1bdd9"
+  },
+  {
+   "path": "logs/F78_bench_ngram.log",
+   "bytes": 2587,
+   "sha256": "01c3e4d4b8f0f01cc9d34aa94cde2a7ffc89bd936fac118f3387328765ba8d6b"
+  },
+  {
+   "path": "logs/F79_comparability.cmd",
+   "bytes": 37,
+   "sha256": "ea61fc4a111fc3b6abb2af9860ef13fa9f79c10048c7fe24e47a07cb3e2c2203"
+  },
+  {
+   "path": "logs/F79_comparability.log",
+   "bytes": 31843,
+   "sha256": "1388f07046c70118c38220c0443b9b0aa4eda929c92c4624708776534b78b2bf"
+  },
+  {
+   "path": "logs/I47_table_validate.cmd",
+   "bytes": 38,
+   "sha256": "5216fed04cd19ac403aad3ba92e6527af9cef4509643ce0b6b34e0411d564fdb"
+  },
+  {
+   "path": "logs/I47_table_validate.log",
+   "bytes": 1405,
+   "sha256": "eea864bba95b4518efce37b15f6d01953bbe63dfb04ffb769b82977d1d72a263"
+  },
+  {
+   "path": "logs/O34_fsq_order.cmd",
+   "bytes": 33,
+   "sha256": "2af19ff79fba590b1a3114d7d15dec33c03377a8367420ba41a55dc51386ed3e"
+  },
+  {
+   "path": "logs/O34_fsq_order.log",
+   "bytes": 22534,
+   "sha256": "3462b4cd2c876cdf0147b1e6c2bb4f9adab9e88b5474ef958dd0950a7e5b2cce"
+  },
+  {
+   "path": "logs/O34_fsq_search.cmd",
+   "bytes": 54,
+   "sha256": "d272b9b271995923a369c391f451a0ec141488e87a41b1c08af2a62bc5fabbdf"
+  },
+  {
+   "path": "logs/O34_fsq_search.log",
+   "bytes": 27003,
+   "sha256": "85d8a2dea4a1483a397dd5b0e765c90b41a39e7d5cd42274db627d3cef1aa9fb"
+  },
+  {
+   "path": "logs/R35_digraph_4x5.cmd",
+   "bytes": 42,
+   "sha256": "078baac70959ed23136430507f1db345c316fd8a6261b71fdff578d66ccb44b2"
+  },
+  {
+   "path": "logs/R35_digraph_4x5.log",
+   "bytes": 482,
+   "sha256": "3fd345727b538285b401c5823d3c046a59f54b70f0a3677ae416161bd4bd5156"
+  },
+  {
+   "path": "logs/R35_digraph_5x5.cmd",
+   "bytes": 43,
+   "sha256": "382708e3b82f0acd8393bf5c195fc5294f0e509df8282208bf8ae3b1f8690b81"
+  },
+  {
+   "path": "logs/R35_digraph_5x5.log",
+   "bytes": 297,
+   "sha256": "f65b5bcc5f8fb597c514987c0e545296e51430e00f2ad7c1938bf8149c3a0891"
+  },
+  {
+   "path": "logs/steps-cpu.jsonl",
+   "bytes": 451,
+   "sha256": "c4e3235c654f38c7f092cc62aca19c2aaa0e058645c5d2022685aa4cf96c55b4"
+  },
+  {
+   "path": "logs/steps-f68.jsonl",
+   "bytes": 137,
+   "sha256": "6decd9cdd4ff094cb962b9b84b0b092bde9cf7e311772856d65f7363409254ec"
+  },
+  {
+   "path": "logs/steps-gpu.jsonl",
+   "bytes": 954,
+   "sha256": "289f3eca0e744428b7aa874ea054e67a60b16d852c89fba41805bf4e435722d9"
+  },
+  {
+   "path": "flatness/en_seed0.json",
+   "bytes": 400,
+   "sha256": "82a8b57c4da58b1c66053787df06ccf931cb1427859345267c149a93adc3c5b8",
+   "claim": "F31/F80/F81"
+  },
+  {
+   "path": "flatness/en_seed0_w2000.json",
+   "bytes": 400,
+   "sha256": "d78802790f467c174ff084768210f6677c3cf9f8ad2d841ab79b22cbea315ee2",
+   "claim": "F31/F80/F81"
+  },
+  {
+   "path": "flatness/la_clean6_seed0.json",
+   "bytes": 538,
+   "sha256": "e69e7a1ddd4f91c379c10b9061af0dbd8e823e8c53f7b20732b48b51bf705275",
+   "claim": "F31/F80/F81"
+  },
+  {
+   "path": "flatness/la_clean6_seed1.json",
+   "bytes": 538,
+   "sha256": "e83ddd0cbd753b11ee5e6fa93531101100215d7235492a1393e2dab28d26f9cf",
+   "claim": "F31/F80/F81"
+  },
+  {
+   "path": "flatness/la_clean6_seed2.json",
+   "bytes": 538,
+   "sha256": "fcffff7c8765786dad37f943cbf6c8324dbca39d317d4302c25e1ef65efe7e99",
+   "claim": "F31/F80/F81"
+  },
+  {
+   "path": "flatness/la_clean6_seed3.json",
+   "bytes": 538,
+   "sha256": "ba2c75d54a2b09119f5a8eceb401948358c12958afd916dd9108649414a35c69",
+   "claim": "F31/F80/F81"
+  },
+  {
+   "path": "flatness/la_full_seed0.json",
+   "bytes": 406,
+   "sha256": "13f20bef4153014c6f3a46ffd9c7dda8df75ee66f196952abf0df1082b6a84e8",
+   "claim": "F31/F80/F81"
+  },
+  {
+   "path": "flatness/la_full_seed1.json",
+   "bytes": 404,
+   "sha256": "9db824c58e2af234808dcb0ee95789ad12a625cd6d140347bc379c6b56804938",
+   "claim": "F31/F80/F81"
+  },
+  {
+   "path": "flatness/la_full_seed2.json",
+   "bytes": 405,
+   "sha256": "e52c7dcfc92203cd88520f8b26f6a54f3eaba4dc317138f2777b9de4f6228f8c",
+   "claim": "F31/F80/F81"
+  },
+  {
+   "path": "flatness/la_full_seed3.json",
+   "bytes": 406,
+   "sha256": "fccf380cc7db07723d036fb9f93263613e128379b05687c78c657f1bb046faaa",
+   "claim": "F31/F80/F81"
+  },
+  {
+   "path": "f66/rep1.json",
+   "bytes": 1230,
+   "sha256": "7932ebda9f8a1d2899fe1721bee88917aa17c9376a150371337c285a01470863",
+   "claim": "F66"
+  },
+  {
+   "path": "f66/rep1.log",
+   "bytes": 796,
+   "sha256": "c1caeea7e3f18f33fd01ce0d9fd40b8d22cf0d570094ad0e3825e5cacb7a6a49",
+   "claim": "F66"
+  },
+  {
+   "path": "f66/rep10.json",
+   "bytes": 1230,
+   "sha256": "77e851aa9ab86ab8bf8e67838b9c9704f62c9af469c715df01894bf6e93595c0",
+   "claim": "F66"
+  },
+  {
+   "path": "f66/rep10.log",
+   "bytes": 796,
+   "sha256": "9a053a9b54d18340965811e358e811198c02bf5e9b4a6980ade9b696cf5399db",
+   "claim": "F66"
+  },
+  {
+   "path": "f66/rep11.json",
+   "bytes": 1238,
+   "sha256": "a511faadd0cd8a48999835953634ac9e895e1e46ea3edce70ad03333b902c41e",
+   "claim": "F66"
+  },
+  {
+   "path": "f66/rep11.log",
+   "bytes": 796,
+   "sha256": "c4ac0ff0fb558377dcf076c61a2040790fedd70c594818fcdebbe7d96343c10c",
+   "claim": "F66"
+  },
+  {
+   "path": "f66/rep12.json",
+   "bytes": 1231,
+   "sha256": "123129cacf66f42062ce55c57f66d7843101924865528fce0a5623abd7e863ce",
+   "claim": "F66"
+  },
+  {
+   "path": "f66/rep12.log",
+   "bytes": 796,
+   "sha256": "0c5e94bf29fd0bc9d462152ffd2e0212ce6f270c5cd14b6cd638d6ddb1ce47be",
+   "claim": "F66"
+  },
+  {
+   "path": "f66/rep13.json",
+   "bytes": 1234,
+   "sha256": "f22d82f93d40ba4bddd9b6588a319aaf35a395520b111c83970d0dede9bb5661",
+   "claim": "F66"
+  },
+  {
+   "path": "f66/rep13.log",
+   "bytes": 796,
+   "sha256": "e5d71a4c43932d3b73a7264a3ed8449c0827e425b2700dad23a99de7a973c908",
+   "claim": "F66"
+  },
+  {
+   "path": "f66/rep14.json",
+   "bytes": 1235,
+   "sha256": "ec6850a4df6fc98c07363fd9170949364dea1373696d3a7bcf5abfb3587e344c",
+   "claim": "F66"
+  },
+  {
+   "path": "f66/rep14.log",
+   "bytes": 796,
+   "sha256": "066b52bb74aef6550d4c049e0cf20e47f81f02e4618cd619d41990f893dff7e9",
+   "claim": "F66"
+  },
+  {
+   "path": "f66/rep15.json",
+   "bytes": 1233,
+   "sha256": "96f6883b6e1e1ccac6dca7459c7470eb00c4d522616c836271e31a3d52e000a7",
+   "claim": "F66"
+  },
+  {
+   "path": "f66/rep15.log",
+   "bytes": 796,
+   "sha256": "99d35a3aaed18f392bc0e3d6be54577ef1bff7cb5ca35fcbfaca842e7edb2304",
+   "claim": "F66"
+  },
+  {
+   "path": "f66/rep16.json",
+   "bytes": 1235,
+   "sha256": "7af7fd68fd3b95a2a5a17b35e2fa9f474d50f6cf77ae4e42e56c406f85923e2d",
+   "claim": "F66"
+  },
+  {
+   "path": "f66/rep16.log",
+   "bytes": 796,
+   "sha256": "b405a237b04101fec7a3c753278383e3ebacfdc0dfd732a59a255990046ad75f",
+   "claim": "F66"
+  },
+  {
+   "path": "f66/rep17.json",
+   "bytes": 1233,
+   "sha256": "95ad407e2d5cbaafa2e74cf298e9f147a4392f922d0fb729aed0c3f282e2f4b3",
+   "claim": "F66"
+  },
+  {
+   "path": "f66/rep17.log",
+   "bytes": 796,
+   "sha256": "85643969300d34a9e29d679aabda434679bafab43d8a249c7efc3f67ce3efa5e",
+   "claim": "F66"
+  },
+  {
+   "path": "f66/rep18.json",
+   "bytes": 1237,
+   "sha256": "8d3aefec453a5e11b780964c95dbf7533b5cca2dea517da10cb1d20ecb2a792e",
+   "claim": "F66"
+  },
+  {
+   "path": "f66/rep18.log",
+   "bytes": 796,
+   "sha256": "0da5312841bf1aa224bdc9c6f808b1055fb9cb3b79cf9ae305e4dbd4f88fe62b",
+   "claim": "F66"
+  },
+  {
+   "path": "f66/rep19.json",
+   "bytes": 1233,
+   "sha256": "fc740e8367410c925a62bb54847f1df17823ab7fac66e563eadcd8e6095d4e47",
+   "claim": "F66"
+  },
+  {
+   "path": "f66/rep19.log",
+   "bytes": 796,
+   "sha256": "45561af48b1b08a6405733bf72b86ea8465b043b6b9162b54480e256b3e74e0c",
+   "claim": "F66"
+  },
+  {
+   "path": "f66/rep2.json",
+   "bytes": 1235,
+   "sha256": "d0c6529ba8b77b499ee4a104a4b9ac60da719d88e9095ede2e404a2f77bdc9df",
+   "claim": "F66"
+  },
+  {
+   "path": "f66/rep2.log",
+   "bytes": 796,
+   "sha256": "b35fc0fec7e4511353e55c310b4f2c303a359ce4099271d8463b77e27354ec2c",
+   "claim": "F66"
+  },
+  {
+   "path": "f66/rep20.json",
+   "bytes": 1230,
+   "sha256": "0ea4af8b115fb0464f6172bd52af4f80db0b44f1a0d2de07f25126c45c739cf1",
+   "claim": "F66"
+  },
+  {
+   "path": "f66/rep20.log",
+   "bytes": 796,
+   "sha256": "5c7ddc70a51900b35e4339d700d1f1b1e74bf67c43945484820db2561459cf18",
+   "claim": "F66"
+  },
+  {
+   "path": "f66/rep3.json",
+   "bytes": 1235,
+   "sha256": "8f58728f00b60522b434389abbcaadc7a54b86d34d4e87ff5bb6bf9e8c626f38",
+   "claim": "F66"
+  },
+  {
+   "path": "f66/rep3.log",
+   "bytes": 796,
+   "sha256": "ce6a4e1e4e196f4984c48da898cb26f8bf7ec271642878b16ffc71daff1757b0",
+   "claim": "F66"
+  },
+  {
+   "path": "f66/rep4.json",
+   "bytes": 1230,
+   "sha256": "a8647d59e1a90a3565349aad1d607927966de5b4fe1d4d01570fd1a286794955",
+   "claim": "F66"
+  },
+  {
+   "path": "f66/rep4.log",
+   "bytes": 796,
+   "sha256": "ca84b617d052e8f7717ef184e23a3c29308a6cfb554dbddaef0116ceeb10f1d5",
+   "claim": "F66"
+  },
+  {
+   "path": "f66/rep5.json",
+   "bytes": 1235,
+   "sha256": "b39fb1c656d2f7888967a4aedea359cfc0e941c6458cffd766ed6eff32b95025",
+   "claim": "F66"
+  },
+  {
+   "path": "f66/rep5.log",
+   "bytes": 796,
+   "sha256": "37f732b86d424f3365cca7680b4302beb92afa8abc67e47fdad1c9b26514d167",
+   "claim": "F66"
+  },
+  {
+   "path": "f66/rep6.json",
+   "bytes": 1236,
+   "sha256": "08b43be39a1d8b45dfea66d76320f6e8a68da1620e99c84d51f6d0c3c061710b",
+   "claim": "F66"
+  },
+  {
+   "path": "f66/rep6.log",
+   "bytes": 796,
+   "sha256": "2699322e8e8347e0920f0abad5968856f4cda28701ed4fafa7f48717a79ef820",
+   "claim": "F66"
+  },
+  {
+   "path": "f66/rep7.json",
+   "bytes": 1235,
+   "sha256": "0e9be5da102f23b5463bf103810f7b76c3c9a81f74fe3f3bfacab28723accf6c",
+   "claim": "F66"
+  },
+  {
+   "path": "f66/rep7.log",
+   "bytes": 796,
+   "sha256": "4ee33e1a672bbf7d0073b60e755d879e5805a261432dea43ff9cc1517d56ad65",
+   "claim": "F66"
+  },
+  {
+   "path": "f66/rep8.json",
+   "bytes": 1235,
+   "sha256": "7acd174f54c45056c380a9190f1ff1b1aa4208ccae914d60fa4f28aebd24ef3a",
+   "claim": "F66"
+  },
+  {
+   "path": "f66/rep8.log",
+   "bytes": 796,
+   "sha256": "3ada4d65cdc0860492e4f6bad9bd1ad187f9f8e837509d81cbf4ef72cbd1224b",
+   "claim": "F66"
+  },
+  {
+   "path": "f66/rep9.json",
+   "bytes": 1238,
+   "sha256": "b5025f79f7fdf1377afde38ec27dc9845c040fec7c2e2b6755ee13d8efd45c96",
+   "claim": "F66"
+  },
+  {
+   "path": "f66/rep9.log",
+   "bytes": 796,
+   "sha256": "773884d6cc75d78bd98c5e9370c712290c8ac7bdae728fcd4cc45b508aaeead7",
+   "claim": "F66"
+  },
+  {
+   "path": "recompute_extra.json",
+   "bytes": 1761,
+   "sha256": "1c92f051e158cc2180c43b46e4d0e28f8abce5c5b55a1f2991d4c1f938038893",
+   "claim": "F4/F32/R29"
+  },
+  {
+   "path": "logs/recompute_extra.log",
+   "bytes": 1623,
+   "sha256": "05105ea85944e8ce4634ce0476fd95973fb7fd75d146b3ef2bfa0e00ccf6332d"
+  },
+  {
+   "path": "compare.json",
+   "bytes": 23735,
+   "sha256": "ba68e7552c377228be38761d365b893df9c087eace2c19d44af4ada90e7fb10b"
+  },
+  {
+   "path": "f68/power-rerun.json",
+   "bytes": 129891,
+   "sha256": "909454019a74628959221c685b1bf56d8f6fa98f16adb2218538c316279e888e",
+   "claim": "F68"
+  },
+  {
+   "path": "f68/power-rerun.cfg.json",
+   "bytes": 76273,
+   "sha256": "36fcd2aded18a2aac9635351aef9f1dbc78ad5c79b36b26ffa19ae1a7c06e002",
+   "claim": "F68"
+  }
+ ]
+}

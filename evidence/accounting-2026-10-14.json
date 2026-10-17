@@ -1,0 +1,298 @@
+{
+ "study": "D'Agapeyeff",
+ "generated": "2026-10-14",
+ "agents_on_tasks": {
+  "calls": 10570,
+  "input": 422580257,
+  "cached": 390524064,
+  "output": 3678128,
+  "usd": 67.349362
+ },
+ "agents_by_model": {
+  "deepseek-ai/DeepSeek-V3.2": {
+   "calls": 8608,
+   "input": 346764355,
+   "cached": 324849600,
+   "output": 2796747,
+   "usd": 48.991071
+  },
+  "deepseek-ai/DeepSeek-V4-Pro": {
+   "calls": 1287,
+   "input": 47824135,
+   "cached": 44250368,
+   "output": 331320,
+   "usd": 9.932346
+  },
+  "moonshotai/Kimi-K2.6": {
+   "calls": 616,
+   "input": 25577536,
+   "cached": 21424096,
+   "output": 534723,
+   "usd": 8.200225
+  },
+  "Qwen/Qwen3-235B-A22B-Instruct-2507": {
+   "calls": 59,
+   "input": 2414231,
+   "cached": 0,
+   "output": 15338,
+   "usd": 0.225715
+  }
+ },
+ "agents_by_day_utc": {
+  "2026-10-09": {
+   "calls": 347,
+   "input": 9693995,
+   "cached": 9059840,
+   "output": 120001,
+   "usd": 1.433119
+  },
+  "2026-10-10": {
+   "calls": 371,
+   "input": 11195266,
+   "cached": 10112288,
+   "output": 174957,
+   "usd": 1.985391
+  },
+  "2026-10-11": {
+   "calls": 6046,
+   "input": 247347236,
+   "cached": 228301152,
+   "output": 1904880,
+   "usd": 39.834486
+  },
+  "2026-10-12": {
+   "calls": 1681,
+   "input": 75564174,
+   "cached": 70095744,
+   "output": 681216,
+   "usd": 11.359559
+  },
+  "2026-10-13": {
+   "calls": 1096,
+   "input": 49225788,
+   "cached": 45644448,
+   "output": 481915,
+   "usd": 7.838168
+  },
+  "2026-10-14": {
+   "calls": 1029,
+   "input": 29553798,
+   "cached": 27310592,
+   "output": 315159,
+   "usd": 4.898646
+  }
+ },
+ "agents_by_agent": {
+  "kahn": {
+   "calls": 1085,
+   "input": 36516185,
+   "cached": 33898304,
+   "output": 227583,
+   "usd": 5.196354
+  },
+  "navigator": {
+   "calls": 515,
+   "input": 17030515,
+   "cached": 15651072,
+   "output": 104828,
+   "usd": 2.433123
+  },
+  "friedman": {
+   "calls": 1195,
+   "input": 51549095,
+   "cached": 47905472,
+   "output": 530418,
+   "usd": 7.310132
+  },
+  "rejewski": {
+   "calls": 1038,
+   "input": 45028646,
+   "cached": 42027008,
+   "output": 432362,
+   "usd": 6.404198
+  },
+  "welchman": {
+   "calls": 1089,
+   "input": 47023364,
+   "cached": 43877056,
+   "output": 324375,
+   "usd": 6.601888
+  },
+  "pegasus": {
+   "calls": 512,
+   "input": 12977030,
+   "cached": 11422464,
+   "output": 117558,
+   "usd": 3.468823
+  },
+  "librarian": {
+   "calls": 70,
+   "input": 1351298,
+   "cached": 1245760,
+   "output": 15148,
+   "usd": 0.195145
+  },
+  "turing": {
+   "calls": 593,
+   "input": 26092063,
+   "cached": 21246912,
+   "output": 501142,
+   "usd": 8.321623
+  },
+  "painvin": {
+   "calls": 740,
+   "input": 30088472,
+   "cached": 28200064,
+   "output": 166394,
+   "usd": 4.206682
+  },
+  "ventris": {
+   "calls": 726,
+   "input": 29072533,
+   "cached": 27187776,
+   "output": 205763,
+   "usd": 4.082199
+  },
+  "dantzig": {
+   "calls": 56,
+   "input": 1787142,
+   "cached": 1581248,
+   "output": 10874,
+   "usd": 0.263227
+  },
+  "bench": {
+   "calls": 31,
+   "input": 741356,
+   "cached": 654080,
+   "output": 14069,
+   "usd": 0.212809
+  },
+  "deming": {
+   "calls": 32,
+   "input": 923201,
+   "cached": 833472,
+   "output": 7095,
+   "usd": 0.13438
+  },
+  "tally": {
+   "calls": 45,
+   "input": 1147134,
+   "cached": 1066464,
+   "output": 34903,
+   "usd": 0.342631
+  },
+  "fisher": {
+   "calls": 353,
+   "input": 17031505,
+   "cached": 16061184,
+   "output": 86013,
+   "usd": 3.091176
+  },
+  "skeptic": {
+   "calls": 234,
+   "input": 11475982,
+   "cached": 10955520,
+   "output": 80907,
+   "usd": 1.982507
+  },
+  "coach": {
+   "calls": 150,
+   "input": 4035970,
+   "cached": 3889728,
+   "output": 19447,
+   "usd": 0.551081
+  },
+  "kasiski": {
+   "calls": 955,
+   "input": 35667203,
+   "cached": 33213440,
+   "output": 393206,
+   "usd": 5.075475
+  },
+  "vector": {
+   "calls": 11,
+   "input": 206133,
+   "cached": 147776,
+   "output": 10029,
+   "usd": 0.101037
+  },
+  "knox": {
+   "calls": 331,
+   "input": 15314059,
+   "cached": 14478656,
+   "output": 64563,
+   "usd": 2.108694
+  },
+  "batey": {
+   "calls": 483,
+   "input": 23218852,
+   "cached": 21562624,
+   "output": 243288,
+   "usd": 3.277805
+  },
+  "mercator": {
+   "calls": 252,
+   "input": 12271487,
+   "cached": 11563648,
+   "output": 56137,
+   "usd": 1.689197
+  },
+  "scribe": {
+   "calls": 53,
+   "input": 1568383,
+   "cached": 1464512,
+   "output": 23664,
+   "usd": 0.226383
+  },
+  "strunk": {
+   "calls": 4,
+   "input": 69600,
+   "cached": 48576,
+   "output": 5970,
+   "usd": 0.01405
+  },
+  "juran": {
+   "calls": 17,
+   "input": 393049,
+   "cached": 341248,
+   "output": 2392,
+   "usd": 0.058739
+  }
+ },
+ "planning_chat": {
+  "calls": 30,
+  "input": 583782,
+  "cached": 480544,
+  "output": 8599,
+  "usd": 0.164212
+ },
+ "task_count": 209,
+ "thread_count": 2,
+ "developer_claude": {
+  "api_calls": 1234,
+  "models": {
+   "claude-opus-5-5": 1231,
+   "<synthetic>": 3
+  },
+  "input_tokens": 2480,
+  "cache_read_input_tokens": 599179625,
+  "cache_creation_input_tokens": 8363055,
+  "output_tokens": 1521007,
+  "billing": "Claude Pro subscription, extra usage disabled (no per-token charge)"
+ },
+ "lab": {
+  "jobs": 89,
+  "gpu_jobs": 54,
+  "gpu_hours": 72.3,
+  "cpu_job_hours": 27.5,
+  "states": {
+   "cancelled": 8,
+   "failed": 13,
+   "succeeded": 55,
+   "interrupted": 8,
+   "timeout": 5
+  },
+  "hardware": "laptop, NVIDIA GeForce RTX 5060 (8 GB)"
+ },
+ "from": "2026-10-09 (UTC)"
+}

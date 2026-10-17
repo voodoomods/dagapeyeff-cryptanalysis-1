@@ -1,0 +1,95 @@
+--- a/README.md
++++ b/README.md
+@@ -30,7 +30,9 @@
+ - **Four-square and two-square with random keys are excluded** — they spread English over 18–25 distinct symbols; the
+   message uses 13 (R35).
+-- **A purpose-built four-square can fit the observations** — a key designed around the message reached 13 flat
+-  symbols with little detectable order in 13 of 100 passages (O33). A feasibility result, not evidence that
+-  D'Agapeyeff used it; it has not been searched.
++- **A purpose-built four-square can match the cipher's symbol usage and flatness** — a key optimized for each
++  passage reached 13 symbols with the specified frequency flatness in 13 of 100 passages; 10 of those 13 were not
++  flagged by the tested family-wise order statistic at the 5% threshold, which is not evidence that they contain no
++  order (O33). A feasibility demonstration with keys optimized using the plaintext, not evidence that D'Agapeyeff
++  used four-square; it has not been searched.
+ 
+ With the methods tested, the grille hypothesis cannot be decided from the cipher's own text. For the tested
+--- a/docs/FINDINGS-ADDENDUM.md
++++ b/docs/FINDINGS-ADDENDUM.md
+@@ -15,5 +15,6 @@
+   over 18-25 distinct symbols in 182 (0 of 10,000 practice ciphers at 13 or fewer); the message uses 13. Scripts and
+   results: `lab/cipher/round11/micro_digraph_cells.py`, `micro_digraph_cells_4x5.py` and their `.json` results.
+-  A key built on purpose around the message is NOT excluded: it reaches 13 flat symbols with little order (O33,
++  A key built on purpose around the message is NOT excluded: it reached 13 flat symbols in 13 of 100 passages, 10 of
++  them not flagged by the tested order statistic at the 5% level (O33,
+   `lab/cipher/round12/`). That construction has not been searched.
+ 
+--- a/report/front.md
++++ b/report/front.md
+@@ -38,7 +38,7 @@
+ - **A second construction can also fit.** Four-square and two-square with *random* keys spread English over 18 to 25
+   symbols and are excluded (0 of 10,000 practice ciphers reach the cipher's 13). But a four-square whose key is built
+-  on purpose around the message reached 13 symbols in 13 of 100 passages, as flat as the cipher's and mostly without
+-  detectable order. That shows such a construction is possible, not that D'Agapeyeff used it; it has not been
+-  searched.
++  on purpose around the message reached 13 symbols, as flat as the cipher's, in 13 of 100 passages; 10 of those 13
++  were not flagged by our family-wise order test at the 5% level, which does not show that they contain no order.
++  That shows such a construction is possible, not that D'Agapeyeff used it; it has not been searched.
+ 
+ **What it means.** Under the grille-plus-polyphonic hypothesis and the n-gram scores we tested, 182 symbols are not
+--- a/report/body_final.md
++++ b/report/body_final.md
+@@ -74,5 +74,6 @@
+ The hypothesis tested in depth in this report is therefore **a 14 × 14 turning grille over a balanced polyphonic
+ table**. It is one construction consistent with the observations, not the only one: a four-square whose key is built
+-on purpose around the message is also consistent with them (Section 7) [O33], and so is a cipher with no message at
++on purpose around the message is also consistent with the frequency observations, and in some passages was not
++flagged by our order test (Section 7) [O33], and so is a cipher with no message at
+ all [F66]. The message is written out in letters, each letter is replaced by the symbol of its group, the symbols are
+ placed through the holes of a square card turned a quarter at a time (Figure 3), and column 14 is filled with dummies.
+@@ -308,11 +309,16 @@
+ hill-climb doing exactly that — which, like the encipherer, uses the plaintext — reached 13 symbols in 13 of 100
+ passages of 182 letters (95% interval 8–21%) and 14 or 15 in most of the rest; all 13 were as flat as the cipher's
+-counts (chi-square p from 0.85 to 1.0, against the cipher's 0.73). Packing the message into few symbols also removes
+-most of the dependence between the two symbols of each pair: an order test that flags 52 of 100 four-squares with
+-random keys (42–62%) flags only 12 of 100 built this way (7–20%), and 3 of the 13 that match the cipher's usage; the
+-real message is not flagged (family-wise p = 0.999) [O33].
++counts (chi-square p from 0.85 to 1.0, against the cipher's 0.73). We then applied an order test — three
++mutual-information statistics (between the two symbols of each pair, in both phases, and the largest at lags 1 to
++26), each against 2,000 shuffles of the same symbols, with a family-wise min-p correction, at the 5% level.
++Purpose-built keys were flagged less often than random keys: 12 of 100 (7–20%) against 52 of 100 (42–62%). Of the 13
++passages that match the cipher's usage and flatness, 3 were flagged (passages 34, 77 and 95), leaving 10 of 100 that
++match the usage and flatness and were not flagged; the real message is not flagged (family-wise p = 0.999) [O33].
++Not being flagged is not evidence that no order is present: the test examines three statistics only, and on the
++uncorrected pair statistics 7 of the 13 show dependence at p < 0.05.
+ 
+ This is a feasibility result. It shows that an intentionally constructed four-square *can* reproduce the cipher's
+-13 symbols, its flatness and its lack of detectable order — the same observations that led to the grille hypothesis.
++13 symbols and its flatness (13 of 100 passages) and, in 10 of 100, also go undetected by the order test we applied —
++the same kinds of observation that led to the grille hypothesis.
+ It does not show that D'Agapeyeff used a four-square. The construction has not been searched: an ordinary
+ four-square search cannot climb to the key [R32], and a key built this way has a structure that a new search would
+@@ -371,5 +377,5 @@
+ | The book teaches no table that fits the hypothesis (F75) | Probably new; narrow. |
+ | Four-square and two-square with random keys excluded by symbol usage (R35) | Probably new — not in Hendrick or Gariazzo; not checked against the wider literature. |
+-| A purpose-built four-square can reproduce the cipher's symbol usage, flatness and lack of order (O33) | **New** as far as checked — a feasibility result and an open lead. |
++| A purpose-built four-square can reproduce the cipher's symbol usage and flatness (13 of 100 passages; 10 of 100 also not flagged by the tested order statistic) (O33) | **New** as far as checked — a feasibility result and an open lead. |
+ 
+ "As far as checked" means not found in Hendrick (2026) or Gariazzo (2026), read in full, nor in the abstracts returned
+--- a/report/codes.md
++++ b/report/codes.md
+@@ -38,5 +38,5 @@
+ | <span id="code-O23"></span>**O23** | Hendrick's open problems: the turning grille (no search finds its key) and keyed four-square and two-square remain open. | — |
+ | <span id="code-O32"></span>**O32** | Under a turning grille, neighboring cells are often consecutive letters — a key signal that does not need the grille, but a weak one (4 of 6 practice ciphers improved). | — |
+-| <span id="code-O33"></span>**O33** | A four-square whose key is built on purpose around the message fits the cipher's 13 symbols (13 of 100 passages), its flatness and, mostly, its lack of order; not yet searched. | `lab/cipher/round12/fsq-full.json`, `fsq-order.json` |
++| <span id="code-O33"></span>**O33** | A four-square whose key is built on purpose around the message matches the cipher's 13 symbols and flatness in 13 of 100 passages; 10 of those 13 were not flagged by the tested family-wise order statistic at the 5% level; not yet searched. | `lab/cipher/round12/fsq-full.json`, `fsq-order.json` |
+ | <span id="code-R21"></span>**R21** | One columnar transposition of width 14 plus one substitution, with the 04 removed: practice ciphers solved, the real cipher scores below its shuffled control. | — |
+ | <span id="code-R26"></span>**R26** | No dictionary keyword square (148,398 tested) fits the cell counts better than shuffled labels. | — |
+--- a/report/back.md
++++ b/report/back.md
+@@ -207,5 +207,5 @@
+ | Grille recovered with a polyphonic table given (F73, corrected in F78); exact-table requirement (F74); identifiability curve (F76); table not recoverable (I47) | Developer — engines and GPU benchmarks | Claude Opus 5.5 |
+ | The decision to test the review's points before publishing | Author — Nicolas Houghtaling | — |
+-| Robustness checks (F77); random-key four-square excluded (R35); purpose-built four-square fits the clues (O33) | Developer — checks prompted by the external reviews | Claude Opus 5.5 |
++| Robustness checks (F77); random-key four-square excluded (R35); purpose-built four-square matches the symbol usage and flatness (O33) | Developer — checks prompted by the external reviews | Claude Opus 5.5 |
+ | Flatness (F31), no order (F32), polyphonic tables need a transposition (R29), procedure simulation (O16), the book's tables (F75, from Kahn's book searches), novelty checks (C9, C12, C13) | Developer — analyses and literature checks | Claude Opus 5.5 |
+ | Natural tables are never this flat (F65) | Rejewski and Ventris; recorded by Turing | DeepSeek-V3.2 (Turing: Kimi-K2.6) |
