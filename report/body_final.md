@@ -329,8 +329,8 @@ natural to read that as a shortage of computing power. What we can say is narrow
   plaintext (the English word sample), not every possible key or plaintext. In these systems each cipher
   symbol is set by the row of one plaintext letter and the column of another, so English spreads over nearly every
   symbol: 22 to 25 distinct symbols in 182 with 5 × 5 squares (20 to 25 even when the message is restricted to its 13
-  commonest letters) and 18 to 20 with 4 × 5 squares — none used 13 or fewer. The cipher's message uses exactly
-  13.
+  commonest letters) and 18 to 20 with 4 × 5 squares — none used 13 or fewer.
+  The cipher's message uses exactly 13.
 
 **A second construction that fits.** The four-square exclusion holds only for keys chosen at random. An encipherer who
 knows the message can arrange the plaintext squares so that its frequent letters share a few rows and columns. A
