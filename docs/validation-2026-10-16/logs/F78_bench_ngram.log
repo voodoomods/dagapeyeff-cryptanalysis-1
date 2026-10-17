@@ -1,0 +1,19 @@
+{"plant": 0, "n": 4, "orbits_up_to_rotation": 36, "found_score": -4.0445, "true_score": -4.0587, "model_fails": true, "seconds": 81.9}
+{"plant": 0, "n": 5, "orbits_up_to_rotation": 48, "found_score": -4.9912, "true_score": -4.9936, "model_fails": false, "seconds": 82.9}
+{"plant": 0, "n": 6, "orbits_up_to_rotation": 49, "found_score": -5.9321, "true_score": -5.9321, "model_fails": false, "seconds": 81.5}
+{"plant": 1, "n": 4, "orbits_up_to_rotation": 18, "found_score": -4.0133, "true_score": -4.0048, "model_fails": false, "seconds": 81.6}
+{"plant": 1, "n": 5, "orbits_up_to_rotation": 49, "found_score": -4.927, "true_score": -4.9383, "model_fails": false, "seconds": 84.8}
+{"plant": 1, "n": 6, "orbits_up_to_rotation": 49, "found_score": -5.7891, "true_score": -5.7978, "model_fails": false, "seconds": 84.1}
+{"plant": 2, "n": 4, "orbits_up_to_rotation": 23, "found_score": -3.9774, "true_score": -4.0516, "model_fails": true, "seconds": 88.1}
+{"plant": 2, "n": 5, "orbits_up_to_rotation": 49, "found_score": -4.9716, "true_score": -4.9536, "model_fails": false, "seconds": 94.1}
+{"plant": 2, "n": 6, "orbits_up_to_rotation": 49, "found_score": -5.7572, "true_score": -5.7666, "model_fails": false, "seconds": 101.2}
+{"plant": 3, "n": 4, "orbits_up_to_rotation": 48, "found_score": -3.8872, "true_score": -3.8892, "model_fails": false, "seconds": 86.0}
+{"plant": 3, "n": 5, "orbits_up_to_rotation": 48, "found_score": -4.7555, "true_score": -4.7596, "model_fails": false, "seconds": 92.1}
+{"plant": 3, "n": 6, "orbits_up_to_rotation": 49, "found_score": -5.5849, "true_score": -5.5849, "model_fails": false, "seconds": 84.7}
+{"plant": 4, "n": 4, "orbits_up_to_rotation": 49, "found_score": -4.0389, "true_score": -4.0213, "model_fails": false, "seconds": 63.2}
+{"plant": 4, "n": 5, "orbits_up_to_rotation": 49, "found_score": -4.9549, "true_score": -4.962, "model_fails": false, "seconds": 76.5}
+{"plant": 4, "n": 6, "orbits_up_to_rotation": 48, "found_score": -5.7691, "true_score": -5.8049, "model_fails": false, "seconds": 70.1}
+{"plant": 5, "n": 4, "orbits_up_to_rotation": 31, "found_score": -3.9979, "true_score": -3.9872, "model_fails": false, "seconds": 66.7}
+{"plant": 5, "n": 5, "orbits_up_to_rotation": 47, "found_score": -4.909, "true_score": -4.9121, "model_fails": false, "seconds": 65.1}
+{"plant": 5, "n": 6, "orbits_up_to_rotation": 49, "found_score": -5.7811, "true_score": -5.7811, "model_fails": false, "seconds": 80.6}
+{"steps": 80000, "chains": 512, "solved_n4": 2, "model_fails_n4": 2, "solved_n5": 6, "model_fails_n5": 0, "solved_n6": 6, "model_fails_n6": 0}

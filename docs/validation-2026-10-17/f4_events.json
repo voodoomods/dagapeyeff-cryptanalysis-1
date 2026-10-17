@@ -1,0 +1,50 @@
+{
+ "positions": [
+  41,
+  55,
+  97,
+  111,
+  125,
+  139,
+  167,
+  195
+ ],
+ "null": "uniform random 8-subset of 196 positions (symbol counts fixed)",
+ "A_report_statistic": {
+  "definition": "max over p=2..20 of (largest column share - 1/p)",
+  "real_value": 0.9286,
+  "exact_upper_bound": 1.8183324943854527e-09,
+  "per_period_terms_14_20": {
+   "14": 8.99506215408865e-10,
+   "15": 4.497531077044325e-10,
+   "16": 2.3723240845948085e-10,
+   "17": 1.235585460726463e-10,
+   "18": 5.840949450706915e-11,
+   "19": 3.36977852925399e-11,
+   "20": 1.617493694041915e-11
+  },
+  "monte_carlo": {
+   "placements": 1000000,
+   "reaching_real": 0,
+   "seed": 20261017
+  },
+  "original_run": "0 of 20,000 (random.Random(t), t = 0..19,999) -> (0+1)/(20,000+1) = 5.0e-5; validation/original/f4_original.py"
+ },
+ "B_any_period_one_column": {
+  "definition": "all eight on one residue for at least one p in 2..20",
+  "real_meets_it_at": [
+   2,
+   7,
+   14
+  ],
+  "exact_p2_term": 0.006733842325085577,
+  "exact_sum_of_terms_2_20": 0.007120572370454804,
+  "monte_carlo": {
+   "placements": 1000000,
+   "hits": 7061,
+   "rate": 0.007061,
+   "hits_with_p2": 6739,
+   "share_from_p2": 0.9544
+  }
+ }
+}

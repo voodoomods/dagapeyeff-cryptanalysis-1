@@ -1,0 +1,21 @@
+{
+ "real_distinct_cells": 13,
+ "four_square_4x5_20_letters": {
+  "distinct_cells_min": 18,
+  "distinct_cells_median": 20.0,
+  "plants_with_13_or_fewer": 0,
+  "plants": 2000
+ },
+ "four_square_4x5_text_13_letters": {
+  "distinct_cells_min": 18,
+  "distinct_cells_median": 20.0,
+  "plants_with_13_or_fewer": 0,
+  "plants": 2000
+ },
+ "four_square_5x5_text_13_letters": {
+  "distinct_cells_min": 20,
+  "distinct_cells_median": 25.0,
+  "plants_with_13_or_fewer": 0,
+  "plants": 2000
+ }
+}

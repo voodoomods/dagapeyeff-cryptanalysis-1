@@ -1,0 +1,79 @@
+/* D'Agapeyeff report — print stylesheet (Letter, Chromium). Ink #0b0b0b / #52514e on white; accent blue #2a78d6. */
+:root { --ink: #0b0b0b; --ink2: #52514e; --muted: #8a8984; --rule: #dcdbd6; --accent: #2a78d6; --accent2: #eb6834;
+        --tint: #f4f7fc; --warm: #fdf0ea; }
+@page { size: Letter; }
+html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+body { margin: 0; color: var(--ink); background: #fff;
+       font-family: "Liberation Serif", Georgia, serif; font-size: 10.6pt; line-height: 1.5; }
+h1, h2, h3, h4, .cover-kicker, .cover-meta, figcaption, table, .toc { font-family: "Liberation Sans", Arial, sans-serif; }
+
+/* cover */
+.cover { height: 9.1in; position: relative; page-break-after: always; display: flex; flex-direction: column; }
+.cover-band { height: 6px; width: 100%; background: linear-gradient(90deg, var(--accent) 0 70%, var(--accent2) 70% 100%); margin-bottom: 1.1in; }
+.cover-kicker { font-size: 8.5pt; letter-spacing: .18em; text-transform: uppercase; color: var(--ink2); margin-bottom: 14pt; }
+.cover h1 { font-size: 30pt; line-height: 1.1; margin: 0 0 12pt; letter-spacing: -.01em; }
+.cover-sub { font-size: 14pt; line-height: 1.35; color: var(--ink2); margin: 0 0 .5in; max-width: 5.6in; }
+.cover-grid { display: grid; grid-template-columns: repeat(14, 1fr); gap: 3px; width: 4.2in; margin-bottom: auto; }
+.cover-grid i { display: block; aspect-ratio: 1; background: var(--tint); border-radius: 2px; }
+.cover-grid i:nth-child(14n) { background: var(--warm); outline: 1px solid var(--accent2); }
+.cover-grid i:nth-child(7n+3) { background: #dbe7f8; }
+.cover-meta { display: grid; grid-template-columns: 1fr 1fr; gap: 12pt 24pt; border-top: 1px solid var(--rule); padding-top: 14pt; font-size: 10pt; }
+.cover-meta span { display: block; font-size: 7.5pt; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); margin-bottom: 2pt; }
+
+/* contents */
+.toc { page-break-after: always; }
+.toc-title { font-size: 16pt; margin: 0 0 14pt; border: none; padding: 0; }
+.toc ol { list-style: none; padding: 0; margin: 0; font-size: 10.5pt; }
+.toc li { padding: 6pt 0; border-bottom: 1px solid var(--rule); }
+.toc a { color: var(--ink); text-decoration: none; }
+
+/* body */
+h2 { font-size: 15pt; margin: 22pt 0 8pt; padding-top: 6pt; border-top: 2px solid var(--ink); page-break-after: avoid; break-after: avoid; }
+main > h2:first-child { margin-top: 0; }
+h3 { font-size: 11.5pt; margin: 16pt 0 6pt; color: var(--ink); page-break-after: avoid; break-after: avoid; }
+h4 { font-size: 10.5pt; margin: 12pt 0 4pt; color: var(--ink2); }
+p { margin: 0 0 8pt; orphans: 3; widows: 3; text-align: left; hyphens: auto; }
+ul, ol { margin: 0 0 8pt; padding-left: 18pt; }
+li { margin-bottom: 3pt; }
+strong { font-weight: 700; }
+a { color: var(--accent); text-decoration: none; }
+code { font-family: "Liberation Mono", monospace; font-size: 8.8pt; background: #f3f2ee; padding: 0 2px; border-radius: 2px; }
+pre { font-size: 8.6pt; background: #f6f5f1; border-left: 3px solid var(--rule); padding: 8pt 10pt; white-space: pre-wrap; page-break-inside: avoid; }
+blockquote { margin: 10pt 0; padding: 8pt 12pt; background: var(--tint); border-left: 3px solid var(--accent); color: var(--ink); }
+
+/* tables */
+table { border-collapse: collapse; width: 100%; font-size: 8.6pt; margin: 6pt 0 12pt; page-break-inside: auto; }
+thead { display: table-header-group; }
+th { text-align: left; font-weight: 700; color: var(--ink); border-bottom: 1.5px solid var(--ink); padding: 4pt 6pt; }
+td { border-bottom: 1px solid var(--rule); padding: 4pt 6pt; vertical-align: top; }
+tr { page-break-inside: avoid; }
+
+/* figures */
+figure { margin: 12pt 0 16pt; page-break-inside: avoid; break-inside: avoid; }
+figure .svg svg { width: 100%; height: auto; max-height: 6.2in; display: block; }
+figure#fig1 .svg svg { max-width: 5.2in; margin: 0 auto; }
+figcaption { font-size: 8.6pt; line-height: 1.4; color: var(--ink2); margin-top: 6pt; padding-top: 5pt; border-top: 1px solid var(--rule); }
+figcaption b { color: var(--ink); }
+
+/* charts: matplotlib writes live SVG text; give it the installed sans */
+figure svg text { font-family: "Liberation Sans", Arial, sans-serif !important; }
+.cover h1, .cover-sub { hyphens: none; }
+
+/* layout fixes after page review */
+figure#fig4 .svg svg, figure#fig5 .svg svg { max-width: 4.6in; margin: 0 auto; }
+figure#fig2 .svg svg, figure#fig6 .svg svg { max-width: 6.4in; margin: 0 auto; }
+table { page-break-inside: avoid; break-inside: avoid; }
+.cover-rights { font-family: "Liberation Sans", Arial, sans-serif; font-size: 7.5pt; color: var(--muted); margin-top: 12pt; line-height: 1.4; }
+.evidence table { page-break-inside: auto; break-inside: auto; }
+/* long sections: tables may break between rows (rows never split; header repeats) */
+table { page-break-inside: auto !important; break-inside: auto !important; }
+tr, td, th { page-break-inside: avoid; break-inside: avoid; }
+h2, h3 { break-after: avoid; }
+td, th { white-space: normal; overflow-wrap: break-word; }
+/* the team: one compact entry per agent */
+.team dl { margin: 6pt 0 10pt; }
+.team dt { font-family: "Liberation Sans", Arial, sans-serif; font-size: 10pt; margin-top: 9pt; break-after: avoid; }
+.team dd { margin: 1pt 0 0 0; padding-left: 10pt; border-left: 2px solid var(--rule); break-inside: avoid; }
+.team dd > p:first-child { font-family: "Liberation Sans", Arial, sans-serif; font-size: 8.4pt; color: var(--ink2); margin-bottom: 2pt; }
+.team dd > p { margin-bottom: 0; }
+a.code { color: var(--accent); text-decoration: none; border-bottom: 1px dotted var(--accent); }

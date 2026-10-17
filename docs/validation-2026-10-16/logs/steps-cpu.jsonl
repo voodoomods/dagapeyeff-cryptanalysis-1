@@ -1,0 +1,5 @@
+{"step": "R35_digraph_5x5", "exit": 0, "seconds": 6, "command": "python round11/micro_digraph_cells.py 2000"}
+{"step": "R35_digraph_4x5", "exit": 0, "seconds": 4, "command": "python round11/micro_digraph_cells_4x5.py"}
+{"step": "O34_fsq_search", "exit": 0, "seconds": 2757, "command": "python round12/review_checks.py fsq 100 10 -val 50000"}
+{"step": "O34_fsq_order", "exit": 0, "seconds": 351, "command": "python round12/fsq_order.py 2000"}
+done cpu

@@ -1,0 +1,34 @@
+cff-version: 1.2.0
+message: "If you refer to this work, please cite it as below."
+title: "dagapeyeff-cryptanalysis-1: code, data and evidence for The D'Agapeyeff Cipher (1939)"
+authors:
+  - family-names: Houghtaling
+    given-names: Nicolas
+    orcid: "https://orcid.org/0009-0001-3192-544X"
+    affiliation: "VoodooMods LLC"
+date-released: "2026-10-17"
+doi: "10.5281/zenodo.23306263"
+repository-code: "https://github.com/voodoomods/dagapeyeff-cryptanalysis-1"
+url: "https://github.com/voodoomods/dagapeyeff-cryptanalysis-1"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.23306263"
+    description: "The research preprint and its supporting material"
+license:
+  - CC-BY-4.0
+  - Apache-2.0
+copyright: "Copyright (c) 2026 VoodooMods LLC. Report and data CC BY 4.0; code Apache-2.0."
+preferred-citation:
+  type: report
+  status: preprint
+  title: "The D'Agapeyeff Cipher (1939): grille recovery and polyphonic-table identifiability under n-gram scoring"
+  authors:
+    - family-names: Houghtaling
+      given-names: Nicolas
+      orcid: "https://orcid.org/0009-0001-3192-544X"
+      affiliation: "VoodooMods LLC"
+  institution:
+    name: "VoodooMods LLC"
+  year: 2026
+  month: 10
+  doi: "10.5281/zenodo.23306263"
