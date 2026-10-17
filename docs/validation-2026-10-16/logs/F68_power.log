@@ -1,0 +1,4 @@
+03:46:37 power: budget 60s → 0/3 recovered
+04:01:37 power: budget 300s → 0/3 recovered
+05:01:37 power: budget 1200s → 0/3 recovered
+done /lab/cipher/compound/results/power-rerun.json UNTESTABLE AT THIS LENGTH (at these budgets) — no budget tried recovers a planted answer reliably; a negative on the real text would mean nothing. Spend compute elsewhere, or narrow the hypothesis.

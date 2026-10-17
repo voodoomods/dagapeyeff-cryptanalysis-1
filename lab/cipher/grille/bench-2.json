@@ -1,0 +1,62 @@
+[
+ {
+  "case": "key given",
+  "seconds": 120,
+  "plant": 0,
+  "orbits_up_to_rotation": 49,
+  "rotation": 1,
+  "char_agreement": 1.0,
+  "text": "INGPLANTSABLESLOPEANDTOWHOCAUSEHEAFEELPUBLICSOONANTIDRIVINGM",
+  "truth": "INGPLANTSABLESLOPEANDTOWHOCAUSEHEAFEELPUBLICSOONANTIDRIVINGM"
+ },
+ {
+  "case": "key given",
+  "seconds": 120,
+  "plant": 1,
+  "orbits_up_to_rotation": 49,
+  "rotation": 2,
+  "char_agreement": 1.0,
+  "text": "ITORYOUTOTHISHASNTTHISTHINGSNONFBITESTRECENTITSARESTONEHAVEA",
+  "truth": "ITORYOUTOTHISHASNTTHISTHINGSNONFBITESTRECENTITSARESTONEHAVEA"
+ },
+ {
+  "case": "key given",
+  "seconds": 120,
+  "plant": 2,
+  "orbits_up_to_rotation": 49,
+  "rotation": 3,
+  "char_agreement": 1.0,
+  "text": "THEINBEFOREOURTHEMSELVESTOANDBEEFTHISGODLYANDGOINGEARLIERONL",
+  "truth": "THEINBEFOREOURTHEMSELVESTOANDBEEFTHISGODLYANDGOINGEARLIERONL"
+ },
+ {
+  "case": "key unknown",
+  "seconds": 600,
+  "plant": 0,
+  "orbits_up_to_rotation": 14,
+  "rotation": 3,
+  "char_agreement": 0.099,
+  "text": "NALIAROLTALICIALLAMYOFSTHATSAFEITTOFIFANSALASANDAINDIALATIAT",
+  "truth": "INGPLANTSABLESLOPEANDTOWHOCAUSEHEAFEELPUBLICSOONANTIDRIVINGM"
+ },
+ {
+  "case": "key unknown",
+  "seconds": 600,
+  "plant": 1,
+  "orbits_up_to_rotation": 19,
+  "rotation": 0,
+  "char_agreement": 0.088,
+  "text": "AANARTEASSINTTHAISESTHEASINGISKNOWATEAINTATIAGETTISHEINGAMEE",
+  "truth": "ITORYOUTOTHISHASNTTHISTHINGSNONFBITESTRECENTITSARESTONEHAVEA"
+ },
+ {
+  "case": "key unknown",
+  "seconds": 600,
+  "plant": 2,
+  "orbits_up_to_rotation": 15,
+  "rotation": 3,
+  "char_agreement": 0.071,
+  "text": "EATESBEITIALAASDATARAYAGRAMANTHEACCESALEITHERANAAREONERATAIN",
+  "truth": "THEINBEFOREOURTHEMSELVESTOANDBEEFTHISGODLYANDGOINGEARLIERONL"
+ }
+]

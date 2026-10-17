@@ -1,0 +1,32 @@
+# Text is stored and checked out with LF line endings, so a fresh clone matches MANIFEST.sha256 byte for byte.
+* text=auto eol=lf
+*.md text eol=lf
+*.py text eol=lf
+*.txt text eol=lf
+*.json text eol=lf
+*.cff text eol=lf
+*.csv text eol=lf
+*.css text eol=lf
+*.svg text eol=lf
+*.sh text eol=lf
+*.patch text eol=lf
+*.sha256 text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.toml text eol=lf
+COPYRIGHT text eol=lf
+LICENSE text eol=lf
+NOTICE text eol=lf
+*.pdf binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.npy binary
+*.zip binary
+# Archived evidence kept byte for byte (CRLF as executed / as distributed by Project Gutenberg); fingerprints are
+# cited in evidence/APPENDIX-C.md and lab/cipher/lm/CORPUS.md. Do not normalize.
+docs/FINDINGS.md -text
+lab/cipher/grille/grille_engine.py -text
+lab/cipher/grille/digraph_engine.py -text
+lab/cipher/round11/identifiability.py -text
+lab/cipher/lm/corpus/*.txt -text

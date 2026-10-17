@@ -1,0 +1,129 @@
+{
+ "toy": {
+  "P(01)": 0.666667,
+  "P(10)": 0.333333,
+  "P(unseen 00)": 0.1,
+  "expected": {
+   "P(01)": 0.666667,
+   "P(10)": 0.333333,
+   "P(unseen 00)": 0.1
+  },
+  "score_stream_0101": -0.276435,
+  "expected_score": -0.276435,
+  "ok": true
+ },
+ "agreement": {
+  "pairs": 50,
+  "max_abs_diff": 6.244987673653668e-07,
+  "mean_abs_diff": 2.119294130942251e-07
+ },
+ "truth_start": [
+  {
+   "plant": 0,
+   "L": 182,
+   "wrong_raw": 0,
+   "kept": true,
+   "margin": 0.0,
+   "published_wrong_found": 0,
+   "published_exact": true,
+   "same_outcome": true
+  },
+  {
+   "plant": 1,
+   "L": 182,
+   "wrong_raw": 3,
+   "kept": false,
+   "margin": 0.0029465,
+   "published_wrong_found": 3,
+   "published_exact": false,
+   "same_outcome": true
+  },
+  {
+   "plant": 2,
+   "L": 182,
+   "wrong_raw": 2,
+   "kept": false,
+   "margin": 0.0001589,
+   "published_wrong_found": 2,
+   "published_exact": false,
+   "same_outcome": true
+  },
+  {
+   "plant": 3,
+   "L": 182,
+   "wrong_raw": 2,
+   "kept": false,
+   "margin": 0.0001895,
+   "published_wrong_found": 2,
+   "published_exact": false,
+   "same_outcome": true
+  },
+  {
+   "plant": 4,
+   "L": 182,
+   "wrong_raw": 2,
+   "kept": false,
+   "margin": 0.0228283,
+   "published_wrong_found": 2,
+   "published_exact": false,
+   "same_outcome": true
+  },
+  {
+   "plant": 5,
+   "L": 182,
+   "wrong_raw": 3,
+   "kept": false,
+   "margin": 0.0026008,
+   "published_wrong_found": 3,
+   "published_exact": false,
+   "same_outcome": true
+  },
+  {
+   "plant": 6,
+   "L": 182,
+   "wrong_raw": 4,
+   "kept": false,
+   "margin": 0.014345,
+   "published_wrong_found": 4,
+   "published_exact": false,
+   "same_outcome": true
+  },
+  {
+   "plant": 7,
+   "L": 182,
+   "wrong_raw": 2,
+   "kept": false,
+   "margin": 0.0010753,
+   "published_wrong_found": 2,
+   "published_exact": false,
+   "same_outcome": true
+  },
+  {
+   "plant": 8,
+   "L": 182,
+   "wrong_raw": 7,
+   "kept": false,
+   "margin": 0.0202802,
+   "published_wrong_found": 8,
+   "published_exact": false,
+   "same_outcome": true
+  },
+  {
+   "plant": 9,
+   "L": 182,
+   "wrong_raw": 5,
+   "kept": false,
+   "margin": 0.0079041,
+   "published_wrong_found": 5,
+   "published_exact": false,
+   "same_outcome": true
+  }
+ ],
+ "summary": {
+  "toy_ok": true,
+  "max_abs_score_diff_vs_experiment": 6.244987673653668e-07,
+  "truth_start_same_kept_flag": 10,
+  "truth_start_same_wrong_count": 9,
+  "runs": 10
+ }
+}

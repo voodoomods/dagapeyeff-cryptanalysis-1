@@ -1,0 +1,88 @@
+{
+ "runs": [
+  {
+   "score_initial": -5.7356,
+   "repair_moves": 6,
+   "score_final": -5.435,
+   "seconds": 189.4,
+   "case": "wrong2",
+   "plant": 0,
+   "wrong_before": 2,
+   "wrong_after": 5,
+   "orbits_initial": 49,
+   "orbits_final": 49
+  },
+  {
+   "score_initial": -6.1827,
+   "repair_moves": 5,
+   "score_final": -6.1097,
+   "seconds": 189.9,
+   "case": "wrong4",
+   "plant": 0,
+   "wrong_before": 4,
+   "wrong_after": 9,
+   "orbits_initial": 14,
+   "orbits_final": 15
+  },
+  {
+   "score_initial": -6.2411,
+   "repair_moves": 6,
+   "score_final": -6.2031,
+   "seconds": 169.5,
+   "case": "random",
+   "plant": 0,
+   "wrong_before": 26,
+   "wrong_after": 26,
+   "orbits_initial": 14,
+   "orbits_final": 15
+  },
+  {
+   "score_initial": -6.1844,
+   "repair_moves": 6,
+   "score_final": -6.0822,
+   "seconds": 191.2,
+   "case": "true_table_on_shuffled_cipher",
+   "plant": 0,
+   "wrong_before": 0,
+   "wrong_after": 6,
+   "orbits_initial": 16,
+   "orbits_final": 14
+  },
+  {
+   "score_initial": -6.2552,
+   "repair_moves": 6,
+   "score_final": -6.1544,
+   "seconds": 197.9,
+   "case": "wrong2",
+   "plant": 1,
+   "wrong_before": 2,
+   "wrong_after": 8,
+   "orbits_initial": 19,
+   "orbits_final": 18
+  },
+  {
+   "score_initial": -6.311,
+   "repair_moves": 6,
+   "score_final": -6.1953,
+   "seconds": 194.7,
+   "case": "wrong4",
+   "plant": 1,
+   "wrong_before": 4,
+   "wrong_after": 10,
+   "orbits_initial": 16,
+   "orbits_final": 22
+  },
+  {
+   "score_initial": -6.2118,
+   "repair_moves": 6,
+   "score_final": -6.1574,
+   "seconds": 171.5,
+   "case": "random",
+   "plant": 1,
+   "wrong_before": 25,
+   "wrong_after": 25,
+   "orbits_initial": 18,
+   "orbits_final": 18
+  }
+ ]
+}

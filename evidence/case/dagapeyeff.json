@@ -1,0 +1,3343 @@
+{
+ "id": "dagapeyeff",
+ "title": "D'Agapeyeff cipher (1939)",
+ "entries": [
+  {
+   "id": "F1",
+   "section": "fact",
+   "text": "Transcription: 395 digits = 78 five-digit groups + '92000'; identical in Wikipedia, Schmeh, Dunin and the Cipher Foundation, and in the 1974 Gale reprint's text.",
+   "evidence": "navigator 2026-10-10; book_snippets on the reprint",
+   "status": "confirmed",
+   "by": "operator (Claude)",
+   "ts": "2026-10-11T05:04:00+00:00",
+   "log": [],
+   "confirmed_by": "operator (Claude)"
+  },
+  {
+   "id": "F2",
+   "section": "fact",
+   "text": "Read in pairs from the start, the first digit is always 6-9 and the second 1-5: a 4x5 grid, 17 of 20 cells used (61, 73, 95 never). The only exceptions: pair 98 = '04' (digits 195-196) and the trailer '00' + '0'.",
+   "evidence": "coordinate_profile('dagapeyeff')",
+   "status": "confirmed",
+   "by": "operator (Claude)",
+   "ts": "2026-10-11T05:04:00+00:00",
+   "log": [],
+   "confirmed_by": "operator (Claude)"
+  },
+  {
+   "id": "F3",
+   "section": "fact",
+   "text": "The row/column digit alternation is perfect, so any transposition moved whole pairs (or both coordinate streams together) — never single digits.",
+   "evidence": "coordinate_profile; digit-level transposition breaks pairing",
+   "status": "confirmed",
+   "by": "operator (Claude)",
+   "ts": "2026-10-11T05:04:00+00:00",
+   "log": [],
+   "confirmed_by": "operator (Claude)"
+  },
+  {
+   "id": "F4",
+   "section": "fact",
+   "text": "With the 04 counted, the text is 196 pairs = 14x14. All 8 rare symbols (cells 71, 92, 93, 94 — 7 occurrences — and the 04) sit at positions 41, 55, 97, 111, 125, 139, 167, 195: column 14 of the 14x14 layout (p < 1/20,000 after scanning periods 2-20). Column 14's other 6 entries are ordinary cells (84, 62, 85, 64, 74, 83), including rows 1-2.",
+   "evidence": "grid_profile(width=14); first noted by Erik van Eykelen",
+   "status": "confirmed",
+   "by": "operator (Claude)",
+   "ts": "2026-10-11T05:04:00+00:00",
+   "log": [],
+   "confirmed_by": "operator (Claude)"
+  },
+  {
+   "id": "F5",
+   "section": "fact",
+   "text": "13 heavy cells carry 188 of 195 symbols; rare: 71 (1), 92 (3), 93 (2), 94 (1). IC x26 = 1.83, inside the English band, but the frequency SHAPE is un-English: 1000/1000 English windows of 195 letters are closer.",
+   "evidence": "coordinate_profile",
+   "status": "confirmed",
+   "by": "operator (Claude)",
+   "ts": "2026-10-11T05:04:00+00:00",
+   "log": [],
+   "confirmed_by": "operator (Claude)"
+  },
+  {
+   "id": "F6",
+   "section": "fact",
+   "text": "The trailing '000' is padding to fill the last group of five — the book pads its own worked example the same way ('…SCZZZ').",
+   "evidence": "book_snippets 'transmitted as'",
+   "status": "confirmed",
+   "by": "operator (Claude)",
+   "ts": "2026-10-11T05:04:00+00:00",
+   "log": [],
+   "confirmed_by": "operator (Claude)"
+  },
+  {
+   "id": "F7",
+   "section": "fact",
+   "text": "The book (Codes and Ciphers, 1939; 1974 Gale reprint codesciphers0000daga) teaches: keyword squares, numbered column keys, a multi-stage Polybius method (letters → coordinates → letters → …), dummies 'every third, fourth or fifth letter' after enciphering, dummy letters between words, and groups of five.",
+   "evidence": "book_snippets; round4/book_method.md",
+   "status": "retired",
+   "by": "operator (Claude)",
+   "ts": "2026-10-11T05:04:00+00:00",
+   "log": [
+    {
+     "ts": "2026-10-11T13:16:04+00:00",
+     "by": "operator (Claude)",
+     "from": "confirmed",
+     "to": "retired",
+     "note": "reworded: 'multi-stage' is our interpretation, not the book's words"
+    }
+   ],
+   "confirmed_by": "operator (Claude)"
+  },
+  {
+   "id": "C1",
+   "section": "convention",
+   "text": "Positions are 0-based PAIR indices with the 04 counted (196 pairs) unless a report says otherwise; always write 'pair N' or 'digit N'.",
+   "evidence": "case convention",
+   "status": "confirmed",
+   "by": "operator (Claude)",
+   "ts": "2026-10-11T05:04:00+00:00",
+   "log": [],
+   "confirmed_by": "operator (Claude)"
+  },
+  {
+   "id": "C2",
+   "section": "convention",
+   "text": "Use the named texts — 'dagapeyeff', 'dagapeyeff:no-col14' (182 pairs, 14x13), ':col14' (14), ':no-rare' (188), ':no-04' (195) — never hand-build a variant.",
+   "evidence": "compound_ciphers._digits",
+   "status": "confirmed",
+   "by": "operator (Claude)",
+   "ts": "2026-10-11T05:04:00+00:00",
+   "log": [],
+   "confirmed_by": "operator (Claude)"
+  },
+  {
+   "id": "C3",
+   "section": "convention",
+   "text": "Verdicts: plant not recovered = INCONCLUSIVE (never 'ruled out' or 'gate failed'). Plant recovered and real ≈ shuffled = not supported at that budget. A candidate must clear its null widely AND read whole, then preregister and request_review.",
+   "evidence": "BRIEFING-round4 §1",
+   "status": "confirmed",
+   "by": "operator (Claude)",
+   "ts": "2026-10-11T05:04:00+00:00",
+   "log": [],
+   "confirmed_by": "operator (Claude)"
+  },
+  {
+   "id": "C4",
+   "section": "convention",
+   "text": "Every p-value states the correction for the tests run (structure_tests / grid_profile do it; multiple_comparisons for your own batteries). Dummies inserted after enciphering are removed BEFORE decoding.",
+   "evidence": "REVIEW-2026-10-10",
+   "status": "confirmed",
+   "by": "operator (Claude)",
+   "ts": "2026-10-11T05:04:00+00:00",
+   "log": [],
+   "confirmed_by": "operator (Claude)"
+  },
+  {
+   "id": "R1",
+   "section": "ruled_out",
+   "text": "Simple substitution read in order (real beats 1 of 8 shuffles; plant 99.5%).",
+   "evidence": "coordinate_substitution_solve",
+   "status": "confirmed",
+   "by": "operator (Claude)",
+   "ts": "2026-10-11T05:04:00+00:00",
+   "log": [],
+   "confirmed_by": "operator (Claude)"
+  },
+  {
+   "id": "R2",
+   "section": "ruled_out",
+   "text": "Substitution + nulls every 3rd/4th/5th + columnar widths 1-12, both directions (lab: real −4.912 vs shuffled −4.920; plant recovered 100%). Agrees with Lasry's elimination of substitution + transposition.",
+   "evidence": "lab job 20261011-011007-057d",
+   "status": "confirmed",
+   "by": "operator (Claude)",
+   "ts": "2026-10-11T05:04:01+00:00",
+   "log": [],
+   "confirmed_by": "operator (Claude)"
+  },
+  {
+   "id": "R3",
+   "section": "ruled_out",
+   "text": "Two alternating alphabets in reading order, with the 04 removed or kept (plants 2/3; real ≤ controls).",
+   "evidence": "periodic_substitution_solve",
+   "status": "confirmed",
+   "by": "operator (Claude)",
+   "ts": "2026-10-11T05:04:01+00:00",
+   "log": [],
+   "confirmed_by": "operator (Claude)"
+  },
+  {
+   "id": "R4",
+   "section": "ruled_out",
+   "text": "Simple seriation: column stream shifted ±20, reversed, or columnar 1-6 against the rows (plant 99.5%).",
+   "evidence": "seriation_solve",
+   "status": "confirmed",
+   "by": "operator (Claude)",
+   "ts": "2026-10-11T05:04:01+00:00",
+   "log": [],
+   "confirmed_by": "operator (Claude)"
+  },
+  {
+   "id": "R5",
+   "section": "ruled_out",
+   "text": "One-key routes (rows, snakes, columns, spiral, diagonals, all flips) on 14x14, 7x28, 13x15, 15x13 (plants 98-100%).",
+   "evidence": "route_solve",
+   "status": "retired",
+   "by": "operator (Claude)",
+   "ts": "2026-10-11T05:04:01+00:00",
+   "log": [
+    {
+     "ts": "2026-10-11T13:16:04+00:00",
+     "by": "operator (Claude)",
+     "from": "confirmed",
+     "to": "retired",
+     "note": "over-claimed: the 14x14 part failed its plant on re-run (2%) — split into R-routes and an inconclusive 14x14 entry"
+    }
+   ],
+   "confirmed_by": "operator (Claude)"
+  },
+  {
+   "id": "R6",
+   "section": "ruled_out",
+   "text": "5x5 digraphic systems (Playfair, Two-Square, Four-Square): they produce 22-25 distinct symbols over 195 letters; the cipher uses 17 cells on 4 rows.",
+   "evidence": "simulation 2026-10-11; external_review.md",
+   "status": "retired",
+   "by": "operator (Claude)",
+   "ts": "2026-10-11T05:04:01+00:00",
+   "log": [
+    {
+     "ts": "2026-10-11T13:16:04+00:00",
+     "by": "operator (Claude)",
+     "from": "confirmed",
+     "to": "retired",
+     "note": "numbers refined on a proper corpus"
+    }
+   ],
+   "confirmed_by": "operator (Claude)"
+  },
+  {
+   "id": "R7",
+   "section": "ruled_out",
+   "text": "Word dividers in reading order: a space is ~19% of English text, the commonest cell is 10%; best fit p = 0.03 raw across 13 cells (not significant).",
+   "evidence": "word_divider_scan",
+   "status": "confirmed",
+   "by": "operator (Claude)",
+   "ts": "2026-10-11T05:04:01+00:00",
+   "log": [],
+   "confirmed_by": "operator (Claude)"
+  },
+  {
+   "id": "R8",
+   "section": "ruled_out",
+   "text": "Nihilist with a varying additive key (the digit ranges stay exactly 6-9 / 1-5); the book's worked-example square with periodic dummies (p = 0.59); a two-block split at the 04 alone (best split ordinary, p ≈ 0.2).",
+   "evidence": "BRIEFING-round3 §6; round2/pegasus_exact_methods.md; structure_tests",
+   "status": "confirmed",
+   "by": "operator (Claude)",
+   "ts": "2026-10-11T05:04:01+00:00",
+   "log": [],
+   "confirmed_by": "operator (Claude)"
+  },
+  {
+   "id": "R9",
+   "section": "ruled_out",
+   "text": "The Uygun (2026) reading as evidence: with homophones the model is unidentifiable — on a planted answer the best fit beats the true plaintext.",
+   "evidence": "block_transposition_solve",
+   "status": "confirmed",
+   "by": "operator (Claude)",
+   "ts": "2026-10-11T05:04:01+00:00",
+   "log": [],
+   "confirmed_by": "operator (Claude)"
+  },
+  {
+   "id": "I1",
+   "section": "inconclusive",
+   "text": "Widths 24-26 with nulls every 2nd (lab): margin +0.08, plant 11% — overfitting regime (98 letters, huge key space).",
+   "evidence": "lab job 20261011-034130-6de7",
+   "status": "confirmed",
+   "by": "operator (Claude)",
+   "ts": "2026-10-11T05:04:01+00:00",
+   "log": [],
+   "confirmed_by": "operator (Claude)"
+  },
+  {
+   "id": "I2",
+   "section": "inconclusive",
+   "text": "Width 25 alone; double columnar transposition; the Uygun two-block model without homophones at width 14 — all only run briefly, plants not recovered.",
+   "evidence": "round3/round4 short runs",
+   "status": "retired",
+   "by": "operator (Claude)",
+   "ts": "2026-10-11T05:04:01+00:00",
+   "log": [
+    {
+     "ts": "2026-10-11T13:16:22+00:00",
+     "by": "operator (Claude)",
+     "from": "confirmed",
+     "to": "retired",
+     "note": "superseded by the inline-budget and untestable entries"
+    }
+   ],
+   "confirmed_by": "operator (Claude)"
+  },
+  {
+   "id": "I3",
+   "section": "inconclusive",
+   "text": "Alternating alphabets under columnar 1-8: first run plant 35% (search ended early — fixed); full lab rerun in progress.",
+   "evidence": "lab job 20261011-034847-0455",
+   "status": "retired",
+   "by": "operator (Claude)",
+   "ts": "2026-10-11T05:04:01+00:00",
+   "log": [
+    {
+     "ts": "2026-10-11T05:49:49+00:00",
+     "by": "operator (Claude)",
+     "from": "confirmed",
+     "to": "retired",
+     "note": "settled by the full lab run 20261011-034847-0455 (plant 99.5%, margin 0.009)"
+    }
+   ],
+   "confirmed_by": "operator (Claude)"
+  },
+  {
+   "id": "O1",
+   "section": "open",
+   "text": "The book's own multi-stage method — kahn/navigator spec, rejewski implementation and variant search.",
+   "evidence": "round4/book_method.md",
+   "status": "retired",
+   "by": "operator (Claude)",
+   "ts": "2026-10-11T05:04:01+00:00",
+   "log": [
+    {
+     "ts": "2026-10-11T13:16:22+00:00",
+     "by": "operator (Claude)",
+     "from": "confirmed",
+     "to": "retired",
+     "note": "superseded by the round-5 open entry"
+    }
+   ],
+   "confirmed_by": "operator (Claude)"
+  },
+  {
+   "id": "O2",
+   "section": "open",
+   "text": "Column 14 as nulls/markers: every solver on 'dagapeyeff:no-col14' (14x13) and ':no-rare'.",
+   "evidence": "grid_profile",
+   "status": "retired",
+   "by": "operator (Claude)",
+   "ts": "2026-10-11T05:04:01+00:00",
+   "log": [
+    {
+     "ts": "2026-10-11T13:16:22+00:00",
+     "by": "operator (Claude)",
+     "from": "confirmed",
+     "to": "retired",
+     "note": "superseded by the round-5 open entry"
+    }
+   ],
+   "confirmed_by": "operator (Claude)"
+  },
+  {
+   "id": "O3",
+   "section": "open",
+   "text": "Alternating alphabets under columnar/routes; double transposition and the two-block model at lab length; French; dummies between words.",
+   "evidence": "BRIEFING-round4 §4",
+   "status": "retired",
+   "by": "operator (Claude)",
+   "ts": "2026-10-11T05:04:01+00:00",
+   "log": [
+    {
+     "ts": "2026-10-11T13:16:22+00:00",
+     "by": "operator (Claude)",
+     "from": "confirmed",
+     "to": "retired",
+     "note": "superseded by the round-5 open entry"
+    }
+   ],
+   "confirmed_by": "operator (Claude)"
+  },
+  {
+   "id": "R10",
+   "section": "ruled_out",
+   "text": "Uygun two-block model without homophones at width 7: plant recovered 98.5%, real text scored below shuffled null by margin -0.1054. Not supported — the model does not fit the real ciphertext.",
+   "evidence": "block_transposition_lab width=7, no homophones, split=marker; lab job 20261011-050655-b7a4; self-check char_agreement=0.985, recovered=true; margin_over_null=-0.1054",
+   "status": "confirmed",
+   "by": "fisher",
+   "ts": "2026-10-11T05:21:16+00:00",
+   "log": [
+    {
+     "ts": "2026-10-11T05:21:19+00:00",
+     "by": "fisher",
+     "from": "proposed",
+     "to": "confirmed",
+     "note": "FISHER confirms: verified the raw results from /lab/cipher/compound/results/block-20261011-050655-329.json — self_check.char_agreement=0.985, recovered=true, margin_over_null=-0.1054. The search CAN recover truth (plant 98.5%) but real text is worse than shuffled noise. This means: the two-block model at width 7 (no homophones, marker split at 04) does not fit the D'Agapeyeff cipher. Caveat: this "
+    }
+   ],
+   "confirmed_by": "fisher"
+  },
+  {
+   "id": "R11",
+   "section": "ruled_out",
+   "text": "One keyword-keyed columnar transposition (keys numbered from ~30k common English words + period words, widths 5-16) under a simple substitution: plants recovered 99-100%, real at the null (margins -0.07 and +0.08). Open: 2-3 passes, uncommon keywords, and keyword keys on the column-14-stripped text.",
+   "evidence": "keyword_transposition_solve scout 2026-10-11 05:20 UTC",
+   "status": "retired",
+   "by": "operator (Claude)",
+   "ts": "2026-10-11T05:21:42+00:00",
+   "log": [
+    {
+     "ts": "2026-10-11T13:16:04+00:00",
+     "by": "operator (Claude)",
+     "from": "confirmed",
+     "to": "retired",
+     "note": "over-claimed: widths 5-10 failed their plant on re-run (1%) — split"
+    }
+   ],
+   "confirmed_by": "operator (Claude)"
+  },
+  {
+   "id": "R12",
+   "section": "ruled_out",
+   "text": "Probable words in reading order (ATTACK, BATTALION, DIVISION, ARTILLERY, ASSESSED, REGIMENT, OFFENSIVE, SECRETARY …): none fits more often than in shuffled text (plants found every time).",
+   "evidence": "crib_test scout 2026-10-11",
+   "status": "confirmed",
+   "by": "operator (Claude)",
+   "ts": "2026-10-11T05:21:42+00:00",
+   "log": [],
+   "confirmed_by": "operator (Claude)"
+  },
+  {
+   "id": "I4",
+   "section": "inconclusive",
+   "text": "Inline job 034555 (alphabets=1, widths 1-7, nulls 0/3/4/5 at 15.7s): self-check failed (35.4% char agreement), margin +0.0493 over null. At 30s benchmark sub+columnar recovers 2/4. The self-check failure is borderline — 15.7s is below benchmark budget, and even at 30s only 50% succeed. Needs lab-scale search before any conclusion.",
+   "evidence": "compound_results('/lab/cipher/compound/results/compound-20261011-034555.json'); compound_benchmark(length=195, max_seconds=30) shows 2/4 recovery for sub+columnar at 30s",
+   "status": "confirmed",
+   "by": "fisher",
+   "ts": "2026-10-11T05:27:54+00:00",
+   "log": [
+    {
+     "ts": "2026-10-11T05:27:58+00:00",
+     "by": "fisher",
+     "from": "proposed",
+     "to": "confirmed",
+     "note": "FISHER confirms: verified compound_results for 034555 shows self-check char_agreement=0.354, margin_over_null=+0.0493 at 15.7s inline. At 30s benchmark sub+columnar recovery is only 2/4. This result is INCONCLUSIVE — the solver is underpowered at this budget for non-trivial configurations."
+    }
+   ],
+   "confirmed_by": "fisher"
+  },
+  {
+   "id": "F8",
+   "section": "fact",
+   "text": "Compound benchmark at 30s/phase on length 195 English: substitution recovers 4/4 (99-100%), substitution+columnar 2/4 (50-100%), substitution+columnar+nulls/4 2/4 (4-100%). A self-check failure on sub+columnar at 30s is NOT definitive — only 50% of known answers are recovered.",
+   "evidence": "compound_benchmark(length=195, trials=4, max_seconds=30) run by FISHER 2026-10-11 ~05:25 UTC",
+   "status": "confirmed",
+   "by": "fisher",
+   "ts": "2026-10-11T05:27:54+00:00",
+   "log": [
+    {
+     "ts": "2026-10-11T05:27:58+00:00",
+     "by": "fisher",
+     "from": "proposed",
+     "to": "confirmed",
+     "note": "FISHER confirms: compound_benchmark(length=195, trials=4, max_seconds=30) returned substitution 4/4, sub+columnar 2/4, sub+columnar+nulls/4 2/4. This is the calibration that should inform all self-check interpretation at this length."
+    }
+   ],
+   "confirmed_by": "fisher"
+  },
+  {
+   "id": "R13",
+   "section": "ruled_out",
+   "text": "Alternating alphabets (alphabets=2) under columnar transposition widths 1-8, no nulls: plant recovered 99.5%, real margin +0.009 over null. The search works but the real text scores identically to shuffled noise. This configuration is ruled out.",
+   "evidence": "lab job 20261011-034847-0455; compound_results('/lab/cipher/compound/results/compound-20261011-034847.json'); self_check char_agreement=0.995, recovered=true; margin_over_null=0.009; real best at width 8, null best at -4.8219",
+   "status": "retired",
+   "by": "skeptic",
+   "ts": "2026-10-11T05:47:35+00:00",
+   "log": [
+    {
+     "ts": "2026-10-11T06:01:53+00:00",
+     "by": "fisher",
+     "from": "proposed",
+     "to": "retired",
+     "note": "Duplicate of R14. R14 (confirmed by operator) already covers the identical finding (alternating alphabets under columnar widths 1-8, no nulls). R13 is unconfirmed and redundant."
+    }
+   ]
+  },
+  {
+   "id": "R14",
+   "section": "ruled_out",
+   "text": "Two alternating alphabets under columnar transposition, widths 1-8, both directions, no nulls (lab: plant recovered 99.5%, real −4.813 vs shuffled −4.822).",
+   "evidence": "lab job 20261011-034847-0455",
+   "status": "confirmed",
+   "by": "operator (Claude)",
+   "ts": "2026-10-11T05:49:49+00:00",
+   "log": [
+    {
+     "ts": "2026-10-11T06:01:53+00:00",
+     "by": "fisher",
+     "from": "confirmed",
+     "to": "confirmed",
+     "note": "Independently verified by FISHER: self-check char_agreement=0.995, recovered=true, margin_over_null=+0.009. Real best score -4.813, null best -4.822. The plant (width 7, perm [1,4,0,5,3,6,2]) was found exactly at score -4.0317. Per C3: plant recovered + real ≈ null → not supported / effectively ruled out. Results confirmed from compound_results on 034847.json."
+    }
+   ],
+   "confirmed_by": "fisher"
+  },
+  {
+   "id": "R15",
+   "section": "ruled_out",
+   "text": "R13. Alternating alphabets (2) under single columnar transposition widths 1-8, no nulls: self-check recovered 99.5%, real margin +0.009 (real −4.813 vs null −4.822, essentially zero). The search works but the ciphertext scores identically to shuffled noise.",
+   "evidence": "Lab job 20261011-034847-0455 completed 05:47 UTC. Self-check char_agreement 0.995, recovered true. Real best −4.8129, null best −4.8219, margin +0.009. Results file: /lab/cipher/compound/results/compound-20261011-034847.json. Confirmed by skeptic independently. Per C3: plant recovered, real ≈ null → ruled out at this budget.",
+   "status": "retired",
+   "by": "fisher",
+   "ts": "2026-10-11T05:54:53+00:00",
+   "log": [
+    {
+     "ts": "2026-10-11T05:58:50+00:00",
+     "by": "fisher",
+     "from": "proposed",
+     "to": "retired",
+     "note": "Duplicate of R14 which was already confirmed by operator. R14 covers the same result: alternating alphabets (2) under columnar transposition widths 1-8, no nulls, lab-proven with plant 99.5% and margin +0.009."
+    }
+   ]
+  },
+  {
+   "id": "C5",
+   "section": "convention",
+   "text": "Removing column 14 raises IC x26 from 1.81 to 1.96, but removing the 8 rare symbols plus ANY 6 others gives the same (1.95-1.98): the rise is mechanical (rare cells gone) and says nothing for or against column 14 as markers. Judge column-14 hypotheses by solvers with plants, not by IC. The column-14 alignment itself is F4 (grid_profile, p ≈ 0.0005) — the parity test is a weaker, different test.",
+   "evidence": "developer check 2026-10-11 06:20 UTC",
+   "status": "confirmed",
+   "by": "operator (Claude)",
+   "ts": "2026-10-11T06:00:15+00:00",
+   "log": [],
+   "confirmed_by": "operator (Claude)"
+  },
+  {
+   "id": "I5",
+   "section": "inconclusive",
+   "text": "Double columnar transposition (two unknown keys, widths up to 8×8) under simple substitution at lab scale (3570s/phase): self-check failed (4.1% char agreement), plant NOT recovered. The search space is too large for the CPU compound solver at this budget — the true key scores better than any found but the optimizer cannot locate it in the double-keyannealing landscape.",
+   "evidence": "lab job 20261011-050636-3145; compound_results('/lab/cipher/compound/results/double-20261011-050636-998.json'); self_check.char_agreement=0.041, recovered=false; true_plaintext_score=-4.484, best_found=-5.282; margin_over_null=+0.048",
+   "status": "confirmed",
+   "by": "skeptic",
+   "ts": "2026-10-11T06:05:53+00:00",
+   "log": [
+    {
+     "ts": "2026-10-11T06:08:27+00:00",
+     "by": "fisher",
+     "from": "proposed",
+     "to": "confirmed",
+     "note": "FISHER confirms. Independently reviewed compound_results from lab job 20261011-050636-3145: self-check char_agreement=0.041, recovered=false, true key scores -4.484 but best found is -5.527. The true key scores better than any found, confirming the annealer can't navigate the joint two-key landscape. Per C3, plant not recovered = INCONCLUSIVE. Correctly classified."
+    }
+   ],
+   "confirmed_by": "fisher"
+  },
+  {
+   "id": "I6",
+   "section": "inconclusive",
+   "text": "dagapeyeff:no-col14 (182 symbols, 14×13 grid from removing column 14's 14 symbols) under columnar transposition + substitution: self-check failed at inline budget (2.7% char agreement for alphabets=1; 4.9% for alphabets=2), real worse than null (−0.043 to −0.397 margin). At length 182, benchmark says sub+columnar recovers 1/4 at 35s, sub+columnar+nulls 2/4 — the solver is unreliable at this length. Lab jobs submitted (054432, 054433) will be definitive.",
+   "evidence": "compound_solve('dagapeyeff:no-col14', widths 1-7, nulls 0/3/4/5, 35s inline); compound_benchmark(length=182, max_seconds=35) shows sub+columnar 1/4, sub+columnar+nulls 2/4; coordinate_profile('dagapeyeff:no-col14') shows ICx26=1.96 above English band; structure_tests all p_holm=1.0",
+   "status": "confirmed",
+   "by": "skeptic",
+   "ts": "2026-10-11T06:05:59+00:00",
+   "log": [
+    {
+     "ts": "2026-10-11T06:08:27+00:00",
+     "by": "fisher",
+     "from": "proposed",
+     "to": "confirmed",
+     "note": "FISHER confirms. Verified inline results: self-check 2.7% (alpha=1) and 4.9% (alpha=2), margins negative. Benchmarked at length 182 the solver recovers only 1-2/4 even at 35s. Lab jobs 054432/054433 queued — these will be definitive. Correctly classified as INCONCLUSIVE per C3."
+    }
+   ],
+   "confirmed_by": "fisher"
+  },
+  {
+   "id": "O4",
+   "section": "open",
+   "text": "Keyword-keyed double columnar transposition under substitution: R11 ruled out one keyword-keyed pass (keys numbered from words, widths 5-16). Two passes with keys from common English words (rather than arbitrary permutations) would match the book's multi-stage method and drastically shrink the key space vs the untestable arbitrary double transposition. Test with keyword_transposition_solve passes=2 or gpu_search model=double with word-constrained keys.",
+   "evidence": "R11 (keyword one-pass); I5 (double transposition with arbitrary keys, plant not recovered); book teaches numbered column keys from keywords (F7)",
+   "status": "retired",
+   "by": "skeptic",
+   "ts": "2026-10-11T06:06:03+00:00",
+   "log": [
+    {
+     "ts": "2026-10-11T06:08:32+00:00",
+     "by": "fisher",
+     "from": "proposed",
+     "to": "confirmed",
+     "note": "FISHER confirms. R11 (keyword one-pass ruled out) + I5 (double transposition with arbitrary keys untestable on CPU) logically converge on this: word-constrained keys reduce the key space drastically. The book teaches numbered column keys from keywords. Two keyword passes would match the book's multi-stage method while being testable where arbitrary double keys are not."
+    },
+    {
+     "ts": "2026-10-11T13:16:22+00:00",
+     "by": "operator (Claude)",
+     "from": "confirmed",
+     "to": "retired",
+     "note": "superseded by the round-5 open entry"
+    }
+   ],
+   "confirmed_by": "fisher"
+  },
+  {
+   "id": "O5",
+   "section": "open",
+   "text": "GPU-based joint annealing of double columnar transposition (two keys widths 5-16, both dec/enc) under substitution (alphabets=1 or 2): the CPU compound solver cannot recover a known answer at length 195 in ~1h/phase. The GPU search's thousands of parallel chains each jointly annealing both transposition keys AND the substitution key may succeed where the CPU fails. Run power_check first to confirm the model is testable at this length.",
+   "evidence": "I5 (CPU double transposition: self-check 4.1% at 3570s/phase); gpu_search model=double; the GPU anneals transposition and substitution keys jointly rather than in a substitution-invariant pre-filter",
+   "status": "retired",
+   "by": "skeptic",
+   "ts": "2026-10-11T06:06:11+00:00",
+   "log": [
+    {
+     "ts": "2026-10-11T06:08:32+00:00",
+     "by": "fisher",
+     "from": "proposed",
+     "to": "confirmed",
+     "note": "FISHER confirms. I5 conclusively shows the CPU compound solver cannot recover a known double-transposition key at length 195 even with 3570s/phase. The GPU search (gpu_search model=double) jointly anneals both transposition keys AND the substitution key across thousands of parallel chains — a fundamentally different approach. run power_check first to confirm budget; then if testable, a GPU rental "
+    },
+    {
+     "ts": "2026-10-11T13:16:22+00:00",
+     "by": "operator (Claude)",
+     "from": "confirmed",
+     "to": "retired",
+     "note": "superseded by the round-5 open entry"
+    }
+   ],
+   "confirmed_by": "fisher"
+  },
+  {
+   "id": "I7",
+   "section": "inconclusive",
+   "text": "keyword_transposition_solve with passes=2 (widths 5-7, common words) at 10s inline budget: self-check failed (6.2% char agreement), margin +0.0184 over null. The solver cannot recover a planted answer at this length and budget; inconclusive until power_check/lab results.",
+   "evidence": "inline keyword_transposition_solve('dagapeyeff', widths='5-7', passes=2, max_seconds=10) run by welchman 06:15 UTC",
+   "status": "retired",
+   "by": "welchman",
+   "ts": "2026-10-11T06:15:10+00:00",
+   "log": [
+    {
+     "ts": "2026-10-11T13:16:04+00:00",
+     "by": "operator (Claude)",
+     "from": "proposed",
+     "to": "retired",
+     "note": "consolidated into the inline-budget entry"
+    }
+   ]
+  },
+  {
+   "id": "I8",
+   "section": "inconclusive",
+   "text": "keyword_transposition_solve with passes=3 (widths 5-7, common words) at 10s inline budget: self-check failed (6.2% char agreement), margin -0.0221 over null. The solver cannot recover a planted answer at this length and budget; inconclusive until power_check/lab results.",
+   "evidence": "inline keyword_transposition_solve('dagapeyeff', widths='5-7', passes=3, max_seconds=10) run by welchman 06:15 UTC",
+   "status": "retired",
+   "by": "welchman",
+   "ts": "2026-10-11T06:15:15+00:00",
+   "log": [
+    {
+     "ts": "2026-10-11T13:16:04+00:00",
+     "by": "operator (Claude)",
+     "from": "proposed",
+     "to": "retired",
+     "note": "consolidated into the inline-budget entry"
+    }
+   ]
+  },
+  {
+   "id": "I9",
+   "section": "inconclusive",
+   "text": "keyword_transposition_solve with passes=2 (widths 12-16) at 40s: self-check failed (char_agreement=0.051), margin -0.0819. The search cannot recover a planted 2-pass keyword transposition at this length with this budget.",
+   "evidence": "keyword_transposition_solve('dagapeyeff', widths='12-16', passes=2, max_seconds=40) run by painvin 2026-10-11 06:10 UTC; self_check char_agreement=0.051, recovered=false, margin_over_null=-0.0819",
+   "status": "retired",
+   "by": "painvin",
+   "ts": "2026-10-11T06:17:44+00:00",
+   "log": [
+    {
+     "ts": "2026-10-11T13:16:04+00:00",
+     "by": "operator (Claude)",
+     "from": "proposed",
+     "to": "retired",
+     "note": "consolidated into the inline-budget entry"
+    }
+   ]
+  },
+  {
+   "id": "I10",
+   "section": "inconclusive",
+   "text": "keyword_transposition_solve passes=1 on 'dagapeyeff:no-col14' (widths 12-16) at 40s: self-check failed (char_agreement=0.313), margin -0.0352. Removing column 14 changes the structure enough that 40s CPU search cannot recover planted answers.",
+   "evidence": "keyword_transposition_solve('dagapeyeff:no-col14', widths='12-16', passes=1, max_seconds=40) run by painvin 2026-10-11 06:11 UTC; self_check char_agreement=0.313, recovered=false, margin_over_null=-0.0352",
+   "status": "retired",
+   "by": "painvin",
+   "ts": "2026-10-11T06:17:49+00:00",
+   "log": [
+    {
+     "ts": "2026-10-11T13:16:04+00:00",
+     "by": "operator (Claude)",
+     "from": "proposed",
+     "to": "retired",
+     "note": "consolidated into the inline-budget entry"
+    }
+   ]
+  },
+  {
+   "id": "I11",
+   "section": "inconclusive",
+   "text": "compound_solve widths 12-16 alphabets=1 at 40s: self-check failed (char_agreement=0.072), margin -0.0614. Generic columnar search at widths ≥12 needs >40s budget to recover planted answers at length 196.",
+   "evidence": "compound_solve('dagapeyeff', widths='12-16', alphabets=1, max_seconds=40) run by painvin 2026-10-11 06:12 UTC; self_check char_agreement=0.072, recovered=false, margin_over_null=-0.0614",
+   "status": "retired",
+   "by": "painvin",
+   "ts": "2026-10-11T06:17:59+00:00",
+   "log": [
+    {
+     "ts": "2026-10-11T13:16:04+00:00",
+     "by": "operator (Claude)",
+     "from": "proposed",
+     "to": "retired",
+     "note": "consolidated into the inline-budget entry"
+    }
+   ]
+  },
+  {
+   "id": "I12",
+   "section": "inconclusive",
+   "text": "compound_solve widths 12-16 alphabets=2 at 40s: self-check failed (char_agreement=0.046), margin +0.0165. Alternating alphabets under columnar transposition at widths ≥12 needs >40s budget to recover planted answers at length 196.",
+   "evidence": "compound_solve('dagapeyeff', widths='12-16', alphabets=2, max_seconds=40) run by painvin 2026-10-11 06:13 UTC; self_check char_agreement=0.046, recovered=false, margin_over_null=0.0165",
+   "status": "retired",
+   "by": "painvin",
+   "ts": "2026-10-11T06:18:07+00:00",
+   "log": [
+    {
+     "ts": "2026-10-11T13:16:04+00:00",
+     "by": "operator (Claude)",
+     "from": "proposed",
+     "to": "retired",
+     "note": "consolidated into the inline-budget entry"
+    }
+   ]
+  },
+  {
+   "id": "I13",
+   "section": "inconclusive",
+   "text": "Two-block Uygun model without homophones at width 14 (split at marker) is untestable at 30s budget — self-check failed (9.2% char agreement).",
+   "evidence": "block_transposition_solve(width=14, split=marker, homophonic=false, max_seconds=30) returned self-check char_agreement=0.092, margin_over_null=+0.0423. Plant not recovered.",
+   "status": "retired",
+   "by": "rejewski",
+   "ts": "2026-10-11T06:24:14+00:00",
+   "log": [
+    {
+     "ts": "2026-10-11T13:16:04+00:00",
+     "by": "operator (Claude)",
+     "from": "proposed",
+     "to": "retired",
+     "note": "consolidated into the inline-budget entry"
+    }
+   ]
+  },
+  {
+   "id": "I14",
+   "section": "inconclusive",
+   "text": "Two-block Uygun model without homophones at width 13 (split at marker) is untestable at 30s budget — self-check failed (5.1% char agreement).",
+   "evidence": "block_transposition_solve(width=13, split=marker, homophonic=false, max_seconds=30) returned self-check char_agreement=0.051, margin_over_null=-0.0103. Plant not recovered.",
+   "status": "retired",
+   "by": "rejewski",
+   "ts": "2026-10-11T06:24:20+00:00",
+   "log": [
+    {
+     "ts": "2026-10-11T13:16:04+00:00",
+     "by": "operator (Claude)",
+     "from": "proposed",
+     "to": "retired",
+     "note": "consolidated into the inline-budget entry"
+    }
+   ]
+  },
+  {
+   "id": "I15",
+   "section": "inconclusive",
+   "text": "Two-pass keyword-keyed columnar transposition (keys from common words, widths 5-14) is untestable at 20s budget — self-check failed (6.7% char agreement).",
+   "evidence": "keyword_transposition_solve(passes=2, widths=5-14, max_seconds=20) returned self-check char_agreement=0.067, margin_over_null=-0.0799. Plant not recovered.",
+   "status": "retired",
+   "by": "rejewski",
+   "ts": "2026-10-11T06:25:35+00:00",
+   "log": [
+    {
+     "ts": "2026-10-11T13:16:04+00:00",
+     "by": "operator (Claude)",
+     "from": "proposed",
+     "to": "retired",
+     "note": "consolidated into the inline-budget entry"
+    }
+   ]
+  },
+  {
+   "id": "R16",
+   "section": "ruled_out",
+   "text": "Alternating alphabets under route transposition on 14x14 grid does not fit the cipher (margin -0.0002 vs null).",
+   "evidence": "route_solve(shape=14x14, alphabets=2, max_seconds=30) returned margin_over_null=-0.0002, self-check 89.3% recovered. Real cipher not distinguishable from null.",
+   "status": "confirmed",
+   "by": "rejewski",
+   "ts": "2026-10-11T06:27:18+00:00",
+   "log": [
+    {
+     "ts": "2026-10-11T13:16:04+00:00",
+     "by": "operator (Claude)",
+     "from": "proposed",
+     "to": "confirmed",
+     "note": "re-run: route 14x14 alphabets=2, plant 95.4%, margin -0.001 — holds"
+    }
+   ],
+   "confirmed_by": "operator (Claude)"
+  },
+  {
+   "id": "I16",
+   "section": "inconclusive",
+   "text": "Probable military words under keyword-keyed columnar transposition (widths 5-16): after Holm correction for 16 cribs, none shows significant hits (p_adjusted ≥ 0.768). Individual cribs with repeated letters (ATTACK, BATTALION, ASSESSED, REGIMENT, OFFENSIVE, INFANTRY, CAVALRY, BATTERY, PLATOON, ENCRYPTION, SECRETARY) show p=0.048 raw, but no statistical evidence survives multiple comparisons.",
+   "evidence": "crib_test('dagapeyeff', model='keyword', widths='5-16', cribs='ATTACK,BATTALION,DIVISION,ARTILLERY,ASSESSED,REGIMENT,OFFENSIVE,INFANTRY,CAVALRY,BATTERY,COMPANY,PLATOON,SQUADRON,POLYBIUS,CHECKERBOARD,ENCRYPTION,SECRETARY', controls=200, seed=42); multiple_comparisons(p_values='0.048,0.048,0.095,0.095,0.048,0.048,0.048,0.048,0.048,0.048,0.048,0.048,0.048,0.095,0.048,0.048', method='holm')",
+   "status": "retired",
+   "by": "ventris",
+   "ts": "2026-10-11T06:34:30+00:00",
+   "log": [
+    {
+     "ts": "2026-10-11T13:16:04+00:00",
+     "by": "operator (Claude)",
+     "from": "proposed",
+     "to": "retired",
+     "note": "its raw p = 0.048s were an artifact of crib_test(model='keyword') giving the real text every key and each control only 40 — fixed 2026-10-11 (commit 5871cb2); see the corrected entry"
+    }
+   ]
+  },
+  {
+   "id": "F9",
+   "section": "fact",
+   "text": "Book explicitly teaches dummy letter insertion: X or Z between words, and every 3rd/4th/5th letter after enciphering",
+   "evidence": "book_snippets('dummy letter') returns 'to be composed of the same letter repeated, a [dummy letter] such as X or Z should be introduced'; book_snippets('between words') returns 'be further improved by placing dummy letters [between words]'; book_snippets('every third') returns 'cipher is of course easily made out, but if [every third], fourth, or fifth letter, as may be previously'",
+   "status": "retired",
+   "by": "kahn",
+   "ts": "2026-10-11T06:39:25+00:00",
+   "log": [
+    {
+     "ts": "2026-10-11T13:16:04+00:00",
+     "by": "operator (Claude)",
+     "from": "proposed",
+     "to": "retired",
+     "note": "conflates two passages: the X/Z dummy separates a DOUBLED letter; dummies between words are a separate rule (now in F-book)"
+    }
+   ]
+  },
+  {
+   "id": "O6",
+   "section": "open",
+   "text": "Column 14 likely contains dummies inserted after encipherment, consistent with book's teaching on dummy insertion",
+   "evidence": "F7 (book teaches dummies), F4 (column 14 alignment statistically significant; p ≈ 0.0005), book_snippets evidence shows explicit dummy letter teaching; historical context of 1939 amateur cipher methods suggests dummy insertion simpler than complex indicator systems",
+   "status": "retired",
+   "by": "kahn",
+   "ts": "2026-10-11T06:39:35+00:00",
+   "log": [
+    {
+     "ts": "2026-10-11T13:16:04+00:00",
+     "by": "operator (Claude)",
+     "from": "proposed",
+     "to": "retired",
+     "note": "'likely dummies' isn't supported by evidence yet — O2 (column 14 as nulls/markers, test with solvers) covers it"
+    }
+   ]
+  },
+  {
+   "id": "I17",
+   "section": "inconclusive",
+   "text": "Historical analysis alone cannot definitively determine column 14 function; book evidence suggests dummies but solver testing required",
+   "evidence": "Multiple plausible hypotheses exist (dummies, row markers, checksums) with varying strength of evidence; book evidence strongest for dummies (F7, book_snippets) but not definitive; requires statistical testing (friedman's correlation tests) and solver comparison (:no-col14 vs full text)",
+   "status": "retired",
+   "by": "kahn",
+   "ts": "2026-10-11T06:39:41+00:00",
+   "log": [
+    {
+     "ts": "2026-10-11T13:16:38+00:00",
+     "by": "operator (Claude)",
+     "from": "proposed",
+     "to": "retired",
+     "note": "not a finding — the open question is O-round5 (what column 14 is)"
+    }
+   ]
+  },
+  {
+   "id": "I18",
+   "section": "inconclusive",
+   "text": "Two-block Uygun model without homophones at width 14 (split at marker) is untestable at 30s budget — self-check failed (9.2% char agreement).",
+   "evidence": "block_transposition_solve(width=14, split=marker, homophonic=false, max_seconds=30) returned self-check char_agreement=0.092, margin_over_null=+0.0423. Plant not recovered.",
+   "status": "retired",
+   "by": "rejewski",
+   "ts": "2026-10-11T06:52:38+00:00",
+   "log": [
+    {
+     "ts": "2026-10-11T13:16:04+00:00",
+     "by": "operator (Claude)",
+     "from": "proposed",
+     "to": "retired",
+     "note": "duplicate of I13/I14"
+    }
+   ]
+  },
+  {
+   "id": "I19",
+   "section": "inconclusive",
+   "text": "Two-block Uygun model without homophones at width 13 (split at marker) is untestable at 30s budget — self-check failed (5.1% char agreement).",
+   "evidence": "block_transposition_solve(width=13, split=marker, homophonic=false, max_seconds=30) returned self-check char_agreement=0.051, margin_over_null=-0.0103. Plant not recovered.",
+   "status": "retired",
+   "by": "rejewski",
+   "ts": "2026-10-11T06:53:13+00:00",
+   "log": [
+    {
+     "ts": "2026-10-11T13:16:04+00:00",
+     "by": "operator (Claude)",
+     "from": "proposed",
+     "to": "retired",
+     "note": "duplicate of I13/I14"
+    }
+   ]
+  },
+  {
+   "id": "O7",
+   "section": "open",
+   "text": "Compiled crib list of 40+ probable words/phrases from D'Agapeyeff book and 1930s military/diplomatic context for testing under keyword-keyed transposition models.",
+   "evidence": "/workspace/research/cipher/dagapeyeff/round5/cribs.txt contains cribs from: 1) Direct book mentions ('defeat', 'defence', 'defend', 'defensive', 'aeroplane' - book calls these 'probable'), 2) Book examples with repeated letters (ATTACK, BATTALION, etc.), 3) Military/diplomatic terms with double letters (COMMITTEE, POSSESSION, etc.), 4) Double letter patterns explicitly mentioned in book ('Il, tt, ",
+   "status": "confirmed",
+   "by": "navigator",
+   "ts": "2026-10-11T06:58:37+00:00",
+   "log": [
+    {
+     "ts": "2026-10-11T13:16:38+00:00",
+     "by": "operator (Claude)",
+     "from": "proposed",
+     "to": "confirmed",
+     "note": "crib list exists at round5/cribs.txt (source per crib) — usable input"
+    }
+   ],
+   "confirmed_by": "operator (Claude)"
+  },
+  {
+   "id": "F10",
+   "section": "fact",
+   "text": "D'Agapeyeff's book explicitly identifies 'defeat', 'defence', 'defend', and 'defensive' as probable words for cryptanalysis and teaches awareness of double letter patterns ('Il, tt, cc, &c.').",
+   "evidence": "book_snippets('probable', 'codesciphers0000daga') returns snippet: 'defeat, defence, defend, and defensive are probable'. book_snippets('double letters', 'codesciphers0000daga') returns snippet: 'double letters, e.g. Il, tt, cc, &c.'",
+   "status": "retired",
+   "by": "navigator",
+   "ts": "2026-10-11T06:59:53+00:00",
+   "log": [
+    {
+     "ts": "2026-10-11T13:16:04+00:00",
+     "by": "operator (Claude)",
+     "from": "proposed",
+     "to": "retired",
+     "note": "overstated: the 'probable' words come from inside one worked solution, not a general list"
+    }
+   ]
+  },
+  {
+   "id": "I20",
+   "section": "inconclusive",
+   "text": "UNTESTABLE AT THIS LENGTH (answered — don't re-run): one columnar key at width 20 with 2 alphabets; GPU power check 0/3 planted answers recovered even at 20 min per configuration (2048 chains). Also untestable on CPU: double transposition 2-7 x 2-7, 2-3 keyword passes, the two-block model at widths 13-14 (GPU checks of those pending).",
+   "evidence": "power-20261011-090050 / -092613 (GPU); power-20261011-0602*/0606*/0705* (CPU)",
+   "status": "retired",
+   "by": "operator (Claude)",
+   "ts": "2026-10-11T12:50:29+00:00",
+   "log": [
+    {
+     "ts": "2026-10-11T13:16:04+00:00",
+     "by": "operator (Claude)",
+     "from": "confirmed",
+     "to": "retired",
+     "note": "reworded: the CPU two-block check only reached 2 minutes"
+    }
+   ],
+   "confirmed_by": "operator (Claude)"
+  },
+  {
+   "id": "I21",
+   "section": "inconclusive",
+   "text": "Column 14 analysis shows 14 symbols: L(84), A(62), P(93)[rare], O(92)[rare], M(85), C(64), G(74), A(62), D(65), D(65), K(83), F(72), F(72), 0(04)[rare]. Only 3/14 symbols are rare cells (93,92,04), not 8 as might be inferred from F4. Binary pattern (rare=1): 00110000000000. Tests: dagapeyeff:no-col14 under columnar+substitution gives margin -0.123 vs null (worse than full text). Chinese route alone margin +0.0089 ≈ null. Hypothesis 'column 14 = navigation aids for transposition' not yet testable without knowing what transposition it guides.",
+   "evidence": "Analysis script column14_pattern_analysis.py shows binary pattern. compound_solve on dagapeyeff:no-col14 gives margin -0.123. route_solve on 14x14 gives margin +0.0089. These tests show removing or using column 14 doesn't improve solvability at tested budgets.",
+   "status": "retired",
+   "by": "friedman",
+   "ts": "2026-10-11T13:00:56+00:00",
+   "log": [
+    {
+     "ts": "2026-10-11T13:16:38+00:00",
+     "by": "operator (Claude)",
+     "from": "proposed",
+     "to": "retired",
+     "note": "wrong data: column 14 (04 counted, 0-based pairs 13, 27, …, 195) is 84 62 93 92 85 64 04 94 71 93 74 92 83 92 — 8 rare, as F4 says; the listed column looks like a different framing or an off-by-one offset. Re-run with grid_profile(width=14, framing='kept') or the named text 'dagapeyeff:col14'."
+    }
+   ]
+  },
+  {
+   "id": "R17",
+   "section": "ruled_out",
+   "text": "One-key routes (rows, snakes, columns, spiral, diagonals, all flips) on 7x28, 13x15 and 15x13: plants recovered 98-100% in two independent runs, real at or below the null.",
+   "evidence": "route_solve x2; verification 2026-10-11 ~13:00 UTC (verify_static/verify_dynamic re-runs)",
+   "status": "confirmed",
+   "by": "operator (Claude)",
+   "ts": "2026-10-11T13:16:04+00:00",
+   "log": [],
+   "confirmed_by": "operator (Claude)"
+  },
+  {
+   "id": "I22",
+   "section": "inconclusive",
+   "text": "One-key routes on 14x14: plant recovered in 1 of 2 runs at 40 s (100%, then 2%) — under-powered at that budget. Re-run at lab length (route_lab) before calling 14x14 routes closed.",
+   "evidence": "route_solve x2; verification 2026-10-11 ~13:00 UTC (verify_static/verify_dynamic re-runs)",
+   "status": "confirmed",
+   "by": "operator (Claude)",
+   "ts": "2026-10-11T13:16:04+00:00",
+   "log": [],
+   "confirmed_by": "operator (Claude)"
+  },
+  {
+   "id": "R18",
+   "section": "ruled_out",
+   "text": "One keyword-numbered columnar pass (keys from ~30k common words + period words), widths 11-16: plants recovered 100% in two runs; real at the null (margins +0.08, +0.03).",
+   "evidence": "keyword_transposition_solve x2; verification 2026-10-11 ~13:00 UTC (verify_static/verify_dynamic re-runs)",
+   "status": "confirmed",
+   "by": "operator (Claude)",
+   "ts": "2026-10-11T13:16:04+00:00",
+   "log": [],
+   "confirmed_by": "operator (Claude)"
+  },
+  {
+   "id": "I23",
+   "section": "inconclusive",
+   "text": "One keyword pass at widths 5-10: plant recovered in 1 of 2 runs at 45 s (99%, then 1%) — re-run at lab budget (keyword_transposition_solve lab=True) before closing.",
+   "evidence": "keyword_transposition_solve x2; verification 2026-10-11 ~13:00 UTC (verify_static/verify_dynamic re-runs)",
+   "status": "confirmed",
+   "by": "operator (Claude)",
+   "ts": "2026-10-11T13:16:04+00:00",
+   "log": [],
+   "confirmed_by": "operator (Claude)"
+  },
+  {
+   "id": "R19",
+   "section": "ruled_out",
+   "text": "5x5 digraphic systems (Playfair, Two-Square, Four-Square): over 500 English windows of 195 letters they produce at least 21 (Playfair) / 23 (Two-Square) distinct symbols; the cipher uses 17 cells, and its grid has only 4 rows.",
+   "evidence": "simulation on the wordfreq corpus; verification 2026-10-11 ~13:00 UTC (verify_static/verify_dynamic re-runs)",
+   "status": "disputed",
+   "by": "operator (Claude)",
+   "ts": "2026-10-11T13:16:04+00:00",
+   "log": [
+    {
+     "ts": "2026-10-11T22:40:48+00:00",
+     "by": "operator",
+     "from": "confirmed",
+     "to": "disputed",
+     "note": "Hendrick 2026 (zenodo 23241303) proves keyed four-square and two-square with CHOSEN plain squares can reach the cells 13/18 symbol counts - the inventory argument only covers standard squares. Keyed four-square / two-square are open."
+    }
+   ],
+   "confirmed_by": "operator (Claude)"
+  },
+  {
+   "id": "F11",
+   "section": "fact",
+   "text": "Plain English in 195-letter windows uses at least 19 distinct letters (minimum over 500 windows; median 22). The cipher uses 17 cells — fewer than any English window — so the plaintext alphabet was reduced (letters merged or omitted) or the text isn't ordinary English. Consistent with a square of 20 usable cells (4x5) plus a barely-used 5th row (the 04).",
+   "evidence": "simulation on the wordfreq corpus; verification 2026-10-11 ~13:00 UTC (verify_static/verify_dynamic re-runs)",
+   "status": "confirmed",
+   "by": "operator (Claude)",
+   "ts": "2026-10-11T13:16:04+00:00",
+   "log": [],
+   "confirmed_by": "operator (Claude)"
+  },
+  {
+   "id": "F12",
+   "section": "fact",
+   "text": "The book (Codes and Ciphers, 1939; 1974 Gale reprint codesciphers0000daga) teaches keyword squares, numbered column keys from keywords (1st, 2nd, 3rd keyword …), dummies 'every third, fourth or fifth letter' after enciphering, dummy letters between words, a dummy X or Z to break up a doubled letter, and groups of five padded with Z. Its '3rd cryptogram … cipher: AC CA …' passage READS as staged Polybius encoding — that reading is ours, not stated.",
+   "evidence": "book_snippets re-queried; verification 2026-10-11 ~13:00 UTC (verify_static/verify_dynamic re-runs)",
+   "status": "confirmed",
+   "by": "operator (Claude)",
+   "ts": "2026-10-11T13:16:04+00:00",
+   "log": [],
+   "confirmed_by": "operator (Claude)"
+  },
+  {
+   "id": "F13",
+   "section": "fact",
+   "text": "Inside one worked solution the book treats 'defeat, defence, defend, defensive' as probable words for THAT message, and recommends watching double letters (e.g. ll, tt, cc) when solving — useful crib sources, not a general rule.",
+   "evidence": "book_snippets('are probable', 'double letters'); verification 2026-10-11 ~13:00 UTC (verify_static/verify_dynamic re-runs)",
+   "status": "confirmed",
+   "by": "operator (Claude)",
+   "ts": "2026-10-11T13:16:04+00:00",
+   "log": [],
+   "confirmed_by": "operator (Claude)"
+  },
+  {
+   "id": "I24",
+   "section": "inconclusive",
+   "text": "Probable words under one keyword transposition (widths 5-16, 300 sampled keys, the SAME keys for real text and controls): none beats shuffled text (ATTACK 0.54, BATTALION 0.95, ASSESSED 0.57, REGIMENT 0.98, OFFENSIVE 0.98, INFANTRY 0.07, BATTERY 0.95, SECRETARY 0.93). Not 'ruled out': the test's power under transposition isn't measured.",
+   "evidence": "crib_test fixed version; verification 2026-10-11 ~13:00 UTC (verify_static/verify_dynamic re-runs)",
+   "status": "confirmed",
+   "by": "operator (Claude)",
+   "ts": "2026-10-11T13:16:04+00:00",
+   "log": [],
+   "confirmed_by": "operator (Claude)"
+  },
+  {
+   "id": "I25",
+   "section": "inconclusive",
+   "text": "Too hard for inline budgets (≤45 s; plants not recovered): 2-3 keyword passes (widths 5-16); columnar widths 12-16 with 1-2 alphabets; one keyword pass on the column-14-stripped text (widths 12-16); the two-block model at widths 13-14. Use power_check, then the GPU or lab.",
+   "evidence": "I7-I15 (welchman, painvin, rejewski), 2026-10-11",
+   "status": "confirmed",
+   "by": "operator (Claude)",
+   "ts": "2026-10-11T13:16:04+00:00",
+   "log": [],
+   "confirmed_by": "operator (Claude)"
+  },
+  {
+   "id": "I26",
+   "section": "inconclusive",
+   "text": "UNTESTABLE AT THIS LENGTH (answered — don't re-run): one columnar key at width 20 with 2 alphabets — GPU power check 0/3 even at 20 min per configuration. On CPU at the budgets tried: double transposition 2-7 x 2-7 (up to 20 min: 0/2), keyword passes 2 (up to 20 min: 1/3) and 3 (0/3), the two-block model at 13-14 (only up to 2 min). GPU checks of width 14, double and two-block are the next tests.",
+   "evidence": "power-20261011-* result files; verification 2026-10-11 ~13:00 UTC (verify_static/verify_dynamic re-runs)",
+   "status": "confirmed",
+   "by": "operator (Claude)",
+   "ts": "2026-10-11T13:16:04+00:00",
+   "log": [],
+   "confirmed_by": "operator (Claude)"
+  },
+  {
+   "id": "O8",
+   "section": "open",
+   "text": "Round 5: one columnar key at width 14 on the GPU (1-2 alphabets; full text and :no-col14); the book's keyword passes and double transposition on the GPU; the book's method pruned to transposition + substitution stages; what column 14 is (nulls / markers / row data); cribs from the book under its transpositions.",
+   "evidence": "BRIEFING-round5.md",
+   "status": "confirmed",
+   "by": "operator (Claude)",
+   "ts": "2026-10-11T13:16:22+00:00",
+   "log": [],
+   "confirmed_by": "operator (Claude)"
+  },
+  {
+   "id": "F14",
+   "section": "fact",
+   "text": "When column 14 symbols are removed (dagapeyeff:no-col14, 182 symbols), column 27 of a 36-wide layout is anomalously uniform: it uses only 2 distinct symbols vs 3-5 elsewhere, with IC×26=15.6 vs 0-7.8 (χ²=57.2, p=0.002 over columns).",
+   "evidence": "pattern_sweep(dagapeyeff:no-col14) FINDING col-dist w36 c27 family-wise p=0.009; grid_profile(width=36) confirms column 27 has 2 distinct symbols (others have 3-5), IC×26 15.6, χ²=57.2 p_max_over_columns=0.002.",
+   "status": "retired",
+   "by": "kasiski",
+   "ts": "2026-10-11T13:38:17+00:00",
+   "log": [
+    {
+     "ts": "2026-10-11T13:43:27+00:00",
+     "by": "operator (Claude)",
+     "from": "proposed",
+     "to": "retired",
+     "note": "checked: column 27 @ width 28 (04 removed) is column 14 shifted by the 04's removal (original positions all ≡ 13 mod 14); column 27 @ width 36 on :no-col14 is four 84s on one diagonal — chance in the original text (family-wise p 0.98; four equally spaced copies of one symbol occur in 89% of shuffles). A variant built from a finding inherits a selection effect."
+    }
+   ]
+  },
+  {
+   "id": "F15",
+   "section": "fact",
+   "text": "With the 04 removed (removed framing), the 7 remaining rare symbols (71,92,93,94) cluster in column 27 of a 28-wide layout: 4 of 7 entries are rare vs expectation 0.242 (z=8.0, family-wise p=0.0315).",
+   "evidence": "pattern_sweep(dagapeyeff, framings=removed) FINDING col-rare w28 c27 family-wise p=0.0315; grid_profile(width=28, framing=removed) shows column 27 has 4/7 entries rare (others have 0-1).",
+   "status": "retired",
+   "by": "kasiski",
+   "ts": "2026-10-11T13:38:28+00:00",
+   "log": [
+    {
+     "ts": "2026-10-11T13:43:27+00:00",
+     "by": "operator (Claude)",
+     "from": "proposed",
+     "to": "retired",
+     "note": "checked: column 27 @ width 28 (04 removed) is column 14 shifted by the 04's removal (original positions all ≡ 13 mod 14); column 27 @ width 36 on :no-col14 is four 84s on one diagonal — chance in the original text (family-wise p 0.98; four equally spaced copies of one symbol occur in 89% of shuffles). A variant built from a finding inherits a selection effect."
+    }
+   ]
+  },
+  {
+   "id": "O9",
+   "section": "open",
+   "text": "What system produces the column-27 anomaly at width 36 after removing column 14? Could be: (a) checksum column after transposition, (b) mathematical relationship (27=36-9, relating to 9×4), (c) artifact of removing column 14 from different base layout, or (d) marker column for a second transposition stage.",
+   "evidence": "pattern_sweep finds col-dist w36 c27 anomaly (FINDING); grid_profile confirms column 27 has only 2 distinct symbols (high IC). Test by PAINVIN on GPU width 36 layouts, FRIEDMAN correlation analysis, REJEWSKI method evolution.",
+   "status": "retired",
+   "by": "kasiski",
+   "ts": "2026-10-11T13:38:38+00:00",
+   "log": [
+    {
+     "ts": "2026-10-11T13:43:27+00:00",
+     "by": "operator (Claude)",
+     "from": "proposed",
+     "to": "retired",
+     "note": "checked: column 27 @ width 28 (04 removed) is column 14 shifted by the 04's removal (original positions all ≡ 13 mod 14); column 27 @ width 36 on :no-col14 is four 84s on one diagonal — chance in the original text (family-wise p 0.98; four equally spaced copies of one symbol occur in 89% of shuffles). A variant built from a finding inherits a selection effect."
+    }
+   ]
+  },
+  {
+   "id": "O10",
+   "section": "open",
+   "text": "The 04 changes marker alignment: with 04 included, all 8 rare symbols align in column 14 (period 14 residue 13); with 04 removed, the 7 remaining rares split between columns 13 (5) and 14 (2) and align at residue 12 of period 14 (except two at 13).",
+   "evidence": "grid_profile(width=14, framing=removed) shows column 13 has 5/14 rare markers, column 14 has 2/13; period alignment shifts from residue 13 (with 04) to residue 12 (without 04) for most markers.",
+   "status": "retired",
+   "by": "kasiski",
+   "ts": "2026-10-11T13:40:02+00:00",
+   "log": [
+    {
+     "ts": "2026-10-11T13:43:38+00:00",
+     "by": "operator (Claude)",
+     "from": "proposed",
+     "to": "retired",
+     "note": "the 'split' is positional bookkeeping: removing the 04 shifts every later position by one, so the same 7 rare symbols stop lining up at period 14 — they still sit in column 14 of the original layout (F4)"
+    }
+   ]
+  },
+  {
+   "id": "F16",
+   "section": "fact",
+   "text": "Kasiski's pattern sweep of the ORIGINAL text (04 counted; layout widths, rows and periods 2-40; neighbour rules; repeats; isomorphs; digit-in-group; 2,000 shuffles, family-wise max-T) finds exactly ONE structure: column 14 (p 0.0005). Patterns that appear only in derived variants (:no-col14, 04 removed) must be re-tested in the original text — so far all were echoes of column 14 or chance.",
+   "evidence": "pattern_sweep 2026-10-11 ~14:00 UTC; developer check of F14/F15",
+   "status": "confirmed",
+   "by": "operator (Claude)",
+   "ts": "2026-10-11T13:43:27+00:00",
+   "log": [
+    {
+     "ts": "2026-10-14T19:11:27+00:00",
+     "by": "operator",
+     "link": "supersedes:F14",
+     "note": "F16 is the original-text sweep that showed F14 was column 14 shifted by the 04 removal; it corrects, not rests on, F14."
+    },
+    {
+     "ts": "2026-10-14T19:11:27+00:00",
+     "by": "operator",
+     "link": "supersedes:F15",
+     "note": "F16 is the original-text sweep that showed F15 was column 14 shifted by the 04 removal; it corrects, not rests on, F15."
+    }
+   ],
+   "confirmed_by": "operator (Claude)",
+   "links": [
+    {
+     "rel": "supersedes",
+     "to": "F14"
+    },
+    {
+     "rel": "supersedes",
+     "to": "F15"
+    }
+   ]
+  },
+  {
+   "id": "F17",
+   "section": "fact",
+   "text": "Column 14 contains systematic row-end nulls: rare symbols appear at non-random rows (pattern [2,3,6,7,8,9,12,13] matches 7/8 rare rows, p=0.0167 vs shuffled controls), consistent with book's dummy insertion after enciphering.",
+   "evidence": "Monte Carlo pattern test (10,000 trials) showing p=0.0167; matches book procedure of inserting dummies 'every third, fourth or fifth letter' after enciphering; consistent with F4 column 14 rare-cell cluster.",
+   "status": "disputed",
+   "by": "kasiski",
+   "ts": "2026-10-11T14:20:45+00:00",
+   "log": [
+    {
+     "ts": "2026-10-11T15:47:08+00:00",
+     "by": "kasiski",
+     "from": "proposed",
+     "to": "disputed",
+     "note": "Row-end nulls hypothesis p=0.0167 was incorrectly reported without family-wise correction; proper Monte Carlo test across 115 patterns shows family-wise p=0.7675 | evidence: Monte Carlo test across 115 patterns with 10000 shuffles: best pattern matches 6/8 rare positions, family-wise p=0.7675, not statistically significant. Script at /workspace/research/cipher/dagapeyeff/round6/fix_hypothesis_c.py"
+    }
+   ]
+  },
+  {
+   "id": "F18",
+   "section": "fact",
+   "text": "Plain English in 195-letter windows always contains all 26 letters (min=26, median=26 over 1000 samples), making the cipher's 17 distinct symbols impossible without alphabet reduction.",
+   "evidence": "Statistical analysis of 1000 random 195-letter windows from Brown corpus: all windows contained 26 unique letters (mean=26.0, std=0.0). /workspace/research/cipher/dagapeyeff/round6/friedman-E.md, /workspace/research/cipher/dagapeyeff/round6/reduction_analysis.json, task t-938ff7ca.",
+   "status": "disputed",
+   "by": "friedman",
+   "ts": "2026-10-11T14:29:56+00:00",
+   "log": [
+    {
+     "ts": "2026-10-11T21:59:40+00:00",
+     "by": "turing",
+     "from": "proposed",
+     "to": "disputed",
+     "note": "Contradicted by corrected analysis in F11/friedman-E.md. Original claim (min=26) came from random letter sampling, not contiguous windows. Corrected analysis on 20,647 contiguous windows shows minimum=19. F18 should be retired in favor of confirmed F11. | evidence: friedman-E.md retracted section 1; /workspace/research/cipher/dagapeyeff/round6/reduction_analysis.json shows corrected window analysi"
+    }
+   ]
+  },
+  {
+   "id": "O11",
+   "section": "open",
+   "text": "Test reduced alphabet hypothesis in solvers: substitution constrained to 17-letter alphabet (ACDEFGHILMNORSTUW) under columnar transposition.",
+   "evidence": "Reduction analysis shows only 'top17_english' yields exactly 17 symbols while improving frequency shape match. The 17-letter alphabet ACDEFGHILMNORSTUW omits B,P,V,J,K,Q,X,Y,Z. /workspace/research/cipher/dagapeyeff/round6/friedman-E.md, /workspace/research/cipher/dagapeyeff/round6/reduction_analysis.json.",
+   "status": "proposed",
+   "by": "friedman",
+   "ts": "2026-10-11T14:30:23+00:00",
+   "log": []
+  },
+  {
+   "id": "R20",
+   "section": "ruled_out",
+   "text": "Double columnar transposition (two unknown keys up to width 14×14) under simple substitution is UNTESTABLE at this text length — a planted answer of this model is not recovered reliably even at 1200s per configuration on the GPU (0/3). A negative result on the real text would therefore be inconclusive.",
+   "evidence": "GPU power check job 20261011-141350-a593: 0/3 planted answers recovered at 60s, 300s, and 1200s budgets per configuration. Result file: /lab/cipher/compound/results/power-20261011-141350-524.json",
+   "status": "retired",
+   "by": "welchman",
+   "ts": "2026-10-11T15:50:48+00:00",
+   "log": [
+    {
+     "ts": "2026-10-11T17:04:29+00:00",
+     "by": "operator",
+     "from": "proposed",
+     "to": "disputed",
+     "note": "Untestable is not ruled out: double transposition 0/3 at 60/300/1200 s belongs in inconclusive (UNTESTABLE AT THIS LENGTH), not ruled_out."
+    },
+    {
+     "ts": "2026-10-11T21:58:22+00:00",
+     "by": "turing",
+     "from": "disputed",
+     "to": "retired",
+     "note": "Claim gate blocks: This is correctly classified as UNTESTABLE (I28 covers it). Calling it 'ruled out' is wrong vocabulary per C3: plant not recovered = INCONCLUSIVE, never 'ruled out'. R20 was correctly rejected by the claim gate but its text misuses terminology."
+    }
+   ]
+  },
+  {
+   "id": "I27",
+   "section": "inconclusive",
+   "text": "Block transposition model with homophones ('two blocks, one shared columnar key') is UNTESTABLE at this text length — preliminary results (0/3 recoveries at 300s) suggest same issue as double transposition.",
+   "evidence": "GPU power check job 20261011-141436-14f1 still running but shows 0/3 at 300s (log line: 'power: budget 300s → 0/3 recovered'). Block model likely shares double's unidentifiability issue.",
+   "status": "disputed",
+   "by": "welchman",
+   "ts": "2026-10-11T15:51:29+00:00",
+   "log": [
+    {
+     "ts": "2026-10-11T17:04:29+00:00",
+     "by": "operator",
+     "from": "proposed",
+     "to": "disputed",
+     "note": "Wrong: power-20261011-141436-474.json shows gpu-block widths 13,14 TESTABLE - 2/3 at 300 s, 3/3 at 1200 s. Run the real two-block search at >= 1200 s/config."
+    }
+   ]
+  },
+  {
+   "id": "R21",
+   "section": "ruled_out",
+   "text": "One unknown columnar key at width 14 followed by one unknown simple substitution, on the stream with the 04 REMOVED (195 symbols), both directions: real text scored BELOW its shuffled null (margin -0.022) while the planted answer was recovered 100% at the same budget (570 s, 1024 chains, GPU). Not yet run with the 04 kept as its own symbol (196 = the aligned 14x14 grid; gpu_search framing=kept).",
+   "evidence": "lab job 20261011-142801-517a, /lab/cipher/compound/results/gpu-columnar-20261011-142801-849.json; power check power-20261011-125005-734.json (3/3 at 300 s)",
+   "status": "confirmed",
+   "by": "operator",
+   "ts": "2026-10-11T17:04:29+00:00",
+   "log": [],
+   "confirmed_by": "operator",
+   "history": [
+    {
+     "by": "operator",
+     "note": "framing corrected: gpu_search used the 04-removed stream"
+    }
+   ]
+  },
+  {
+   "id": "I28",
+   "section": "inconclusive",
+   "text": "Double columnar transposition (two unknown keys up to width 14×14) under simple substitution is UNTESTABLE at this text length — a planted answer of this model is not recovered reliably even at 1200s per configuration on the GPU (0/3). A negative result on the real text would therefore be inconclusive.",
+   "evidence": "GPU power check job 20261011-141350-a593: 0/3 planted answers recovered at 60s, 300s, and 1200s budgets per configuration. Result file: /lab/cipher/compound/results/power-20261011-141350-524.json",
+   "status": "disputed",
+   "by": "welchman",
+   "ts": "2026-10-11T17:11:43+00:00",
+   "log": [
+    {
+     "ts": "2026-10-14T02:49:33+00:00",
+     "by": "turing",
+     "from": "proposed",
+     "to": "disputed",
+     "note": "Duplicate of retired R20; double columnar transposition (two unknown keys up to width 14×14) under simple substitution is untestable at this length per existing ruled_out entry R20 | evidence: Matches retired R20 exactly on method and conclusion; proposed after R20 was retired"
+    }
+   ]
+  },
+  {
+   "id": "F19",
+   "section": "fact",
+   "text": "Width-14 columnar transposition followed by simple substitution is TESTABLE at text length 196 (04 kept): a power check (job 20261011-141436-14f1) recovered planted answers 2/3 at 300s per configuration and 3/3 at 1200s per configuration.",
+   "evidence": "lab_job 20261011-141436-14f1 log tail shows: \"budget 300s → 2/3 recovered\" and \"budget 1200s → 3/3 recovered\". GPU search with ≥300s per configuration can therefore distinguish a real signal from noise.",
+   "status": "retired",
+   "by": "painvin",
+   "ts": "2026-10-11T17:39:59+00:00",
+   "log": [
+    {
+     "ts": "2026-10-11T19:12:50+00:00",
+     "by": "operator",
+     "from": "proposed",
+     "to": "disputed",
+     "note": "Wrong evidence: job 14f1 is the gpu-block power check. Kept-framing width 14 power check is job 20261011-173643-8bc8 (power-20261011-173643-103.json): 3/3 at 300 s and 600 s."
+    },
+    {
+     "ts": "2026-10-11T21:57:10+00:00",
+     "by": "turing",
+     "from": "disputed",
+     "to": "retired",
+     "note": "Claim gate blocks: power check says 2/3 at 300s but the real text (gpu-columnar job 20261011-173705-ebbe) scored below its null (margin -0.0148). A positive plant recovery does not mean the model is testable for the real text — R24 proved the real text does not fit. The claim 'TESTABLE' overstates the evidence."
+    }
+   ]
+  },
+  {
+   "id": "F20",
+   "section": "fact",
+   "text": "Width-14 columnar transposition followed by simple substitution is TESTABLE at text length 196 (04 kept as symbol): a power check (job 20261011-125005-734) recovered planted answers 2/3 at 60s per configuration and 3/3 at 300s per configuration.",
+   "evidence": "compound_results('/lab/cipher/compound/results/power-20261011-125005-734.json') shows curve: budget 60s → 2/3 recovered, budget 300s → 3/3 recovered. GPU search with ≥60s per configuration can distinguish signal from noise.",
+   "status": "retired",
+   "by": "painvin",
+   "ts": "2026-10-11T17:40:36+00:00",
+   "log": [
+    {
+     "ts": "2026-10-11T19:12:50+00:00",
+     "by": "operator",
+     "from": "proposed",
+     "to": "disputed",
+     "note": "Wrong framing: power-20261011-125005-734 used the 04 REMOVED (195). See F19 note for the kept check."
+    },
+    {
+     "ts": "2026-10-11T21:57:11+00:00",
+     "by": "turing",
+     "from": "disputed",
+     "to": "retired",
+     "note": "Claim gate blocks: same issue as F19. Power check shows plant recovery but R24 (width-14, 04 kept) proved real text scores below null at same GPU budget (1770s/phase). Testability claim overstates evidence."
+    }
+   ]
+  },
+  {
+   "id": "I29",
+   "section": "inconclusive",
+   "text": "Hypothesis (c) 'column 14 as systematic row-end nulls' selection effect invalid: testing ALL patterns of 8 rows guarantees perfect match (8/8) to any random rare row set, making p=1.0; the previously reported p=0.0167 (for matching 7/8) assumes testing ONE predefined pattern, not selecting best after looking.",
+   "evidence": "Monte Carlo simulation (/workspace/research/cipher/dagapeyeff/round6/final_fix_hypothesis_c.py) shows: with 3003 possible 8-row patterns from 14 rows, random rare positions ALWAYS find a pattern matching all 8/8 (p=1.0). The reported 0.0167 was probability that ONE specific pattern matches ≥7 rare rows, but pattern was selected after looking at data.",
+   "status": "disputed",
+   "by": "kasiski",
+   "ts": "2026-10-11T17:44:38+00:00",
+   "log": [
+    {
+     "ts": "2026-10-14T02:50:03+00:00",
+     "by": "turing",
+     "from": "proposed",
+     "to": "disputed",
+     "note": "Selection effects invalidate methodology; testing ALL patterns of 8 rows guarantees finding patterns by chance | evidence: Entry states 'testing ALL patterns with the property guarantees finding patterns even in random data'; pattern testing all possibilities after looking at data is a cherry-picking fallacy"
+    }
+   ]
+  },
+  {
+   "id": "I30",
+   "section": "inconclusive",
+   "text": "Book-procedure simulator tests: No procedure combination reproduces all D'Agapeyeff characteristics; tested 5 variations produce 44-46 cells used (target 17), 3-6 heavy cells (target 13), 19-25 rare cells (target 4), and 25-43% 6-9/1-5 compliance (target ~99%).",
+   "evidence": "Simulation results (/workspace/research/cipher/dagapeyeff/round6/sim/simulation_results.json, run_simulations.py): test cases: Polybius only (46 cells, 6 heavy, 25 rare, 43% compliance), width-14 transposition (44,3,19,26%), two keyword passes (44,5,24,43%), Chinese route (45,5,21,33%), full procedure (44,6,20,28%). All far from target values.",
+   "status": "disputed",
+   "by": "kasiski",
+   "ts": "2026-10-11T17:44:52+00:00",
+   "log": [
+    {
+     "ts": "2026-10-11T21:59:40+00:00",
+     "by": "turing",
+     "from": "proposed",
+     "to": "disputed",
+     "note": "Simulation result with methodological limitation: simulator lacks families that could reproduce clues (mixed dummies, variable periods, metadata columns per O18). The 44-46 cells and 3-6 heavy cells are far from target, but this may be a simulator limitation rather than conclusive evidence that no procedure works. Treat as preliminary, not conclusive. | evidence: /workspace/research/cipher/dagapey"
+    }
+   ]
+  },
+  {
+   "id": "O12",
+   "section": "open",
+   "text": "Column 14 rare symbols are consistent with book's teaching of dummy insertion AFTER enciphering: if flow is substitution → columnar transposition → read off → insert dummies every Nth symbol, dummies land at regular intervals; when laid in 14x14 grid they may cluster in specific columns based on read order.",
+   "evidence": "Book snippet: 'dummy letters every third, fourth or fifth letter after enciphering' (F12). Column 14 contains all 8 rare symbols at positions that could result from regular dummy insertion pattern. KNOX keyword/crib tests show no support for keyword transposition alone, suggesting dummies are part of structure.",
+   "status": "proposed",
+   "by": "knox",
+   "ts": "2026-10-11T17:54:30+00:00",
+   "log": []
+  },
+  {
+   "id": "I31",
+   "section": "inconclusive",
+   "text": "One or two keyword-numbered columnar passes (widths 5-16) with book-derived keywords does not fit the ciphertext better than shuffled null at inline budget (40s): 1-pass margin +0.0327, 2-pass margin -0.039.",
+   "evidence": "keyword_transposition_solve(words='/workspace/research/cipher/dagapeyeff/round6/knox/keywords.txt', widths='5-16', passes=1,2, max_seconds=40) results. Self-check passed (plants recovered 100%). Real text scores near null.",
+   "status": "proposed",
+   "by": "knox",
+   "ts": "2026-10-11T17:54:48+00:00",
+   "log": []
+  },
+  {
+   "id": "F21",
+   "section": "fact",
+   "text": "Alexander d'Agapeyeff co-authored 'Maps' (1942) with E. C. R. Hadfield (identifier maps0000alex), demonstrating his cartography expertise and familiarity with 1930s-40s map conventions including Ordnance Survey grids, marginal information columns, and coordinate systems.",
+   "evidence": "book_snippets('d'Agapeyeff', 'maps') finds identifier maps0000alex; book_snippets('Ordnance Survey', 'maps0000alex') confirms references to British mapping authority; historical context: British National Grid established in 1930s, using letter pairs and 6-figure grid references.",
+   "status": "disputed",
+   "by": "mercator",
+   "ts": "2026-10-11T18:01:39+00:00",
+   "log": [
+    {
+     "ts": "2026-10-11T19:12:50+00:00",
+     "by": "operator",
+     "from": "proposed",
+     "to": "disputed",
+     "note": "Duplicate of F24 - keep F24."
+    }
+   ]
+  },
+  {
+   "id": "C6",
+   "section": "convention",
+   "text": "The 14x14 layout with column 14 containing all rare symbols aligns with 1930s map sheet conventions where the rightmost column contained marginal information (scale, legend, sheet number, bench-marks).",
+   "evidence": "grid_profile(width=14, framing='kept') shows column 14 statistically different (p=0.002) and contains all 8 rare symbols; book_snippets('margin', 'maps0000alex') shows map margins contain reference information; historical Ordnance Survey sheets had marginal columns for metadata.",
+   "status": "retired",
+   "by": "mercator",
+   "ts": "2026-10-11T18:01:53+00:00",
+   "log": [
+    {
+     "ts": "2026-10-11T19:12:50+00:00",
+     "by": "operator",
+     "from": "proposed",
+     "to": "disputed",
+     "note": "Interpretation, not a convention: the column-14 = map-margin idea has no test. Duplicate of C7. Move to open with a test that could fail."
+    },
+    {
+     "ts": "2026-10-11T21:57:11+00:00",
+     "by": "turing",
+     "from": "disputed",
+     "to": "retired",
+     "note": "Claim gate blocks: speculative cartographic interpretation. While d'Agapeyeff co-authored 'Maps', aligning column 14 with marginal information on map sheets is an unverified analogy, not a cryptanalytic fact. F24 covers the actual book evidence."
+    }
+   ]
+  },
+  {
+   "id": "F22",
+   "section": "fact",
+   "text": "Book teaches specific method: keyword square (default MANCHESTR), columns numbered by keyword order (16243897 example), write message in rows, read by columns in numbered order — creates 8-column transposition.",
+   "evidence": "book_snippets search results: 'cipher square: MANCHESTR 5 16243897 Remaining letters—not in the keyword—are written … Message written thus: ENEMYATTA CKSATDAWN No. 1 column gives NK No. 2 column gives MA No. 3 column gives AD &c.' Reconstructed method in test_book_method.py.",
+   "status": "retired",
+   "by": "kahn",
+   "ts": "2026-10-11T18:07:27+00:00",
+   "log": [
+    {
+     "ts": "2026-10-11T19:12:50+00:00",
+     "by": "operator",
+     "from": "proposed",
+     "to": "disputed",
+     "note": "The MANCHESTR square and order 16243897 are the BOOK'S WORKED EXAMPLE, not this cipher's key - the exact mistake REVIEW-2026-10-10 corrected (CIPHER_CONDUCT: never assume the book's example square). The book example square with periodic dummies is already ruled out (R8, p 0.59). Rewrite as: the book teaches keyword squares + keyword-numbered columns (already F-level), without the example values."
+    },
+    {
+     "ts": "2026-10-11T21:58:22+00:00",
+     "by": "turing",
+     "from": "disputed",
+     "to": "retired",
+     "note": "Claim gate blocks: MANCHESTR is the book's worked EXAMPLE square, not the cipher key. REVIEW-2026-10-10 established that using a worked example as if it were the key is error. F12 correctly states the book teaches keyword squares generally; F22 incorrectly asserts a specific square is 'taught' as the method."
+    }
+   ]
+  },
+  {
+   "id": "O13",
+   "section": "open",
+   "text": "Test if cipher exhibits 8-column periodicity from D'Agapeyeff's book method (MANCHESTR square, columns 16243897) — Friedman-testable constraint.",
+   "evidence": "Book method reconstruction shows 8-column layout; periodicity test needed on cipher; predictions in KAHN_FINAL.md.",
+   "status": "retired",
+   "by": "kahn",
+   "ts": "2026-10-11T18:07:36+00:00",
+   "log": [
+    {
+     "ts": "2026-10-11T19:12:50+00:00",
+     "by": "operator",
+     "from": "proposed",
+     "to": "disputed",
+     "note": "8-column periodicity from the book example is the example key again; period-8 structure is already covered by the blind sweep (only column 14 survives, p 0.0005)."
+    },
+    {
+     "ts": "2026-10-11T21:57:11+00:00",
+     "by": "turing",
+     "from": "disputed",
+     "to": "retired",
+     "note": "Claim gate blocks: depends on the book's MANCHESTR example being treated as the actual key square. REVIEW-2026-10-10 corrected this error — the example square is not the cipher key. Cannot confirm a simulation/false assumption as an open angle."
+    }
+   ]
+  },
+  {
+   "id": "O14",
+   "section": "open",
+   "text": "Square layout analysis: 04 likely represents punctuation/dummy inserted after enciphering (row 0, column 4); problem cells 61,73,95 map to E,G,Z in keyword square — test readability with rare letter assignments.",
+   "evidence": "Square analysis scripts (analyze_square_layouts.py, test_dummy_patterns.py) showing cell mappings; KAHN_FINAL.md section 'Analysis of Our Cipher'.",
+   "status": "retired",
+   "by": "kahn",
+   "ts": "2026-10-11T18:07:42+00:00",
+   "log": [
+    {
+     "ts": "2026-10-11T19:12:50+00:00",
+     "by": "operator",
+     "from": "proposed",
+     "to": "disputed",
+     "note": "Maps cells to letters through the book's example square (61->E, 73->G, 95->Z): the key is unknown, so no cell has a letter. Withdraw; the 04-as-post-encipherment-dummy idea is already O12 (knox)."
+    },
+    {
+     "ts": "2026-10-11T21:58:22+00:00",
+     "by": "turing",
+     "from": "disputed",
+     "to": "retired",
+     "note": "Claim gate blocks: depends on treating the book's MANCHESTR example square as the cipher key. REVIEW-2026-10-10 corrected this error. Simulating the book's method does not mean the cipher uses that example square."
+    }
+   ]
+  },
+  {
+   "id": "F23",
+   "section": "fact",
+   "text": "Transcription comparison across published sources (Wikipedia, 1974 Gale reprint, Rugg 2013, Bauer 2017) reveals zero differences; the ciphertext is consistently reproduced.",
+   "evidence": "compare_transcriptions for each source; workspace file research/cipher/dagapeyeff/round6/batey_transcriptions.md",
+   "status": "disputed",
+   "by": "batey",
+   "ts": "2026-10-11T18:08:47+00:00",
+   "log": [
+    {
+     "ts": "2026-10-11T19:12:50+00:00",
+     "by": "operator",
+     "from": "proposed",
+     "to": "disputed",
+     "note": "Overstated: only Wikipedia was compared in full; the 1974 reprint, Rugg and Bauer were checked by snippet (first groups only). Say exactly that."
+    }
+   ]
+  },
+  {
+   "id": "O15",
+   "section": "open",
+   "text": "Whether a single slip (drop, misread, or swap) could hide a valid width-14 columnar transposition + substitution answer: three power checks and six error-tolerant searches (targeted at 04 and all positions) are queued.",
+   "evidence": "lab_submit IDs: 20261011-174524-6554, -174551-da82, -174604-ab1b (power); 20261011-180019-7818, -180033-72ef, -180048-c726 (04-only); 20261011-180459-3160, -9e20, -ba85 (all-positions). Report /workspace/research/cipher/dagapeyeff/round6/batey.md.",
+   "status": "proposed",
+   "by": "batey",
+   "ts": "2026-10-11T18:08:47+00:00",
+   "log": []
+  },
+  {
+   "id": "F24",
+   "section": "fact",
+   "text": "Alexander d'Agapeyeff co-authored 'Maps' (1942) with E. C. R. Hadfield (identifier maps0000alex), discussing Ordnance Survey maps, map scales (1 inch, 6-inch, 25-inch), and the importance of marginal information on map sheets.",
+   "evidence": "book_snippets('Ordnance Survey', identifier='maps0000alex') returns snippet: 'the very excellent English [Ordnance Survey] maps, with a scale of 1 inch to the mile, are … 6-inch-to-the-mile and the 25-inch-to-the-mile [Ordnance Survey]'. book_snippets('marginal', identifier='maps0000alex') returns: 'reference should be made to the [marginal] information of a map before assuming this.'",
+   "status": "proposed",
+   "by": "mercator",
+   "ts": "2026-10-11T18:14:39+00:00",
+   "log": []
+  },
+  {
+   "id": "C7",
+   "section": "convention",
+   "text": "The 14x14 layout with column 14 containing all rare symbols aligns with 1930s map sheet conventions where one column contains marginal information (scale, legend, sheet number, publication details, north arrow).",
+   "evidence": "grid_profile(width=14, framing='kept') shows column 14 contains all 8 marker cells (p=0.002). Historical context: British National Grid established in 1930s; map sheets had marginal columns for reference information.",
+   "status": "retired",
+   "by": "mercator",
+   "ts": "2026-10-11T18:15:36+00:00",
+   "log": [
+    {
+     "ts": "2026-10-11T19:12:50+00:00",
+     "by": "operator",
+     "from": "proposed",
+     "to": "disputed",
+     "note": "Interpretation, not a convention, and untested: grid_profile p=0.002 only restates the column-14 fact. Move to open; name a prediction a map-margin reading makes that a dummy column does not."
+    },
+    {
+     "ts": "2026-10-11T21:57:11+00:00",
+     "by": "turing",
+     "from": "disputed",
+     "to": "retired",
+     "note": "Claim gate blocks: speculative cartographic interpretation. Same as C6 — aligns a cipher column with map conventions without cryptanalytic evidence. Interpretation, not convention."
+    }
+   ]
+  },
+  {
+   "id": "C8",
+   "section": "convention",
+   "text": "The coordinate system (rows 6-9, columns 1-5) could represent map grid references with row digits as eastings and column digits as northings, consistent with British National Grid 6-figure references (letter pair + 6 digits).",
+   "evidence": "coordinate_profile shows perfect row/column alternation with rows 6-9 and columns 1-5. Historical: British grid references use eastings (E) and northings (N) digits, e.g., NS123456 where 12 = easting, 34 = northing, 56 = precision.",
+   "status": "retired",
+   "by": "mercator",
+   "ts": "2026-10-11T18:16:42+00:00",
+   "log": [
+    {
+     "ts": "2026-10-11T19:12:50+00:00",
+     "by": "operator",
+     "from": "proposed",
+     "to": "disputed",
+     "note": "Untested narrative (rows 6-9 = eastings, cols 1-5 = northings): no test, and every crib test of map terms failed against controls (mercator.md). Move to open with a falsifiable test or withdraw."
+    },
+    {
+     "ts": "2026-10-11T21:57:11+00:00",
+     "by": "turing",
+     "from": "disputed",
+     "to": "retired",
+     "note": "Claim gate blocks: speculative cartographic interpretation. British National Grid 6-figure references use letter pairs, not digit pairs like the cipher. No evidence the coordinate system encodes map references."
+    }
+   ]
+  },
+  {
+   "id": "R22",
+   "section": "ruled_out",
+   "text": "One unknown columnar key at width 13 + one simple substitution, 04-REMOVED stream (195), both directions: plant recovered 100%, real at its null (margin +0.0098) at 1770 s/phase on the GPU.",
+   "evidence": "job 20261011-154010-6936, gpu-columnar-20261011-154010-986.json",
+   "status": "confirmed",
+   "by": "operator",
+   "ts": "2026-10-11T19:12:50+00:00",
+   "log": [],
+   "confirmed_by": "operator"
+  },
+  {
+   "id": "R23",
+   "section": "ruled_out",
+   "text": "One unknown columnar key at width 13 + one simple substitution on the text without column 14 (dagapeyeff:no-col14, 182 = 14x13), both directions: plant recovered 100%, real below its null (margin -0.028) at 1770 s/phase on the GPU.",
+   "evidence": "job 20261011-154459-31ef, gpu-columnar-20261011-154459-550.json",
+   "status": "confirmed",
+   "by": "operator",
+   "ts": "2026-10-11T19:12:50+00:00",
+   "log": [],
+   "confirmed_by": "operator"
+  },
+  {
+   "id": "O16",
+   "section": "open",
+   "text": "Procedure simulation: of 304 enciphering families, only reduced-alphabet + 4x5 square + a dummy every 14th symbol added as the last step ever reproduce all clues (17 cells, intact coordinates, every rare symbol in column 14); every other family tried scored 0 joint matches in 80 trials. Lead: column 14 is final-step padding; the message is in dagapeyeff:no-col14.",
+   "evidence": "simulate_procedures(families='all', trials=80, seed=0) run by the operator 2026-10-11; families limited to the simulator's list",
+   "status": "confirmed",
+   "by": "operator",
+   "ts": "2026-10-11T19:39:22+00:00",
+   "log": [
+    {
+     "ts": "2026-10-11T22:51:29+00:00",
+     "by": "turing",
+     "from": "proposed",
+     "to": "confirmed",
+     "note": "Simulation result that only r17+4x5+p14 families reproduce all clues. This is a result from simulate_procedures with thousands of trials. Verified. Still open as not definitive."
+    }
+   ],
+   "confirmed_by": "turing"
+  },
+  {
+   "id": "F25",
+   "section": "fact",
+   "text": "Only surviving family from procedure simulation: reduced alphabet + 4x5 keyword square + dummy every 14th symbol added last, producing message in dagapeyeff:no-col14 (182 symbols)",
+   "evidence": "Case O16: simulate_procedures(families='all', trials=80, seed=0) run by operator 2026-10-11; families limited to simulator's list with constraints: 17 cells, intact coordinates, every rare symbol in column 14; all other families scored 0 joint matches",
+   "status": "retired",
+   "by": "rejewski",
+   "ts": "2026-10-11T19:42:42+00:00",
+   "log": [
+    {
+     "ts": "2026-10-11T20:18:51+00:00",
+     "by": "operator",
+     "from": "proposed",
+     "to": "disputed",
+     "note": "A simulation result inside the simulator's own family list (O18 names what it lacks) is a lead, not a fact about the cipher: keep it as O16 (open). Replication with another seed (6/304 families, all r17/4x5/p14) strengthens O16; add it there."
+    },
+    {
+     "ts": "2026-10-11T21:58:22+00:00",
+     "by": "turing",
+     "from": "disputed",
+     "to": "retired",
+     "note": "Claim gate blocks: simulator result cannot be confirmed as a fact. 304 families × 80 trials is not exhaustive — simulator lacks mixed dummies, variable periods, metadata columns, partial transpositions (O18). 'Only surviving family' is simulator-limited, not cipher-limited."
+    }
+   ]
+  },
+  {
+   "id": "F26",
+   "section": "fact",
+   "text": "Keyword squares reduce substitution key space from ~1.1×10²¹ (26!/(26-17)!) to ~20,000 possibilities for a 30k-word dictionary, a reduction factor of ~5.6×10¹⁶",
+   "evidence": "Analysis script keyword_constraint_analysis.py: 163 keywords → 161 distinct 4x5 mappings (~1:1 ratio). Extrapolation: 30k words → ~20k distinct mappings. Unconstrained space calculation: 26×25×...×10 = 1.11×10²¹. Reduction: 1.11×10²¹ / 20,000 = 5.6×10¹⁶",
+   "status": "retired",
+   "by": "rejewski",
+   "ts": "2026-10-11T19:51:24+00:00",
+   "log": [
+    {
+     "ts": "2026-10-11T20:18:51+00:00",
+     "by": "operator",
+     "from": "proposed",
+     "to": "disputed",
+     "note": "True arithmetic, but conditional: it is the size of the key space IF a dictionary keyword square was used, not a fact about the cipher. File as convention/open (it is the basis of O17)."
+    },
+    {
+     "ts": "2026-10-11T21:58:22+00:00",
+     "by": "turing",
+     "from": "disputed",
+     "to": "retired",
+     "note": "Claim gate blocks: this is a key-space calculation, not a case-countable fact. The ~20,000 estimate extrapolates from 163 keywords to 30k. Confirmed by skeptic as a calculation, but figures should remain in reports, not case file facts (calculation, not observation)."
+    }
+   ]
+  },
+  {
+   "id": "I32",
+   "section": "inconclusive",
+   "text": "Statistical test shows cipher cell frequencies in no-col14 are consistent with keyword square hypothesis (p=0.47, Monte Carlo with 1000 simulations), not rejecting the hypothesis but not supporting it either",
+   "evidence": "keyword_statistical_test.py: p-value 0.47 from test \"heaviest cell (81) gets common English letter\". Null: random keyword squares. Average common letters (E/T/A/O) on top 4 cells: 0.79 vs expected 0.8",
+   "status": "proposed",
+   "by": "rejewski",
+   "ts": "2026-10-11T19:51:32+00:00",
+   "log": []
+  },
+  {
+   "id": "O17",
+   "section": "open",
+   "text": "GPU search needed for keyword-square × columnar transposition on dagapeyeff:no-col14 with reduced alphabet (17 letters) constraint: test 20k keywords × widths 5-16 with plants and shuffled nulls",
+   "evidence": "rejewski-B.md sections 5-6: search specification with plant design. Key space quantified: ~20k distinct squares from dictionary × 12 widths = ~240k configurations. Plant verification required before testing real cipher",
+   "status": "confirmed",
+   "by": "rejewski",
+   "ts": "2026-10-11T19:51:47+00:00",
+   "log": [
+    {
+     "ts": "2026-10-11T22:51:29+00:00",
+     "by": "turing",
+     "from": "proposed",
+     "to": "confirmed",
+     "note": "Open task specification for GPU keyword-square search. Status confirmed as proposed open angle."
+    }
+   ],
+   "confirmed_by": "turing"
+  },
+  {
+   "id": "F27",
+   "section": "fact",
+   "text": "Procedure simulation confirms only reduced alphabet (r17) + 4x5 square + dummy every 14th symbol can reproduce all cipher clues (17 cells, coordinates intact, all rare in column 14). With 300 trials and seed=9999, joint probability = 0.017.",
+   "evidence": "simulate_procedures(ciphertext='dagapeyeff', families='square=4x5,reduction=r17,dummies=p14', trials=300, seed=9999) shows top family (r17/4x5/p14/after) joint=0.017. Comparable results with families='all' (seed=8888) show only 6/304 families reproduce all clues, all sharing r17/4x5/p14.",
+   "status": "retired",
+   "by": "kasiski",
+   "ts": "2026-10-11T20:01:37+00:00",
+   "log": [
+    {
+     "ts": "2026-10-11T20:18:51+00:00",
+     "by": "operator",
+     "from": "proposed",
+     "to": "disputed",
+     "note": "A simulation result inside the simulator's own family list (O18 names what it lacks) is a lead, not a fact about the cipher: keep it as O16 (open). Replication with another seed (6/304 families, all r17/4x5/p14) strengthens O16; add it there."
+    },
+    {
+     "ts": "2026-10-11T21:58:22+00:00",
+     "by": "turing",
+     "from": "disputed",
+     "to": "retired",
+     "note": "Claim gate blocks: simulator cannot test all possible families. kasiski-B confirmed 6/304 families reproduce all clues, all sharing r17/4x5/p14, but the simulator has known gaps (O18: mixed dummies, variable periods, metadata columns, partial transpositions). A result limited to simulator coverage cannot claim 'only' family."
+    }
+   ]
+  },
+  {
+   "id": "F28",
+   "section": "fact",
+   "text": "Column 14 contains 8 rare symbols (93,92,04,94,71,93,92,92) and 6 common symbols (84,62,85,64,74,83). Rare symbols appear at rows 2,3,6,7,8,9,11,13; common symbols at rows 0,1,4,5,10,12.",
+   "evidence": "Column 14 analysis script (kasiski-B-col14-analysis.py) shows exact composition. Rare symbols: 92 appears 3 times, 93 appears 2 times, 04/71/94 appear 1 time each. Common symbols are all frequent cells (ranks 3-11 overall).",
+   "status": "confirmed",
+   "by": "kasiski",
+   "ts": "2026-10-11T20:01:45+00:00",
+   "log": [
+    {
+     "ts": "2026-10-11T22:49:33+00:00",
+     "by": "turing",
+     "from": "proposed",
+     "to": "confirmed",
+     "note": "Factual observation: column 14 contains 8 rare symbols (93,92,04,94,71,93,92,92) and 6 common symbols (84,62,85,64,74,83). Verified by direct inspection of the ciphertext."
+    }
+   ],
+   "confirmed_by": "turing"
+  },
+  {
+   "id": "O18",
+   "section": "open",
+   "text": "Simulator lacks families that could also put every rare symbol in one column: mixed dummy types, variable periods, position-dependent rules, metadata column model, partial transpositions.",
+   "evidence": "Analysis of missing families in kasiski-B-missing-families.md. simulate_procedures(families='all') shows only r17/4x5/p14 families reproduce clues. Missing: mixed dummies (p14+words), variable periods p2-p30, column-specific operations, metadata column treatment, position-dependent insertion rules.",
+   "status": "proposed",
+   "by": "kasiski",
+   "ts": "2026-10-11T20:01:58+00:00",
+   "log": []
+  },
+  {
+   "id": "R24",
+   "section": "ruled_out",
+   "text": "One unknown columnar key at width 14 + one simple substitution on the ALIGNED 14x14 grid (04 kept as its own symbol, 196), both directions: plant recovered 100%, real below its null (margin -0.0148) at 1770 s/phase on the GPU. Planted with full English; the 17-letter (en-r17) re-check is queued.",
+   "evidence": "job 20261011-173705-ebbe, gpu-columnar-20261011-173705-154.json (framing kept)",
+   "status": "confirmed",
+   "by": "operator",
+   "ts": "2026-10-11T20:34:38+00:00",
+   "log": [],
+   "confirmed_by": "operator"
+  },
+  {
+   "id": "R25",
+   "section": "ruled_out",
+   "text": "Two blocks split at the 04 sharing one columnar key (the Uygun model without homophones) at widths 13 and 14 + one simple substitution, 04 removed (195), both directions: plant recovered 100%, real at its null (margin +0.033) at 1770 s/phase on the GPU. Planted with full English.",
+   "evidence": "job 20261011-171111-e527, gpu-block-20261011-171111-523.json",
+   "status": "confirmed",
+   "by": "operator",
+   "ts": "2026-10-11T20:38:11+00:00",
+   "log": [],
+   "confirmed_by": "operator"
+  },
+  {
+   "id": "R26",
+   "section": "ruled_out",
+   "text": "Padding crib: no dictionary keyword square (148,398 squares: 30k words x fills rows/cols4/cols5 x rest alpha/after) makes the 13 message columns' cell counts fit English letter frequencies better than shuffled cell labels do - full English p 0.89, 17-letter p 0.79, 19-letter p 0.87, German p 0.88 - while planted ciphers put the true square at rank 1 in 100% of plants. Count-based, so it holds for ANY transposition of those 13 columns. French p 0.16 (not significant; English keywords only).",
+   "evidence": "padding_crib / null_crib.rank_squares run by the operator 2026-10-11 (nulls 100, plants 30-40, seeds 0-1)",
+   "status": "confirmed",
+   "by": "operator",
+   "ts": "2026-10-11T20:38:11+00:00",
+   "log": [],
+   "confirmed_by": "operator"
+  },
+  {
+   "id": "R27",
+   "section": "ruled_out",
+   "text": "One unknown columnar key at width 14 followed by one unknown simple substitution, on the stream with the 04 KEPT as its own symbol (196 = 14x14 aligned grid), both directions: plant recovered 100%, real below its shuffled null (margin -0.0148) at 885s/phase on the GPU (2048 chains). This closes the natural framing where the 04 occupies its own position in a 14x14 layout.",
+   "evidence": "gpu-columnar job 20261011-173705-ebbe; compound_results('/lab/cipher/compound/results/gpu-columnar-20261011-173705-154.json'); self_check char_agreement=1.0, recovered=true; real best -5.0615 vs null best -5.0467",
+   "status": "confirmed",
+   "by": "turing",
+   "ts": "2026-10-11T20:53:36+00:00",
+   "log": [
+    {
+     "ts": "2026-10-11T22:51:29+00:00",
+     "by": "turing",
+     "from": "proposed",
+     "to": "confirmed",
+     "note": "Already a confirmed entry R24. R27 is a duplicate with a proposed status. The evidence is the same job (20261011-173705-ebbe). Ruled out: plant 100%, margin -0.0148."
+    }
+   ],
+   "confirmed_by": "turing"
+  },
+  {
+   "id": "O19",
+   "section": "open",
+   "text": "Whether a single slip (drop or misread at the 04, position 195) could hide a valid width-14 columnar transposition + substitution answer: power checks queued to determine testability.",
+   "evidence": "Power check jobs submitted: 20261011-211700-295c (drop error), 20261011-211812-2f89 (misread error). Both at position 195, widths=14, framing=kept (aligned 14x14 grid). Previous error jobs interrupted during lab upgrade. Results pending to determine if TESTABLE at this text length.",
+   "status": "proposed",
+   "by": "batey",
+   "ts": "2026-10-11T21:20:37+00:00",
+   "log": []
+  },
+  {
+   "id": "O20",
+   "section": "open",
+   "text": "Padding crib with French-style transliterated Russian (ru-latfr, Russian keywords): p 0.0025-0.008 against shuffled labels (500-2000 nulls, three seeds), same top square PODRAZOUMEVAETSIA/rows/after; but the 13 message columns alone give p 0.59 - the signal comes from column 14 (rare cells at the square tail, rows 9/0). ~9 plaintext models tried (borderline after correction). English-style ru-lat p 0.54. Decisive test: keyword_square_search on the shortlist with language ru-latfr.",
+   "evidence": "padding_crib(language=ru-latfr, words=wordfreq:ru-latfr) operator 2026-10-11; squares file /lab/cipher/compound/squares/crib-20261011-212123-2000.txt",
+   "status": "disputed",
+   "by": "operator",
+   "ts": "2026-10-11T21:21:34+00:00",
+   "log": [
+    {
+     "ts": "2026-10-11T22:45:30+00:00",
+     "by": "operator",
+     "from": "proposed",
+     "to": "disputed",
+     "note": "Hendrick 2026 (zenodo 23241303): Russian needs at least 9 count errors under each of four transliterations on three treebanks, under ANY one-to-one key - so a Russian keyword square for the message is excluded by counts; consistent with our own message-only p 0.59. The ru-latfr crib signal came only from column 14 (rare letters on rare cells) and is not evidence for Russian. Treat as dead unless a"
+    }
+   ]
+  },
+  {
+   "id": "F29",
+   "section": "fact",
+   "text": "A2 period names/phrases list compiled: 308 unique keywords/phrases combining 1930s military/diplomatic context with D'Agapeyeff's book phrases, including historical figures, treaties, events, literary works, and intelligence/espionage terms relevant to 1939 context.",
+   "evidence": "/workspace/research/cipher/dagapeyeff/round7/keywords-period.txt (KAHN's period list), /workspace/research/cipher/dagapeyeff/round7/keywords-period-book-merged-final.txt (merged Knox+KAHN lists), /workspace/research/cipher/dagapeyeff/round7/kahn.md (report). Task t-fb2ba0d4 completed.",
+   "status": "confirmed",
+   "by": "kahn",
+   "ts": "2026-10-11T21:23:13+00:00",
+   "log": [
+    {
+     "ts": "2026-10-11T22:49:33+00:00",
+     "by": "turing",
+     "from": "proposed",
+     "to": "confirmed",
+     "note": "Verified: kahn compiled 308 unique keywords/phrases from 1930s context and book phrases. File exists at round7/keywords-period.txt."
+    }
+   ],
+   "confirmed_by": "turing"
+  },
+  {
+   "id": "F30",
+   "section": "fact",
+   "text": "Numbers spelled out as a plaintext style matches cipher constraints: exactly 17 distinct letters (matches F11), IC=1.98 (close to cipher's 1.83), top13 letters cover 93% of text (cipher: 13 heavy cells carry 96%). This style could explain the cipher's reduced alphabet.",
+   "evidence": "/workspace/research/cipher/dagapeyeff/round7/style_frequencies.json shows numbers_spelled style with 17 distinct letters, IC=1.98, top13_percent=92.8%. Comparison with cipher: F11 shows cipher uses 17 cells, F5 shows IC=1.83, 13 heavy cells carry 188/195=96% of symbols.",
+   "status": "confirmed",
+   "by": "friedman",
+   "ts": "2026-10-11T21:26:01+00:00",
+   "log": [
+    {
+     "ts": "2026-10-11T22:49:33+00:00",
+     "by": "turing",
+     "from": "proposed",
+     "to": "confirmed",
+     "note": "Verified: statistical comparison of plaintext styles shows numbers-spelled uses 17 distinct letters, IC=1.98, top13=93%. This is a descriptive fact about a plaintext model."
+    }
+   ],
+   "confirmed_by": "turing"
+  },
+  {
+   "id": "I33",
+   "section": "inconclusive",
+   "text": "Author-related keywords (author names, map terms, book titles) tested via crib_test show no support in cipher text - hits ≤ shuffled null across 20+ cribs.",
+   "evidence": "crib_test results with model='keyword' on cribs: ALEXANDERDAGAPEYEFF, ORDNANCESURVEY, NATIONALGRID, GRIDREFERENCE, CARTOGRAPHY, MAPSHEETNUMBER, CODESANDCIPHERS, BRITISHNATIONALGRID, DAGAPEYEFF, SIXFIGUREREFERENCE. All share_with_shuffles ≥ 0.762, plant_found_at_true_position=true. Consistent with R26 finding no dictionary keyword square fits cipher.",
+   "status": "confirmed",
+   "by": "mercator",
+   "ts": "2026-10-11T21:27:57+00:00",
+   "log": [
+    {
+     "ts": "2026-10-11T22:51:29+00:00",
+     "by": "turing",
+     "from": "proposed",
+     "to": "confirmed",
+     "note": "Descriptive fact about crib_test results, not an interpretation. Confirmed as a test result."
+    }
+   ],
+   "confirmed_by": "turing"
+  },
+  {
+   "id": "O21",
+   "section": "open",
+   "text": "Procedure inference from 60k simulations (job 20261011-205428-7dd2) yields credible settings: dummy period 14 (p=0.824), dummies added after transposition (p=0.748),  4×5 square (p=1.0), width 13 transposition (p=0.433), reduction 18 (r17 English, p=0.534)",
+   "evidence": "lab_job 20261011-205428-7dd2 log shows posterior probabilities; full analysis at /workspace/research/cipher/dagapeyeff/round7/kasiski-F.md",
+   "status": "proposed",
+   "by": "kasiski",
+   "ts": "2026-10-11T21:29:37+00:00",
+   "log": []
+  },
+  {
+   "id": "R28",
+   "section": "ruled_out",
+   "text": "French, Italian, Spanish, Dutch, and Latin plaintext with language-specific keyword squares do not fit the cipher better than chance",
+   "evidence": "keyword_transposition_solve tests for each language (fr, it, es, nl, la) at widths 13-14 with 10k native-language keywords: all showed real ciphertext scoring at or below shuffled null controls (margins: FR -0.0311, IT -0.1292, ES -0.0495, NL -0.0223). Self-checks passed (plants recovered 100%). Results files: /workspace/research/cipher/dagapeyeff/round7/ventris-{FR,IT,ES,NL}-result.json. Report: ",
+   "status": "confirmed",
+   "by": "ventris",
+   "ts": "2026-10-11T21:49:46+00:00",
+   "log": [
+    {
+     "ts": "2026-10-11T22:49:33+00:00",
+     "by": "turing",
+     "from": "proposed",
+     "to": "confirmed",
+     "note": "Ventris ran keyword_transposition_solve for FR/IT/ES/NL/LA with self-checks passed (plants 100%). All showed real at or below null. Confirmed as ruled_out."
+    }
+   ],
+   "confirmed_by": "turing"
+  },
+  {
+   "id": "O22",
+   "section": "open",
+   "text": "Inference-guided searches in progress: Based on kasiski's posterior values (dummy period 14=0.824, order after=0.748, width 13=0.433, 4x5 square=1.0, reduction 18→r17=0.534), power checks submitted for widths 13 and 14 with en-r17 on dagapeyeff:no-col14. GPU search pending power check results. Padding hypothesis (04 from row 0 in 5x5 square) contradicted by square=4x5 posterior.",
+   "evidence": "Job 20261011-205428-7dd2 inference results (/workspace/research/cipher/dagapeyeff/round7/kasiski-F.md); power check jobs submitted: 20261011-215013-35dc (width 13) and 20261011-215056-48d7 (width 14); rejewski-F.md analysis; mathematical contradiction of 5x5 hypothesis vs 4x5 posterior",
+   "status": "proposed",
+   "by": "rejewski",
+   "ts": "2026-10-11T21:54:57+00:00",
+   "log": []
+  },
+  {
+   "id": "I34",
+   "section": "inconclusive",
+   "text": "Keyword phrases from D'Agapeyeff's book and 1930s period context tested with keyword_transposition_solve and padding_crib: lab job margin +0.0438, self-check 51.3%, en p=0.2935, en-r17 p=0.0348 - not significant after multiple comparisons correction.",
+   "evidence": "keyword_transposition_solve lab job 063b (margin +0.0438, self-check 51.3%); padding_crib results: book phrases en p=0.2935, en-r17 p=0.0448; combined list en p=0.1542, en-r17 p=0.0348; results file /lab/cipher/compound/results/keyword-20261011-215743-194.json; squares files /lab/cipher/compound/squares/crib-20261011-220321-5.txt and /lab/cipher/compound/squares/crib-20261011-220446-5.txt",
+   "status": "proposed",
+   "by": "knox",
+   "ts": "2026-10-11T22:07:34+00:00",
+   "log": []
+  },
+  {
+   "id": "I35",
+   "section": "inconclusive",
+   "text": "Numbers-spelled-out plaintext model (language='numbers' and 'numbers-r17') tested with padding_crib: no significant fit (p=0.7065 and p=0.5025 vs shuffled labels). Best square: MAITLAND/cols5/after.",
+   "evidence": "padding_crib(ciphertext='dagapeyeff', language='numbers') p=0.7065; padding_rib(language='numbers-r17') p=0.5025; best_total scores -592.682 (numbers) vs -589.026 (numbers-r17) vs null_best_mean -587.035 (numbers) / -590.724 (numbers-r17).",
+   "status": "proposed",
+   "by": "friedman",
+   "ts": "2026-10-11T22:08:19+00:00",
+   "log": []
+  },
+  {
+   "id": "I36",
+   "section": "inconclusive",
+   "text": "padding_crib tests for French, Italian, Spanish, Dutch, and Latin plaintext with language-specific keywords show p-values ≥ 0.0249, aligning with R26: no dictionary square fits better than shuffled labels.",
+   "evidence": "padding_crib tool calls returned: French p=0.3234, Italian p=0.2985, Spanish p=0.3134, Dutch p=0.4876, Latin p=0.0249, Latin-r17 p=0.0149; all planted true squares rank #1; confirms R26 finding",
+   "status": "proposed",
+   "by": "ventris",
+   "ts": "2026-10-11T22:08:45+00:00",
+   "log": []
+  },
+  {
+   "id": "I37",
+   "section": "inconclusive",
+   "text": "Padding crib with additional language models (numbers, ru-lat, ru-latfr) yields high p-values (all >0.05), extending R26's conclusion that no dictionary keyword square fits the cipher's cell counts.",
+   "evidence": "padding_crib('dagapeyeff', language='numbers', words='common') → p=0.6139; padding_crib('dagapeyeff', language='ru-lat', words='common') → p=0.4752; padding_crib('dagapeyeff', language='ru-latfr', words='common') → p=0.8614; with author/period lists: p=0.3861 (numbers), 0.3168 (en), 0.1287 (en-r17). No significant fits.",
+   "status": "proposed",
+   "by": "mercator",
+   "ts": "2026-10-11T22:12:59+00:00",
+   "log": []
+  },
+  {
+   "id": "F31",
+   "section": "fact",
+   "text": "The 13 message columns (182 symbols, column 14 excluded) use exactly 13 distinct cells, and their counts (20,17,17,16,16,15,14,13,12,12,11,10,9) are statistically indistinguishable from UNIFORM (chi-square vs uniform p 0.73). Natural text is almost never this flat: in 2000 windows of 182 letters each, the top-13 letters were as flat in 1/2000 (English), 0/2000 (17-letter English, French, German, French-style Russian, numbers spelled out), 6/2000 (Latin) - and natural windows use 17-22 letters, not 13. Every rare cell (71 92 93 94 04) occurs ONLY in column 14; column 14 draws its 8 rare entries REFINED (operator): naturally made tables never reach this flatness either - many-to-one merges with rare letters scattered 0-5/1000, two letters per symbol (Porta A-M/N-Z, random pairs, keyword 2x13 tables) 0/1000 - but a DELIBERATELY frequency-balanced many-to-one table does (English 364/1000, Latin 368/1000, German 54, French 4). So the message is not natural text through a naturally made table; it is consistent with a frequency-balanced table, fractionation, a key stream, a numeric code, or no message.",
+   "evidence": "operator computation 2026-10-11 (scipy chisquare; windows from the en/en-r17/fr/de/ru-latfr/la/numbers streams)",
+   "status": "confirmed",
+   "by": "operator",
+   "ts": "2026-10-11T22:13:30+00:00",
+   "log": [
+    {
+     "by": "operator",
+     "note": "refined with merge and two-letter-table tests"
+    }
+   ],
+   "confirmed_by": "operator"
+  },
+  {
+   "id": "F32",
+   "section": "fact",
+   "text": "Beyond F31 the 13 message columns show NO structure in any view tested against 1500-5000 shuffles: rows do not differ (chi2 p 0.08), columns do not (0.30), top vs bottom half do not (0.10), left vs right do not (0.60); no lagged dependence at lags 1-26 in reading or column order (max mutual information, family-wise p 0.91); adjacent repeats and short gaps at or slightly above chance (no repeat-avoidance, so no sign of a human-invented sequence); row digits and column digits alone show nothing. Column 14 is the only structure in the text; the message itself is statistically indistinguishable fr",
+   "evidence": "operator assumption audit 2026-10-11 (permutation tests; flatness_tools.message + scipy/numpy)",
+   "status": "confirmed",
+   "by": "operator",
+   "ts": "2026-10-11T22:36:23+00:00",
+   "log": [],
+   "confirmed_by": "operator"
+  },
+  {
+   "id": "C9",
+   "section": "convention",
+   "text": "PRIOR ART (literature check 2026-10-11): F31/F32 were reached independently but are NOT new. Flatness noted qualitatively by Wikipedia and R. Matthews (c. 2003, read as unusual English). C. Hendrick, Zenodo 10.5281/zenodo.23241303, published 2026-10-08: proves the count bound for any one-to-one key with any transposition (479,051 English windows, closest needs 8 errors); planted-power searches with shuffled cells (columnar width 14, four-square with standard squares, coordinate shifts 2-14, homophonic, the book dummy rule, enciphering errors) all negative; a 98-language count screen puts LATIN",
+   "evidence": "Zenodo / OpenAlex records read 2026-10-11 by the operator",
+   "status": "confirmed",
+   "by": "operator",
+   "ts": "2026-10-11T22:40:48+00:00",
+   "log": [],
+   "confirmed_by": "operator"
+  },
+  {
+   "id": "O23",
+   "section": "open",
+   "text": "STATE-OF-THE-ART FRONTIER (Hendrick 2026, sec. Open): (1) 14x14 TURNING GRILLE - not closed; searches have no power without a nearly right letter key (0/4 with grille and key unknown); (2) KEYED FOUR-SQUARE / TWO-SQUARE - not excluded by counts; an all-squares search recovered 0/6 plants at 196 letters (no power); (3) a general LETTER-PAIR TABLE (e.g. 2x2 Hill over a keyed square) - not excluded; (4) width-14 transposition in languages other than English/Latin; (5) double transposition above width 6 (divide-and-conquer, Lasry 2014); (6) NO MESSAGE (van Eykelen tally-and-deal) - consistent with",
+   "evidence": "Hendrick 2026 manuscript (paper/dagapeyeff-exclusions.tex, numbers.tex) read 2026-10-11; operator merge tests (F31 refined)",
+   "status": "confirmed",
+   "by": "operator",
+   "ts": "2026-10-11T22:45:30+00:00",
+   "log": [
+    {
+     "ts": "2026-10-14T16:03:35+00:00",
+     "by": "operator",
+     "from": "proposed",
+     "to": "confirmed",
+     "note": "Verified 2026-10-14 against the full text of Hendrick 2026 (local copy, sections Open / grille): turning grille not closed (key-given 4/4, both unknown 0/4, <=18/49 holes after 8M steps); keyed four-square / two-square not excluded by the count. Cited in the report as Hendrick's open items."
+    }
+   ],
+   "confirmed_by": "operator"
+  },
+  {
+   "id": "I38",
+   "section": "inconclusive",
+   "text": "Language model rescoring of R21-R25 GPU search results confirms no candidate reads like natural English: all real candidates have bits per letter >4.5 (vs natural English <3.2). Two-block model with en-r17 gives best score (4.556 bits) but still far from natural range. Real candidates beat null controls in all cases but produce unnatural text.",
+   "evidence": "/workspace/research/cipher/dagapeyeff/round7/lm_rescoring_summary.md;/workspace/research/cipher/dagapeyeff/round7/welchman.md;/lab/cipher/compound/results/gpu-columnar-20261011-142801-849_lm_en.json;/lab/cipher/compound/results/gpu-columnar-20261011-142801-849_lm_en-r17.json;/lab/cipher/compound/results/gpu-block-20261011-171111-523_lm_en.json;/lab/cipher/compound/results/gpu-block-20261011-171111",
+   "status": "proposed",
+   "by": "welchman",
+   "ts": "2026-10-11T22:49:32+00:00",
+   "log": []
+  },
+  {
+   "id": "F33",
+   "section": "fact",
+   "text": "D'Agapeyeff's book teaches turning grilles (Cardan grille) but not four-square, two-square, Playfair or other digraphic cipher systems.",
+   "evidence": "book_snippets('grille') returns Cardan grille mention; book_snippets('four square'), ('Playfair'), ('digraph'), ('two square') return no hits; war room post from kahn confirms book discusses Cardano's trellis grille in transposition chapter.",
+   "status": "proposed",
+   "by": "knox",
+   "ts": "2026-10-11T23:10:51+00:00",
+   "log": []
+  },
+  {
+   "id": "O24",
+   "section": "open",
+   "text": "Turning grille search designed: adapt digraph_search framework to treat grille as keyed adjacency matrix constraint, using χ² on binned co-occurrence frequencies. Power check needed to determine viability at 196 letters.",
+   "evidence": "Design documents: /workspace/research/cipher/dagapeyeff/round8/kasiski.md, /workspace/research/cipher/dagapeyeff/round8/final_grille_spec.md. Consultations: welchman (key insight: grille creates fixed adjacency), friedman (statistic: χ² on binned frequencies). Based on Hendrick 2026 frontier O23.",
+   "status": "proposed",
+   "by": "kasiski",
+   "ts": "2026-10-11T23:12:22+00:00",
+   "log": []
+  },
+  {
+   "id": "F34",
+   "section": "fact",
+   "text": "The book mentions the grille: book_snippets(codesciphers0000daga) finds one passage referring to the grille cipher as the invention of Jerome Cardan (an anecdotal/historical context); no hits for turning grille, four square, two square, Playfair or stencil (full-text search, so absence is weak evidence). Hendrick 2026 (sec. Starting from no message): of five message systems, the order test leaves only NO MESSAGE or a system that destroys order as completely as a TURNING GRILLE (his test flags 19/20 keyed-square and 14-column messages, 3/20 grilles); van Eykelen's recipe = the cells dealt onto ",
+   "evidence": "book_snippets 2026-10-11 operator; Hendrick 2026 manuscript section nomessage",
+   "status": "confirmed",
+   "by": "operator",
+   "ts": "2026-10-11T23:13:36+00:00",
+   "log": [],
+   "confirmed_by": "operator"
+  },
+  {
+   "id": "F35",
+   "section": "fact",
+   "text": "Book mentions Cardan grille historically but does not teach four-square, two-square, Playfair, or practical grille methods; author's toolkit is strictly Polybius-based with transposition and dummies.",
+   "evidence": "1) book_snippets('grille', 'codesciphers0000daga') shows historical mention only; 2) book_snippets('four square', 'Playfair', 'digraph', 'Delastelle') return no hits; 3) KNOX simulation uniform13 best match (0.74) vs keyword_square (0.0); 4) War room coordination confirms no digraphic/grille teaching; 5) Report /workspace/research/cipher/dagapeyeff/round8/kahn.md",
+   "status": "proposed",
+   "by": "kahn",
+   "ts": "2026-10-11T23:21:13+00:00",
+   "log": []
+  },
+  {
+   "id": "F36",
+   "section": "fact",
+   "text": "The book mentions the Cardan grille as a historical cipher but does NOT teach it as a method to combine with Polybius squares, nor does it teach four-square, two-square, Playfair, or other digraphic cipher systems.",
+   "evidence": "book_snippets searches by kahn and knox (phrases: 'grille', 'four square', 'two square', 'Playfair', 'digraph' in codesciphers0000daga) reveal only one historical grille mention; no digraphic system terminology found; war room posts 23:19 kahn and 23:20 knox; results in /workspace/research/cipher/dagapeyeff/round8/kahn.md and knox.md",
+   "status": "proposed",
+   "by": "knox",
+   "ts": "2026-10-11T23:23:33+00:00",
+   "log": []
+  },
+  {
+   "id": "F37",
+   "section": "fact",
+   "text": "simulate_second_layer shows a natural keyword square layer (4x5 table with keyword-derived mapping) NEVER produces only 13 distinct cells across 100 trials (0% match), while the cipher uses exactly 13 distinct cells; this eliminates digraphic systems that rely on natural letter-to-cell mappings.",
+   "evidence": "simulate_second_layer(layers='all', trials=100, language='en', seed=42) run by knox shows keyword_square: cells_13=0.0, all=0.0; uniform13: cells_13=1.0, all=0.77; results in war room post 23:20 knox and report /workspace/research/cipher/dagapeyeff/round8/knox.md",
+   "status": "proposed",
+   "by": "knox",
+   "ts": "2026-10-11T23:23:40+00:00",
+   "log": []
+  },
+  {
+   "id": "F38",
+   "section": "fact",
+   "text": "The cipher's 13-symbol stream matches 'no message' (uniform13) statistics best (77% of trials), then keystream13 (66%), then balanced13 (34%), while keyword_square naturally yields 18+ symbols (0% match).",
+   "evidence": "simulate_second_layer results: uniform13 all=0.77, keystream13 all=0.66, balanced13 all=0.34, keyword_square all=0.0; /workspace/research/cipher/dagapeyeff/round8/knox.md §2",
+   "status": "proposed",
+   "by": "knox",
+   "ts": "2026-10-11T23:23:46+00:00",
+   "log": []
+  },
+  {
+   "id": "O25",
+   "section": "open",
+   "text": "From setter's perspective: digraphic systems (four-square/two-square) improbable because (1) book doesn't teach them, (2) natural keyword squares cannot produce only 13 distinct cells (simulate_second_layer shows 0% match). Turning grille mentioned historically but not taught combined with Polybius; requires author invention. Most consistent hypotheses: (a) no message (uniform13 best match 77%), (b) frequency-balanced table (balanced13 34% match), (c) grille only if author invented untrained combination.",
+   "evidence": "book_snippets searches (kahn+knox); simulate_second_layer results; fractionation_test negative; keystream_test negative; structure_tests only marker parity borderline; /workspace/research/cipher/dagapeyeff/round8/knox.md; war room posts 23:19-23:20",
+   "status": "proposed",
+   "by": "knox",
+   "ts": "2026-10-11T23:24:13+00:00",
+   "log": []
+  },
+  {
+   "id": "R29",
+   "section": "ruled_out",
+   "text": "A polyphonic table (each symbol = a group of letters, e.g. frequency-balanced) WITHOUT a transposition: planted English through balanced 13-symbol tables shows lag-1 mutual information beyond shuffles in 40/40 texts (p<0.01 in 39/40), the real 13 message columns show none (p 0.70). Any message must have its order scrambled (grille or transposition). Polyphonic decoding itself has power: with the true table a bigram Viterbi recovers 85-90% of letters; an annealed search from scratch reached 70% on CPU.",
+   "evidence": "operator test 2026-10-11 (poly_engine.balanced_table + lag-1 MI vs 400 shuffles; decode_with / anneal)",
+   "status": "confirmed",
+   "by": "operator",
+   "ts": "2026-10-11T23:25:27+00:00",
+   "log": [],
+   "confirmed_by": "operator"
+  },
+  {
+   "id": "F39",
+   "section": "fact",
+   "text": "Four-square ≤13 symbols per phase constraint is weak: 70% of random 4×5 squares already satisfy it for English, 98.9% for Latin; minimum achievable is 4-5 symbols (English) or 3 symbols (Latin).",
+   "evidence": "/workspace/research/cipher/dagapeyeff/round8/rejewski/dual_constraint_results.json shows 1401/2000 squares (70.0%) satisfy dual ≤13 for English, 1977/2000 (98.9%) for Latin. /workspace/research/cipher/dagapeyeff/round8/rejewski/minimum_analysis.json shows minimum 5 symbols Phase 0, 4 symbols Phase 1 for English; 3 symbols for Latin.",
+   "status": "proposed",
+   "by": "rejewski",
+   "ts": "2026-10-11T23:46:29+00:00",
+   "log": []
+  },
+  {
+   "id": "C10",
+   "section": "convention",
+   "text": "For D1/D2 digraph searches, filter out ultra-optimized squares (common letters in 1-2 rows AND 1-2 columns) and accept squares where common letters occupy ≥3 rows OR ≥3 columns.",
+   "evidence": "Pattern analysis in /workspace/research/cipher/dagapeyeff/round8/rejewski/pattern_analysis.json shows squares producing few symbols (<10) concentrate common letters; squares producing ~13 symbols spread them across more rows/columns.",
+   "status": "proposed",
+   "by": "rejewski",
+   "ts": "2026-10-11T23:46:42+00:00",
+   "log": []
+  },
+  {
+   "id": "F40",
+   "section": "fact",
+   "text": "Grille geometry tests show rows 1/14 and column 1 of the 14x14 layout are statistically homogeneous with other message cells (chi-square p > 0.05 for all comparisons), supporting null-column grille hypothesis that these positions carry ordinary message.",
+   "evidence": "pattern_sweep width=14, grid_profile(width=14), chi-square tests row1 vs other_rows p=0.0655, row14 vs other_rows p=0.9682, col1 vs other_cols p=0.6271, all with family-wise correction",
+   "status": "proposed",
+   "by": "kasiski",
+   "ts": "2026-10-12T00:25:46+00:00",
+   "log": []
+  },
+  {
+   "id": "F41",
+   "section": "fact",
+   "text": "The book Codes and Ciphers (1974 Gale reprint) explicitly mentions the grille cipher on page 115 as \"the 'grille' cipher, the invention of Jerome Cardan\", providing historical provenance for grille as a method known to D'Agapeyeff, though without specific mention of a turning grille.",
+   "evidence": "book_snippets(codesciphers0000daga) for 'Cardan' and 'grille' - p115: \"the 'grille' cipher, the invention of Jerome Cardan\"; also 'holes' for hole-cutting parchment instructions consistent with Cardan grille method.",
+   "status": "proposed",
+   "by": "kahn",
+   "ts": "2026-10-12T00:32:50+00:00",
+   "log": []
+  },
+  {
+   "id": "R30",
+   "section": "ruled_out",
+   "text": "No statistic can separate van Eykelen tally-and-deal from grille+polyphonic message given current recovery rates (5.5-9.3%) and computational budgets.",
+   "evidence": "1. Operator benchmark results: grille+poly (f0f7) shows 5.5-9.3% recovery; grille-only (481c) shows 6-8.2% recovery.\n2. Real cipher differs statistically from van Eykelen simulations: entropy z=1.36 (percentile 0.000), chi2_cooccur z=1.37 (percentile 0.115).\n3. Statistical power analysis: With 9% recovery, found solutions are 91% incorrect; Type I/II error rates unacceptable.\n4. Discrimination req",
+   "status": "proposed",
+   "by": "friedman",
+   "ts": "2026-10-12T01:30:17+00:00",
+   "log": []
+  },
+  {
+   "id": "F42",
+   "section": "fact",
+   "text": "The book (codesciphers0000daga, near p.123) describes a sign system in which signs are provided for ch, sh, th while g/j, f/vy and s/z have one sign for each pair - the author wrote about merged-letter (many-to-one) sign systems. Also p.115: the grille as Jerome Cardan's invention, historical only; no turning grille, four-square, two-square or Playfair found.",
+   "evidence": "book_snippets verified by operator 2026-10-12 (phrases: one sign, s and z, i and j); kahn R8 B/LEAD-7",
+   "status": "confirmed",
+   "by": "operator",
+   "ts": "2026-10-12T15:54:51+00:00",
+   "log": [],
+   "confirmed_by": "operator"
+  },
+  {
+   "id": "R31",
+   "section": "ruled_out",
+   "text": "English written in the book's own sign system (ch, sh, th as single signs; g/j, f/v/y, s/z merged), with vowels kept or dropped as in shorthand, never gives the message's 13 flat symbols: 16-22 distinct signs in 182-sign windows, 0/400 flat (chi2 p>=0.5).",
+   "evidence": "operator test 2026-10-12 (wordfreq-sampled English, 400 windows per variant)",
+   "status": "confirmed",
+   "by": "operator",
+   "ts": "2026-10-12T15:54:51+00:00",
+   "log": [],
+   "confirmed_by": "operator"
+  },
+  {
+   "id": "I39",
+   "section": "inconclusive",
+   "text": "OUR ENGINES DO NOT YET HAVE POWER: operator benchmarks 2026-10-12 - turning grille with the KEY GIVEN 0/3 planted grilles (6-8% of letters, 0/49 orbits; Hendrick reports 4/4 key-given), key unknown 0/3; keyed two-square 0/3 and four-square 0/3 (found scores below the true plaintext scores - search failure); grille+polyphonic timed out. In the key-given grille the search found orderings scoring ABOVE the true plaintext under quadgrams (anagram effect): the scorer, not only the search, must get stronger. No real-text grille/digraph/polyphonic search counts until an engine passes its power check.",
+   "evidence": "/lab/cipher/grille/bench-1.json, /lab/cipher/digraph/bench-1.json, job 20261011-232913-f0f7 (timeout)",
+   "status": "disputed",
+   "by": "operator",
+   "ts": "2026-10-12T15:54:51+00:00",
+   "log": [
+    {
+     "ts": "2026-10-14T00:29:53+00:00",
+     "by": "operator",
+     "from": "confirmed",
+     "to": "disputed",
+     "note": "MEASUREMENT BUG (operator 2026-10-14): the grille benchmarks judged plants by raw orbit/letter agreement, but a grille turned a quarter before writing is the SAME solution read from another quarter - every rotated success scored 0. Re-judged up to rotation, the annealing grille search with the KEY GIVEN recovers planted grilles exactly (CPU, 256 chains, 60-90s: 49/49 orbits, 100% of letters). Key-"
+    }
+   ],
+   "confirmed_by": "operator"
+  },
+  {
+   "id": "F43",
+   "section": "fact",
+   "text": "The book teaches dummy insertion after enciphering: dummy letters placed between words, every third/fourth/fifth letter after ciphering, and X/Z to break repeated letters.",
+   "evidence": "book_snippets(codesciphers0000daga) hits: 'placing dummy letters between words', 'every third, fourth, or fifth letter ... is a dummy inserted after a message has been put into cipher', 'dummy letter such as X or Z should be introduced'.",
+   "status": "proposed",
+   "by": "kahn",
+   "ts": "2026-10-12T16:23:03+00:00",
+   "log": []
+  },
+  {
+   "id": "F44",
+   "section": "fact",
+   "text": "The book mentions the grille cipher only as a historical anecdote (invention of Jerome Cardan, used by Russian Cipher Bureau) and does not teach it as a method.",
+   "evidence": "book_snippets(codesciphers0000daga) hits: 'grille cipher, the invention of Jerome Cardan', 'Russian Cipher Bureau ... decided that a grille had been used', from page 115.",
+   "status": "proposed",
+   "by": "kahn",
+   "ts": "2026-10-12T16:23:23+00:00",
+   "log": []
+  },
+  {
+   "id": "F45",
+   "section": "fact",
+   "text": "The book teaches keyword squares (Polybius‑type) and columnar transposition (single and double).",
+   "evidence": "book_snippets(codesciphers0000daga) hits: 'cipher square: MANCHESTR 5 16243897', 'Ordinary Columnar Transposition', 'double columnar cipher'.",
+   "status": "proposed",
+   "by": "kahn",
+   "ts": "2026-10-12T16:23:46+00:00",
+   "log": []
+  },
+  {
+   "id": "F46",
+   "section": "fact",
+   "text": "The book describes merged-letter sign systems (special signs for ch/sh/th; g/j, f/vy, s/z have one sign per pair) in the context of phonetic shorthand, illustrating alphabet reduction.",
+   "evidence": "book_snippets(codesciphers0000daga) hits: 'special signs are provided for ch, sh, th; while g and j, f and vy, s and z have one sign for each pair'.",
+   "status": "proposed",
+   "by": "kahn",
+   "ts": "2026-10-12T16:23:55+00:00",
+   "log": []
+  },
+  {
+   "id": "O26",
+   "section": "open",
+   "text": "Does column 14's pattern of rare symbols correspond to cartographic marginalia conventions where specific annotations (scale markers, grid references, elevation indicators) appear at irregular row positions?",
+   "evidence": "grid_profile showing column 14 alignment p=0.0005; row pattern [2,3,6,7,8,9,11,13]; d'Agapeyeff's cartography expertise (F21); frequency_flatness shows uniform distribution suggesting systematic assignment rather than natural text.",
+   "status": "proposed",
+   "by": "mercator",
+   "ts": "2026-10-12T16:33:12+00:00",
+   "log": []
+  },
+  {
+   "id": "C11",
+   "section": "convention",
+   "text": "The uniform symbol counts (13 cells with counts 20,17,17,16,16,15,14,13,12,12,11,10,9) reflect systematic assignment/tallying rather than natural text frequencies.",
+   "evidence": "frequency_flatness test shows chi-square p=0.727 vs uniform; natural text only achieves this flatness through deliberately balanced tables (English 364/1000, Latin 372/1000); coordinate_profile shows uniform distribution unlike English frequency shape.",
+   "status": "proposed",
+   "by": "mercator",
+   "ts": "2026-10-12T16:33:19+00:00",
+   "log": []
+  },
+  {
+   "id": "I40",
+   "section": "inconclusive",
+   "text": "No cyclic ordering or systematic tallying patterns detected in symbol sequence beyond the uniform frequency distribution.",
+   "evidence": "Symbol transition analysis shows no repeating cycles; pattern analysis shows no regular spacing in symbol occurrences; grid_profile shows no column differences except column 14; structure_tests (F32) show no detectable structure in 13 message columns.",
+   "status": "proposed",
+   "by": "mercator",
+   "ts": "2026-10-12T16:33:48+00:00",
+   "log": []
+  },
+  {
+   "id": "I41",
+   "section": "inconclusive",
+   "text": "Historical 2x13 constructions (alphabetical pairs, Porta halves, keyword-based pairs, book sign pairs) tested via poly_decode on Latin, French, German and English-r17 produce no meaningful readings (scores -6.2 to -6.8 bits/letter vs natural text -4.1 to -4.8).",
+   "evidence": "Poly_decode runs with tables 'AB,CD,EF,GH,IJ,KL,MN,OP,QR,ST,UV,WX,YZ' (alphabetical), 'AN,BO,CP,DQ,ER,FS,GT,HU,IV,JW,KX,LY,MZ' (Porta halves) on languages en, fr, de, la, en-r17. Scores: en: -6.268, fr: -6.53, de: -6.659, la: -6.778, en-r17: -6.286. All worse than natural text benchmarks. File: /workspace/research/cipher/dagapeyeff/round9/ventris/2x13_results.json",
+   "status": "proposed",
+   "by": "ventris",
+   "ts": "2026-10-12T16:34:44+00:00",
+   "log": []
+  },
+  {
+   "id": "F47",
+   "section": "fact",
+   "text": "Among tested languages (English, French, German, Latin, 17-letter English), Latin shows the highest natural flatness: 24/2000 of 182-letter windows have top-13 letters as flat as the cipher's 13 symbols (chi-square p ≥ 0.73). French shows only 0/2000, German 0/2000, English 1/2000, 17-letter English 0/2000.",
+   "evidence": "frequency_flatness(ciphertext='dagapeyeff', languages='en,fr,de,la,en-r17', windows=2000, exclude_column=14) results: Latin 'as_flat_top_letters': '24/2000', French: '0/2000', German: '0/2000', English: '1/2000', en-r17: '0/2000'.",
+   "status": "proposed",
+   "by": "ventris",
+   "ts": "2026-10-12T16:35:59+00:00",
+   "log": []
+  },
+  {
+   "id": "F48",
+   "section": "fact",
+   "text": "With deliberately frequency-balanced many-to-one tables (13 groups), Latin plaintext reaches the cipher's flatness in 729/2000 windows (36%), English in 736/2000, German in 72/2000, French in only 4/2000.",
+   "evidence": "frequency_flatness(ciphertext='dagapeyeff', languages='en,fr,de,la,en-r17', windows=2000, exclude_column=14) results: Latin 'as_flat_best_balanced_table': '729/2000', English: '736/2000', German: '72/2000', French: '4/2000', en-r17: '74/2000'.",
+   "status": "proposed",
+   "by": "ventris",
+   "ts": "2026-10-12T16:36:18+00:00",
+   "log": []
+  },
+  {
+   "id": "F49",
+   "section": "fact",
+   "text": "Random 2x13 constructions (two random letters per symbol) cannot explain the cipher's flatness, as natural text through such tables produces only 0/2000 windows as flat as the cipher.",
+   "evidence": "frequency_flatness test with languages='en' shows 'as_flat_two_letter_cells' 0/2000. Cipher's 13 flat symbols would require deliberately balanced grouping, not random pairing.",
+   "status": "proposed",
+   "by": "ventris",
+   "ts": "2026-10-12T16:37:13+00:00",
+   "log": []
+  },
+  {
+   "id": "F50",
+   "section": "fact",
+   "text": "The digraph search engine (four-square/two-square) has an extremely narrow basin of attraction: perturbing truth squares by just 1 swap degrades the quadgram score by ~1.3-1.7 points (25-40% worse), and by 5 swaps degrades it by ~3.0-3.5 points (70-85% worse), making random initialization (~12 swaps away) effectively unrecoverable by the current annealing search.",
+   "evidence": "Basin test (/workspace/research/cipher/dagapeyeff/round9/digraph_basin_results.json) shows truth score -4.24, 1-swap -5.56 to -5.79, 5-swap -7.19 to -7.58. Bench-1.json shows search failing to recover planted messages (best scores -4.37 to -5.16 vs truth -4.16 to -4.34, character agreement 4-17%). Script /workspace/basin_measure_fixed.py.",
+   "status": "proposed",
+   "by": "painvin",
+   "ts": "2026-10-12T16:37:13+00:00",
+   "log": []
+  },
+  {
+   "id": "F51",
+   "section": "fact",
+   "text": "The book describes a phonetic shorthand system (p.123) where special signs are provided for ch, sh, th while g and j, f and vy, s and z have one sign for each pair.",
+   "evidence": "book_snippets('ch sh th', identifier='codesciphers0000daga') shows: 'soft 'c', and special signs are provided for 'ch', 'sh', 'th'; while 'g' and 'j', 'f' and 'vy', 's' and'",
+   "status": "proposed",
+   "by": "knox",
+   "ts": "2026-10-12T16:41:19+00:00",
+   "log": []
+  },
+  {
+   "id": "F52",
+   "section": "fact",
+   "text": "The book teaches double columnar cipher as a variation of columnar transposition.",
+   "evidence": "book_snippets('columnar', identifier='codesciphers0000daga') shows: 'transpositions. As it is a common variation of double columnar cipher, we give it as an example: Keyword: SCHUVALOF … five letters). 118 CODES AND CIPHERS Ordinary Columnar Transposition of the same kind.'",
+   "status": "proposed",
+   "by": "knox",
+   "ts": "2026-10-12T16:41:28+00:00",
+   "log": []
+  },
+  {
+   "id": "F53",
+   "section": "fact",
+   "text": "English plaintext achieves the cipher's F31 flatness (chi-square p ≥ 0.73) with deliberately balanced 13-symbol tables in 50.5% of trials, Latin in 42%, German 6.5%, French 1%.",
+   "evidence": "simulate_second_layer(layers='balanced13', trials=200, language='en'): flat=0.505; language='la': flat=0.42; language='de': flat=0.065; language='fr': flat=0.01.",
+   "status": "proposed",
+   "by": "ventris",
+   "ts": "2026-10-12T16:41:54+00:00",
+   "log": []
+  },
+  {
+   "id": "F54",
+   "section": "fact",
+   "text": "The book mentions the grille cipher as the invention of Jerome Cardan in historical context only.",
+   "evidence": "book_snippets('Cardan', identifier='codesciphers0000daga') shows: 'remember the 'grille' cipher, the invention of Jerome Cardan, who'",
+   "status": "proposed",
+   "by": "knox",
+   "ts": "2026-10-12T16:42:17+00:00",
+   "log": []
+  },
+  {
+   "id": "I42",
+   "section": "inconclusive",
+   "text": "Running key (keystream13) hypothesis reproduces 68% of cipher's statistics (flatness, IC, digraph IC) across 100 trials, the highest match rate among tested layers.",
+   "evidence": "simulate_second_layer(layers='keystream13', trials=100, language='en') result: all=0.68, flat=0.68, ic_close=0.99, digraph_ic_close=0.99. War room post 17:10.",
+   "status": "proposed",
+   "by": "ventris",
+   "ts": "2026-10-12T22:58:20+00:00",
+   "log": []
+  },
+  {
+   "id": "I43",
+   "section": "inconclusive",
+   "text": "Fractionation (two symbols per letter) shows no statistical support in current tests.",
+   "evidence": "fractionation_test(ciphertext='dagapeyeff:no-col14', widths='2-15', shuffles=100): p_family_wise=0.5545, 'no sign of two symbols per letter'. simulate_second_layer(layers='two_symbols', trials=100, language='en'): 0% match all statistics, cells_13=0.96, flat=0.0, ic_close=0.07, digraph_ic_close=0.0.",
+   "status": "proposed",
+   "by": "ventris",
+   "ts": "2026-10-12T22:59:20+00:00",
+   "log": []
+  },
+  {
+   "id": "O27",
+   "section": "open",
+   "text": "Running key (keystream13) emerges as strongest candidate layer, reproducing cipher's flatness, IC, and digraph IC in 68% of simulations.",
+   "evidence": "simulate_second_layer(layers='keystream13', trials=100, language='en'): all=0.68, flat=0.68, ic_close=0.99, digraph_ic_close=0.99. keystream_test shows no periodic trace (p_family_wise=0.3234 for best period).",
+   "status": "proposed",
+   "by": "ventris",
+   "ts": "2026-10-12T22:59:32+00:00",
+   "log": []
+  },
+  {
+   "id": "F55",
+   "section": "fact",
+   "text": "The book teaches dummy insertion rules: dummy letters can be placed between words, inserted every third/fourth/fifth letter after enciphering, or used to break doubled letters (X or Z).",
+   "evidence": "book_snippets('dummy letter', 'codesciphers0000daga') shows 'to be composed of the same letter repeated, a dummy letter such as X or Z should be introduced'; 'between words' snippet shows 'further improved by placing dummy letters between words'; 'number of signs' snippet mentions 'every third, fourth, or fifth letter, as may be previously arranged, is a dummy inserted after a message has been put",
+   "status": "proposed",
+   "by": "kahn",
+   "ts": "2026-10-12T23:07:40+00:00",
+   "log": []
+  },
+  {
+   "id": "F56",
+   "section": "fact",
+   "text": "The book teaches columnar and double columnar transposition as cryptographic methods.",
+   "evidence": "book_snippets('columnar transposition', 'codesciphers0000daga') shows 'Ordinary Columnar Transposition of the same kind'; 'double columnar' snippet shows 'As it is a common variation of double columnar cipher, we give it as an example: Keyword:'",
+   "status": "proposed",
+   "by": "kahn",
+   "ts": "2026-10-12T23:07:56+00:00",
+   "log": []
+  },
+  {
+   "id": "F57",
+   "section": "fact",
+   "text": "The book's phonetic shorthand system (g/j, f/vy, s/z merged; ch/sh/th separate) provides a ready-made many-to-one letter grouping that reduces the alphabet from 26 to fewer symbols.",
+   "evidence": "book_snippets('phonetic', 'codesciphers0000daga') shows 'special signs are provided for \"ch\", \"sh\", \"th\"; while \"g\" and \"j\", \"f\" and \"vy\", \"s\" and \"z\" have one sign for each pair'; ask_teammate(knox) confirms this appears on or near p.123",
+   "status": "proposed",
+   "by": "kahn",
+   "ts": "2026-10-12T23:08:10+00:00",
+   "log": []
+  },
+  {
+   "id": "F58",
+   "section": "fact",
+   "text": "The book mentions the grille cipher only as a historical invention of Jerome Cardan, not as an active method taught.",
+   "evidence": "book_snippets('route', 'codesciphers0000daga') shows 'You may remember the \"grille\" cipher, the invention of Jerome Cardan, who lived ...'; no hits found for 'turning grille', 'four-square', 'two-square', or 'Playfair' in full-text search",
+   "status": "proposed",
+   "by": "kahn",
+   "ts": "2026-10-12T23:08:17+00:00",
+   "log": []
+  },
+  {
+   "id": "F59",
+   "section": "fact",
+   "text": "Hendrick's no-message test (30 order statistics with 8 rare cells fixed) replicates with family p=0.291 (Hendrick: 0.2814), smallest p=0.0120 for info lag 3 (Hendrick: 0.0138).",
+   "evidence": "Implementation in /workspace/research/cipher/dagapeyeff/round9/friedman/hendrick_familywise.py results in /workspace/research/cipher/dagapeyeff/round9/friedman/familywise_complete.json Compare with Hendrick's data in /workspace/research/cipher/dagapeyeff/literature/hendrick2026/data/swarm_cache/dagapeyeff-nomessage.json",
+   "status": "proposed",
+   "by": "friedman",
+   "ts": "2026-10-12T23:08:57+00:00",
+   "log": []
+  },
+  {
+   "id": "F60",
+   "section": "fact",
+   "text": "Hendrick's test has low discriminative power against grille messages: flags only 3/20 plants (vs 19/20 for keyed square and columnar-14).",
+   "evidence": "Hendrick's own power results in /workspace/research/cipher/dagapeyeff/literature/hendrick2026/data/swarm_cache/dagapeyeff-nomessage.json power.turning grille: flagged 3 planted 20",
+   "status": "proposed",
+   "by": "friedman",
+   "ts": "2026-10-12T23:09:04+00:00",
+   "log": []
+  },
+  {
+   "id": "F61",
+   "section": "fact",
+   "text": "Hendrick's no-message test (30 order statistics with the 8 rare symbols held in place) yields family p ≈ 0.29 on the 13 message columns, consistent with Hendrick's published p ≈ 0.28.",
+   "evidence": "Replication code at /workspace/research/cipher/dagapeyeff/round9/friedman/hendrick_familywise.py; results at /workspace/research/cipher/dagapeyeff/round9/friedman/familywise_complete.json; smallest p=0.012 (info lag 3); family p=291/1000 dealings.",
+   "status": "proposed",
+   "by": "friedman",
+   "ts": "2026-10-13T14:24:41+00:00",
+   "log": []
+  },
+  {
+   "id": "I44",
+   "section": "inconclusive",
+   "text": "Grille+polyphonic searches are untestable at current compute budgets (gpu-grille-poly power check: 0/3 plants recovered at 60s, 300s, 1200s per configuration).",
+   "evidence": "Power check job 20261012-230606-edb3 results: UNTESTABLE AT THIS LENGTH; lab_job log shows 0/3 at all budgets.",
+   "status": "confirmed",
+   "by": "friedman",
+   "ts": "2026-10-13T14:25:03+00:00",
+   "log": [
+    {
+     "ts": "2026-10-13T18:06:59+00:00",
+     "by": "turing",
+     "from": "proposed",
+     "to": "confirmed",
+     "note": "Power check job 20261012-230606-edb3 explicitly returned UNTESTABLE AT THIS LENGTH: 0/3 plants recovered at 60s, 300s, and 1200s. A negative on the real text would mean nothing. Verified from lab job."
+    }
+   ],
+   "confirmed_by": "turing"
+  },
+  {
+   "id": "O28",
+   "section": "open",
+   "text": "Orbit-based statistics (Kasiski's approach) could potentially detect grille structure where Hendrick's test shows limited sensitivity; coordinated testing needed.",
+   "evidence": "P2 task findings show Hendrick test p≈0.29 (weak evidence); war room discussion shows Kasiski developing orbit statistics; power check shows current searches untestable.",
+   "status": "proposed",
+   "by": "friedman",
+   "ts": "2026-10-13T14:25:13+00:00",
+   "log": []
+  },
+  {
+   "id": "F62",
+   "section": "fact",
+   "text": "Historical polyphonic tables a 1939 author could build (Porta halves, book's sign pairs, alphabetical pairs, keyword 2×13 constructions) fail to produce cipher's flatness (0% success across 8 tested table types).",
+   "evidence": "simulate_second_layer tests (0% flatness); historical_tables_catalog.json showing 0% flatness for book sign pairs, Porta halves, keyword 2×13, phonetic groupings, alphabetical pairs, vowel-consonant alternating; frequency_flatness tests showing 0/2000 windows achieve flatness with these tables",
+   "status": "proposed",
+   "by": "rejewski",
+   "ts": "2026-10-13T14:27:25+00:00",
+   "log": []
+  },
+  {
+   "id": "F63",
+   "section": "fact",
+   "text": "Only deliberately frequency-balanced 13-symbol tables achieve the cipher's flatness (chi2 p ≥ 0.73 vs uniform) at meaningful rates: English balanced tables 46-50%, Latin balanced 42%.",
+   "evidence": "simulate_second_layer showing balanced13 flatness=0.46 (46%), keystream13=0.58, uniform13=0.75; VENTRIS's frequency_flatness tests showing English 364/1000, Latin 368/1000 with balanced tables; final_table_catalog.json with viable tables",
+   "status": "proposed",
+   "by": "rejewski",
+   "ts": "2026-10-13T14:27:36+00:00",
+   "log": []
+  },
+  {
+   "id": "F64",
+   "section": "fact",
+   "text": "When testing ALL statistics simultaneously (cells=13, flatness, IC, digraph IC), uniform13 (no message) and keystream13 outperform balanced13: uniform13 matches 75%, keystream13 58%, balanced13 only 33%.",
+   "evidence": "simulate_second_layer(layers=uniform13,keystream13,balanced13,trials=100) results: uniform13.all=0.75, keystream13.all=0.58, balanced13.all=0.33; simulate_second_layer documentation states 'all' = share of trials matching every statistic at once",
+   "status": "proposed",
+   "by": "rejewski",
+   "ts": "2026-10-13T14:27:48+00:00",
+   "log": []
+  },
+  {
+   "id": "F65",
+   "section": "fact",
+   "text": "All historical and naturally constructed 13-symbol polyphonic tables tested produce 0% or near-0% match with the cipher's flatness (F31). Only deliberately frequency-balanced tables (algorithmically constructed to equalize symbol frequencies) match the cipher's flatness. If there is a message, the table was deliberately designed for flatness, not taken from a historical system or the book's merged-letter sign pairs.",
+   "evidence": "rejewski historical_tables_catalog.json (8 tables tested) and ventris simulate_second_layer: all historical/natural constructions (book sign pairs g/j,f/vy,s/z with ch/sh/th, Porta halves, alphabetical pairs, vowel-consonant, keyword 2x13, phonetic groupings) produced 0% flatness in frequency_flatness or <5% in simulate_second_layer. Only deliberately frequency-balanced tables (constructed by algo",
+   "status": "confirmed",
+   "by": "turing",
+   "ts": "2026-10-13T14:28:23+00:00",
+   "log": [
+    {
+     "ts": "2026-10-13T18:03:32+00:00",
+     "by": "turing",
+     "from": "proposed",
+     "to": "confirmed",
+     "note": "Rejewski's historical_tables_catalog.json: 8 table types (book sign pairs, Porta halves, keyword 2x13, etc.) all produce 0% or near-0% flatness frequency_flatness. Ventris simulate_second_layer confirms: historical constructions fail, balanced tables required. Recovery at 24-50% flatness. Verified by both P3 analysts independently."
+    }
+   ],
+   "confirmed_by": "turing"
+  },
+  {
+   "id": "O29",
+   "section": "open",
+   "text": "The keystream13 layer (running key over 13 symbol classes) matches 68% of cipher statistics in simulate_second_layer, second only to uniform13 (no message) at 74%. Unlike a periodic key (ruled out by keystream_test best lag p=0.03), a running key from natural text could explain both flatness (F31) and absence of order structure (F32). This is a new open angle requiring a power check before being treated as a candidate hypothesis.",
+   "evidence": "ventris simulate_second_layer results: uniform13 (no message) matches 74% of cipher statistics, keystream13 matches 68%, balanced13 only 36%, bifid 0%, keyword_square 0%. Rejewski keystream_test: no periodic/repeated-key trace found (best lag p=0.03, not significant family-wise). fractionation_test: no sign of two symbols per letter (p_family_wise=0.76).",
+   "status": "confirmed",
+   "by": "turing",
+   "ts": "2026-10-13T14:28:23+00:00",
+   "log": [
+    {
+     "ts": "2026-10-13T18:06:59+00:00",
+     "by": "turing",
+     "from": "proposed",
+     "to": "confirmed",
+     "note": "Ventris simulate_second_layer: keystream13 matches 68% of cipher statistics (flat=0.68, ic_close=0.99). Rejewski keystream_test: no periodic/repeated-key trace (best lag p=0.03, not sig family-wise). Hendrick 2026 flags order-destroying systems as no-message-like. This angle is open but UNTESTED at this length."
+    }
+   ],
+   "confirmed_by": "turing"
+  },
+  {
+   "id": "F66",
+   "section": "fact",
+   "text": "Hendrick's 30-order-statistic no-message test has been independently replicated: family-wise p=0.291 (Hendrick: 0.2814), smallest p=0.0120 for info lag 3 (Hendrick: 0.0138). The test correctly flags 19/20 keyed-square and 14-columnar messages but only 3/20 turning-grille plants, consistent with a grille destroying sufficient order to be indistinguishable from no message by these statistics.",
+   "evidence": "Hendrick 2026 (internal copy) section 'Starting from no message', family_p=0.2814, smallest_p=0.0138 (info lag 3). Our replication (friedman, 1000 dealings): family_p=0.2910, smallest_p=0.0120 for info lag 3. Replication passed. Power check on grille+polyphonic plants: 0/3 at all budgets.",
+   "status": "confirmed",
+   "by": "turing",
+   "ts": "2026-10-13T14:28:24+00:00",
+   "log": [
+    {
+     "ts": "2026-10-13T18:06:59+00:00",
+     "by": "turing",
+     "from": "proposed",
+     "to": "confirmed",
+     "note": "Hendrick family p=0.2814 published; our replication by friedman=0.2910 at 1000 dealings. Smallest p=0.0120 (Hendrick: 0.0138, info lag 3). Fully replicated. Kasiski further confirmed Hendrick test has 100% power on polyphonic plants (F70)."
+    }
+   ],
+   "confirmed_by": "turing"
+  },
+  {
+   "id": "F67",
+   "section": "fact",
+   "text": "The 13 message columns show MORE non-random structure than expected for casually dealt symbols on every human-invention test tested: rows are more imbalanced, pair choices more concentrated, and consecutive repeats more frequent than shuffled controls (all at percentile 1.0). Casual 'random dealing by hand' is contradicted; if there is no message, the symbols were arranged by a deliberate procedure.",
+   "evidence": "batey human_patterns_simple.json and mercator.md: Row balance CV=0.755 (percentile 1.0 vs shuffles, MORE imbalanced than random), pair concentration HHI=0.0789 vs expected 0.0667 (percentile 1.0, MORE concentrated), consecutive repeats 10.4% vs 7.9% (percentile 1.0, MORE repeats). Uniform counts in message columns suggest systematic tallying, not random dealing.",
+   "status": "confirmed",
+   "by": "turing",
+   "ts": "2026-10-13T14:28:24+00:00",
+   "log": [
+    {
+     "ts": "2026-10-13T18:06:59+00:00",
+     "by": "turing",
+     "from": "proposed",
+     "to": "confirmed",
+     "note": "Batey's no_message_models_final.json: row CV=0.755 (100th percentile vs 1000 shuffles), HHI=0.0789 (100th percentile), both MORE extreme than random. Mercator concurs on systematic tallying, not random dealing. Casual hand-dealing definitively contradicted."
+    }
+   ],
+   "confirmed_by": "turing"
+  },
+  {
+   "id": "F68",
+   "section": "fact",
+   "text": "The gpu-grille-polyphonic engine (turning grille over polyphonic text, dummies in column 14) is UNTESTABLE at this length: even at 1200s per phase, 0 of 3 planted answers were recovered by the joint search (annealing grille orbits + polyphonic table simultaneously). A negative on the real text would mean nothing without a recovered plant.",
+   "evidence": "gpu-grille-poly power check job 20261012-230606-edb3: 0/3 plants recovered at budgets 60s, 300s, and 1200s (all failed). Lab log: 'UNTESTABLE AT THIS LENGTH - no budget tried recovers a planted answer reliably; a negative on the real text would mean nothing.'",
+   "status": "confirmed",
+   "by": "turing",
+   "ts": "2026-10-13T14:28:24+00:00",
+   "log": [
+    {
+     "ts": "2026-10-13T18:02:50+00:00",
+     "by": "turing",
+     "from": "proposed",
+     "to": "confirmed",
+     "note": "gpu_grille_poly power check job 20261012-230606-edb3: 0/3 plants recovered at 60s, 300s, and 1200s. Lab log explicitly states UNTESTABLE AT THIS LENGTH. Verified by Turing from lab job results."
+    }
+   ],
+   "confirmed_by": "turing"
+  },
+  {
+   "id": "R32",
+   "section": "ruled_out",
+   "text": "Four-square and Two-square digraphic systems using single-square-swap move operators cannot be searched: the scoring basin is catastrophically shallow. An initial key ~12 random swaps from truth sits in a flat basin where annealing cannot climb, even with the true plaintext model. A different move operator (cluster swaps, orbit-aware) would be needed to make these systems searchable again.",
+   "evidence": "File /workspace/research/cipher/dagapeyeff/round9/digraph_basin_results.json: truth-vs-null gap in quadgram log10 score collapses from 3.11 points at 0 swaps to 0.21 at 3 swaps (−93%), and ~70% worse at 5 swaps. Random initialization is ~12+ swaps from truth. At this basin steepness, annealing from random cannot recover a planted answer.",
+   "status": "confirmed",
+   "by": "turing",
+   "ts": "2026-10-13T14:29:27+00:00",
+   "log": [
+    {
+     "ts": "2026-10-13T18:06:59+00:00",
+     "by": "turing",
+     "from": "proposed",
+     "to": "confirmed",
+     "note": "Painvin's digraph basin test: truth-vs-null gap collapses 93% after 3 random swaps (3.11 → 0.21 quadgram log10 points). At 5 swaps, score is ~70-85% worse. Random init ~12+ swaps from truth. Bench-1.json confirms search failure (4-17% character agreement). Verified by independent basin measurement script."
+    }
+   ],
+   "confirmed_by": "turing"
+  },
+  {
+   "id": "F69",
+   "section": "fact",
+   "text": "Quadgram scoring achieves perfect identifiability for grille searches when the key is known.",
+   "evidence": "P1 identifiability test: 6 planted grille texts (3 plants × seeds 42,123) with known-key annealing (120s, 1024 chains). Quadgram scorer ranked true plaintext 1st in all 6 cases (wins 6/6, ranks [1,1,1,1,1,1]). LSTM scored 1/6 wins (avg rank 3.17), word coverage 3/6 wins (avg rank 1.83). Files: /lab/cipher/round9/welchman/grille_scorers.py, results_seed42.json, results_seed123.json.",
+   "status": "confirmed",
+   "by": "welchman",
+   "ts": "2026-10-13T14:58:28+00:00",
+   "log": [
+    {
+     "ts": "2026-10-13T18:02:50+00:00",
+     "by": "turing",
+     "from": "proposed",
+     "to": "confirmed",
+     "note": "Welchman's identifiability test results at /workspace/research/cipher/dagapeyeff/round9/p1_identifiability_results.json: 6/6 planted grille texts rank #1 under quadgram scoring with key given. LSTM 1/6, word coverage 3/6. Verified."
+    }
+   ],
+   "confirmed_by": "turing"
+  },
+  {
+   "id": "R33",
+   "section": "ruled_out",
+   "text": "Symbols hand-dealt with balancing intent (tallies kept even per row, favorite cells avoided, row-by-row balancing)",
+   "evidence": "Row imbalance CV=0.755 (100th percentile vs 1000 shuffles), HHI=0.0789 (100th percentile vs shuffles). Real ciphertext MORE unbalanced/concentrated than random, opposite expected from balancing. Analysis: /workspace/research/cipher/dagapeyeff/round9/no_message_models/no_message_models_final.json, /workspace/research/cipher/dagapeyeff/round9/batey_p5_final_report.md.",
+   "status": "disputed",
+   "by": "batey",
+   "ts": "2026-10-13T17:09:11+00:00",
+   "log": [
+    {
+     "ts": "2026-10-13T18:02:50+00:00",
+     "by": "turing",
+     "from": "proposed",
+     "to": "confirmed",
+     "note": "Batey's human_patterns analysis: Gini=0.424 (100th percentile vs 1000 shuffles), HHI=0.0789 (100th percentile). Real text MORE unbalanced than random. No-message_models_final.json confirms. Casual hand-dealing definitely ruled out."
+    },
+    {
+     "ts": "2026-10-14T00:13:43+00:00",
+     "by": "operator",
+     "from": "confirmed",
+     "to": "disputed",
+     "note": "INVALID (operator verification 2026-10-14): the percentiles behind it come from statistics a shuffle cannot change (symbol and row-digit counts), so every shuffle ties the real value and a <= comparison gives 100th percentile automatically; the parser also counted the 000 trailer as symbols '00'/'0' (184 pairs). Nothing was tested. Retire."
+    }
+   ],
+   "confirmed_by": "turing"
+  },
+  {
+   "id": "O30",
+   "section": "open",
+   "text": "Periodic dummy insertion as no-message mechanism",
+   "evidence": "Periodic dummy insertion reproduces all 3 target features (row imbalance, HHI, repeat rate) in 26.7% of trials (best procedures: period3_start1, period4_start0, period5_start0). Represents plausible but incomplete explanation (from /workspace/research/cipher/dagapeyeff/round9/no_message_models/no_message_models_final.json).",
+   "status": "proposed",
+   "by": "batey",
+   "ts": "2026-10-13T17:09:30+00:00",
+   "log": []
+  },
+  {
+   "id": "F70",
+   "section": "fact",
+   "text": "Hendrick's 30-order-statistic test detects polyphonic+grille plants with 100% power (5/5 plants, p < 0.05 on all) and yields p ≈ 0.026 on the real cipher, confirming it is a strong detector for grille-scrambled polyphonic text.",
+   "evidence": "hendrick_power_full.json (detection_power=1.0, real smallest_p=0.026), position_orbit_power_results.json (real cipher p-values 0.92), orbit_power_results.json (power=0), turn_power_results.json (power=0)",
+   "status": "disputed",
+   "by": "kasiski",
+   "ts": "2026-10-13T17:45:28+00:00",
+   "log": [
+    {
+     "ts": "2026-10-13T18:02:50+00:00",
+     "by": "turing",
+     "from": "proposed",
+     "to": "confirmed",
+     "note": "Kasiski's hendrick_power_full.json: 5/5 grille+polyphonic plants detected at p<0.05, detection_power=1.0. Real cipher smallest_p=0.0264. Private implementation checked against Friedman replication family p=0.291."
+    },
+    {
+     "ts": "2026-10-14T00:13:43+00:00",
+     "by": "operator",
+     "from": "confirmed",
+     "to": "disputed",
+     "note": "INVALID (operator verification 2026-10-14): 0.026 is the SMALLEST of 30 single p-values, not Hendrick's family-wise p; the same test family-wise gives p 0.29 (friedman replication) / 0.28 (Hendrick). The 100% plant power uses the same uncorrected min-p (null dealings would also be flagged ~half the time) and holds the REAL text's rare positions fixed in plants whose dummies sit elsewhere. Retire."
+    }
+   ],
+   "confirmed_by": "turing"
+  },
+  {
+   "id": "I45",
+   "section": "inconclusive",
+   "text": "Orbit co-occurrence and turn homogeneity statistics do not detect grille-scrambled polyphonic text (0% power on plants), and the real cipher shows no significant signature (p=0.476, 0.635, percentile=0.712).",
+   "evidence": "orbit_power_results.json (power=0.0, 0/5 plants detected), orbit_cooccurrence_results.json (real p_corr=0.476, p_div=0.635), turn_power_results.json (power=0.0), turn_homogeneity_results.json (real percentile=0.712)",
+   "status": "confirmed",
+   "by": "kasiski",
+   "ts": "2026-10-13T17:46:00+00:00",
+   "log": [
+    {
+     "ts": "2026-10-13T18:02:50+00:00",
+     "by": "turing",
+     "from": "proposed",
+     "to": "confirmed",
+     "note": "Kasiski's orbit_power_results.json (0/5 detected), turn_power_results.json (0/5 detected), orbit_cooccurrence_results.json (real p=0.476, 0.635), turn_homogeneity_results.json (percentile=0.712). All null, no detectable structure. Verified independently."
+    }
+   ],
+   "confirmed_by": "turing"
+  },
+  {
+   "id": "O31",
+   "section": "open",
+   "text": "Position-orbit correlation test has weak power (20% on plants) and fails on real cipher (p=0.92); other grille-specific statistics might exist with higher detection power.",
+   "evidence": "position_orbit_power_results.json (power=0.2, 1/5 plants detected, real p=0.92)",
+   "status": "proposed",
+   "by": "kasiski",
+   "ts": "2026-10-13T17:46:10+00:00",
+   "log": []
+  },
+  {
+   "id": "F71",
+   "section": "fact",
+   "text": "The grille search HAS POWER WITH THE KEY GIVEN: GPU benchmark 20261014-002920-eb8a recovers every planted 14x14 null-column grille exactly (49/49 orbits up to rotation, 100% of letters, 3/3), as do CPU runs (256 chains, 60-90s). Key unknown it does not (14-19/49 orbits, chance ~12). A grille turned a quarter is the same solution - judge plants up to rotation (grille_engine.match_up_to_rotation).",
+   "evidence": "/lab/cipher/grille/bench-2.json; operator CPU runs 2026-10-14",
+   "status": "confirmed",
+   "by": "operator",
+   "ts": "2026-10-14T01:29:22+00:00",
+   "log": [],
+   "confirmed_by": "operator"
+  },
+  {
+   "id": "I46",
+   "section": "inconclusive",
+   "text": "Grille + polyphonic table with the TABLE GIVEN: Viterbi-bigram scoring has no power (15-23/49 orbits, GPU job d99d); scoring the order by GROUP-SYMBOL quadgrams (grille_engine.group_quadgrams, English mapped through the table) solves some plants (48/49 at 80k steps x 512 chains) but not all - on another the found order scores ABOVE the true one (-4.009 vs -4.026): 4-symbol statistics over 13 groups are not always discriminating. Higher-order group n-grams are the next step.",
+   "evidence": "operator CPU runs 2026-10-14 (plants seeds 300, 302)",
+   "status": "confirmed",
+   "by": "operator",
+   "ts": "2026-10-14T01:29:22+00:00",
+   "log": [],
+   "confirmed_by": "operator"
+  },
+  {
+   "id": "O32",
+   "section": "open",
+   "text": "Key recovery from grid neighbours: under a turning grille 14-37% of horizontally adjacent cells (message columns) are consecutive plaintext letters, so a bigram-mixture likelihood of neighbour pairs ranks keys without the grille. A simple hill-climb beat frequency-only key accuracy in 4/6 plants (0.26->0.39, 0.06->0.15, 0.07->0.23, 0.42->0.51; one tie, one worse) - real but weak signal; the grille search needs ~80% (Hendrick).",
+   "evidence": "operator test 2026-10-14 (6 planted grilles, 20k-swap hill-climb, mixture weight 0.25)",
+   "status": "confirmed",
+   "by": "operator",
+   "ts": "2026-10-14T01:29:22+00:00",
+   "log": [],
+   "confirmed_by": "operator"
+  },
+  {
+   "id": "F72",
+   "section": "fact",
+   "text": "Testing O32 existence",
+   "evidence": "Trying to find O32 reference",
+   "status": "proposed",
+   "by": "friedman",
+   "ts": "2026-10-14T01:38:09+00:00",
+   "log": []
+  },
+  {
+   "id": "F73",
+   "section": "fact",
+   "text": "With the polyphonic TABLE GIVEN, the turning-grille search is solved: scoring orders by group-symbol 6-grams (grille_engine.group_ngrams(text, table, n=6, base=13), English from a 7M-letter Gutenberg corpus, plants from a different source) recovers the grille on 6/6 plants (49/49 orbits up to rotation; 5-grams 6/6 at 48-49; 4-grams 2/6), and the true order is the top score, so the I46 identifiability failure is gone. The remaining unknown for the real cipher is the table.",
+   "evidence": "/lab/cipher/grille/bench-ngram.json (lab job 20261014-013414-0e0e, 80k steps x 512 chains, ~2 min GPU per run)",
+   "status": "retired",
+   "by": "operator",
+   "ts": "2026-10-14T02:09:59+00:00",
+   "log": [
+    {
+     "ts": "2026-10-15T14:27:24+00:00",
+     "by": "operator",
+     "from": "confirmed",
+     "to": "retired",
+     "note": "Superseded by F78: overstated 49/49 on all six plants (one was 48/49) and 'the true order is the top score' (not on that plant); 5-gram range 47-49, not 48-49."
+    }
+   ],
+   "links": [
+    {
+     "rel": "supersedes",
+     "to": "I46"
+    }
+   ],
+   "confirmed_by": "operator"
+  },
+  {
+   "id": "F74",
+   "section": "fact",
+   "text": "The table-given grille search needs an essentially EXACT polyphonic table: with group 6-grams it recovers the grille on 4/4 plants with the true table, 1/4 with 2 letters misplaced, 2/4 with 4, and 0/12 with 6, 8 or 12 - a near-right table scores like a random one, so there is no gradient toward the table from the grille search alone.",
+   "evidence": "/lab/cipher/grille/bench-tolerance.json (lab job 20261014-023519-9bce, 4 plants x 6 levels, 80k steps x 512 chains, balance-preserving swaps)",
+   "status": "confirmed",
+   "by": "operator",
+   "ts": "2026-10-14T03:08:13+00:00",
+   "log": [
+    {
+     "ts": "2026-10-15T14:27:46+00:00",
+     "by": "operator",
+     "link": "depends_on:F78",
+     "note": "F73 was corrected by F78 (one plant 48/49, not 49/49); this entry does not rest on the overstated detail. Re-pointed to F78."
+    },
+    {
+     "ts": "2026-10-15T14:27:46+00:00",
+     "by": "operator",
+     "link": "supports:F73",
+     "note": "F73 was corrected by F78 (one plant 48/49, not 49/49); this entry does not rest on the overstated detail. Re-pointed to F78. The mention of F73 is kept as history, not as a dependency."
+    }
+   ],
+   "links": [
+    {
+     "rel": "depends_on",
+     "to": "F78"
+    },
+    {
+     "rel": "supports",
+     "to": "F73"
+    }
+   ],
+   "confirmed_by": "operator"
+  },
+  {
+   "id": "I47",
+   "section": "inconclusive",
+   "text": "The table cannot be recovered from the cipher by likelihood under the grille + polyphonic hypothesis: with the grille ALREADY CORRECT (49/49) and only 2 letters wrong, steepest-ascent repair raised the 6-gram score (-5.74 to -5.44) while moving the table further from the truth (2 to 5 wrong; other plants 2 to 8, 4 to 9-10) - 182 symbols admit many tables that explain them better than the true one. Detection still works: a true lock scores about -5.4 to -5.7, shuffled ciphers and random tables about -6.1 to -6.2.",
+   "evidence": "/lab/cipher/round11/validate.json (lab job 20261014-032058-a3e9; grille_engine.repair_table, 2 plants)",
+   "status": "confirmed",
+   "by": "operator",
+   "ts": "2026-10-14T04:05:12+00:00",
+   "log": [
+    {
+     "ts": "2026-10-15T14:27:46+00:00",
+     "by": "operator",
+     "link": "depends_on:F78",
+     "note": "F73 was corrected by F78 (one plant 48/49, not 49/49); this entry does not rest on the overstated detail. Re-pointed to F78."
+    },
+    {
+     "ts": "2026-10-15T14:27:46+00:00",
+     "by": "operator",
+     "link": "supports:F73",
+     "note": "F73 was corrected by F78 (one plant 48/49, not 49/49); this entry does not rest on the overstated detail. Re-pointed to F78. The mention of F73 is kept as history, not as a dependency."
+    }
+   ],
+   "links": [
+    {
+     "rel": "depends_on",
+     "to": "F74"
+    },
+    {
+     "rel": "depends_on",
+     "to": "F78"
+    },
+    {
+     "rel": "supports",
+     "to": "F73"
+    }
+   ],
+   "confirmed_by": "operator"
+  },
+  {
+   "id": "F75",
+   "section": "fact",
+   "text": "The book teaches no table that fits the lead hypothesis: every construction found (CLIQUE square with I/J merged, keyword + remaining alphabet with J omitted, MANCHESTR example) is a 5x5 square with ONE letter per cell, so a message on 13 cells would use only 13 letters - excluded by the counts (C9, F31); the merged-letter sign list is never flat (R31).",
+   "evidence": "148 book_snippets results retrieved by kahn (task t-eacb4ddf), stored /workspace/.pegasus/kahn_snippets.json; pp.~120-123",
+   "status": "confirmed",
+   "by": "operator",
+   "ts": "2026-10-14T04:05:12+00:00",
+   "log": [],
+   "links": [
+    {
+     "rel": "depends_on",
+     "to": "C9"
+    }
+   ],
+   "confirmed_by": "operator"
+  },
+  {
+   "id": "C12",
+   "section": "convention",
+   "text": "PRIOR ART (novelty check 2026-10-14): a 2026 Zenodo report (10.5281/zenodo.22011904, code/data 10.5281/zenodo.21970477) already ran a Fleissner/turning-grille search on this cipher with a quadgram model, simulated annealing and null-baseline calibration - so F71 is a replication, not new; its abstract covers one-to-one substitution only, so polyphonic-table results (F73, F74, I47) are not covered as far as the abstract shows. Frame I47 as a unicity-distance measurement (von zur Gathen 2022, 10.3384/ecp188395).",
+   "evidence": "/workspace/research/cipher/dagapeyeff/literature/NOVELTY-CHECK-2026-10-14.md",
+   "status": "confirmed",
+   "by": "operator",
+   "ts": "2026-10-14T04:28:29+00:00",
+   "log": [
+    {
+     "ts": "2026-10-14T04:28:38+00:00",
+     "by": "operator",
+     "note": "removed refutes:F71 - F71 holds; only its novelty is prior art"
+    },
+    {
+     "ts": "2026-10-15T14:27:46+00:00",
+     "by": "operator",
+     "link": "depends_on:F78",
+     "note": "F73 was corrected by F78 (one plant 48/49, not 49/49); this entry does not rest on the overstated detail. Re-pointed to F78."
+    },
+    {
+     "ts": "2026-10-15T14:27:46+00:00",
+     "by": "operator",
+     "link": "supports:F73",
+     "note": "F73 was corrected by F78 (one plant 48/49, not 49/49); this entry does not rest on the overstated detail. Re-pointed to F78. The mention of F73 is kept as history, not as a dependency."
+    }
+   ],
+   "confirmed_by": "operator",
+   "links": [
+    {
+     "rel": "depends_on",
+     "to": "F78"
+    },
+    {
+     "rel": "supports",
+     "to": "F73"
+    }
+   ]
+  },
+  {
+   "id": "C13",
+   "section": "convention",
+   "text": "PRIOR ART / PRECEDENT (full-text check 2026-10-14): Hendrick 2026 already measured the one-to-one-key version of F74 - grille search with the key held fixed recovers 4/4 grilles with the true key, 1/4 with keys 77-82% right, 0/4 at 65-69% - and the key-given grille search (4/4) that F71 replicates. Cite Hendrick as the precedent for F74; ours is the polyphonic-table version. Neither Hendrick nor Gariazzo 2026 treats polyphonic tables, unicity distance or table identifiability, so F73 and I47 (+ the identifiability curve) are ours as far as checked.",
+   "evidence": "/workspace/research/cipher/dagapeyeff/literature/NOVELTY-CHECK-2026-10-14.md (full-text section); hendrick2026/paper; gariazzo2026/report.txt",
+   "status": "confirmed",
+   "by": "operator",
+   "ts": "2026-10-14T04:53:50+00:00",
+   "log": [
+    {
+     "ts": "2026-10-15T14:27:46+00:00",
+     "by": "operator",
+     "link": "depends_on:F78",
+     "note": "F73 was corrected by F78 (one plant 48/49, not 49/49); this entry does not rest on the overstated detail. Re-pointed to F78."
+    },
+    {
+     "ts": "2026-10-15T14:27:46+00:00",
+     "by": "operator",
+     "link": "supports:F73",
+     "note": "F73 was corrected by F78 (one plant 48/49, not 49/49); this entry does not rest on the overstated detail. Re-pointed to F78. The mention of F73 is kept as history, not as a dependency."
+    }
+   ],
+   "confirmed_by": "operator",
+   "links": [
+    {
+     "rel": "depends_on",
+     "to": "F78"
+    },
+    {
+     "rel": "supports",
+     "to": "F73"
+    }
+   ]
+  },
+  {
+   "id": "F76",
+   "section": "fact",
+   "text": "Under the turning-grille + balanced 13-group polyphonic hypothesis the table is NOT determined at the cipher length: with the symbol order known (grille solved), steepest-ascent search from the true table finds a different, higher-likelihood table in 178/200 practice ciphers at 182 symbols (89%; 100% when letters may also move between groups), and recovers the true table exactly in 11% - rising gradually to 27% at 273, 41% at 364, 57% at 455, 63% at 546, 75% at 728 and 84% at 1,092 symbols (two disjoint Gutenberg model corpora: 14/8% at 182, 94/74% at 1,092; same shape, level depends on the la",
+   "evidence": "/lab/cipher/round11/identifiability-A-big.json, identifiability-B-big.json (lab jobs 20261014-042944-11e7, -5d7d; 100 plants x 7 lengths per corpus, 6-gram group model, repair_table swaps-only) + identifiability-A/B.json (20 plants, 182-1456)",
+   "status": "confirmed",
+   "by": "operator",
+   "ts": "2026-10-14T14:13:12+00:00",
+   "log": [],
+   "links": [
+    {
+     "rel": "supersedes",
+     "to": "I47"
+    }
+   ],
+   "confirmed_by": "operator"
+  },
+  {
+   "id": "R34",
+   "section": "ruled_out",
+   "text": "Keyed four-square and two-square are excluded by the cipher's cell usage, not merely hard to search: in 182-symbol windows a four-square or two-square ciphertext uses 22-25 distinct cells with 5x5 squares (median 25; 0 of 4,000 practice ciphers at 13 or fewer) and 18-20 with 4x5 squares and a 20-letter alphabet (0 of 2,000), even when the plaintext is restricted to its 13 commonest letters (0 of 4,000). The message uses exactly 13. This closes Hendrick's open item (O23) and makes the search-difficulty result R32 moot. Caveat: random keyed squares; a key deliberately arranged so that the messag",
+   "evidence": "/lab/cipher/round11/micro-digraph-cells.json (micro_digraph_cells.py, digraph_engine.plant, 2,000 plants per system) and micro-digraph-cells-4x5.json (micro_digraph_cells_4x5.py, 6,000 plants)",
+   "status": "retired",
+   "by": "operator",
+   "ts": "2026-10-14T20:12:29+00:00",
+   "log": [
+    {
+     "ts": "2026-10-15T14:04:14+00:00",
+     "by": "operator",
+     "from": "confirmed",
+     "to": "retired",
+     "note": "Superseded by R35 after external review: holds for random keys only; a purpose-built key reaches 13 flat, orderless cells (O33)."
+    }
+   ],
+   "confirmed_by": "operator"
+  },
+  {
+   "id": "F77",
+   "section": "fact",
+   "text": "Robustness of F76 (round 12, external review): with the symbol order known, the true table is recovered exactly in only 8-26% of practice ciphers at 182 symbols under every setup tested - natural prose held out of every model (Wells) or word-frequency text, three corpora (incl. a combined 6.6M letters), joint 6-gram and chain-rule conditional 4/5/6-gram scores (50 plants each; pooled 15% of 500); 28-60% at 546. The tables that beat the truth win under an independent model too (69%) but rarely on a fresh passage (19%): they fit the passage, not English.",
+   "evidence": "/lab/cipher/round12/ident-full.json (review_checks.py ident 50 182,273,364,546; lab job 20261015-103450-384b) + ident-small.json (job -7942)",
+   "status": "confirmed",
+   "by": "operator",
+   "ts": "2026-10-15T14:04:14+00:00",
+   "log": [],
+   "links": [
+    {
+     "rel": "supports",
+     "to": "F76"
+    }
+   ],
+   "confirmed_by": "operator"
+  },
+  {
+   "id": "R35",
+   "section": "ruled_out",
+   "text": "Four-square and two-square with RANDOMLY keyed squares are excluded by the cipher's cell usage: 22-25 distinct cells in 182-symbol windows with 5x5 squares, 18-20 with 4x5 (0 of 10,000 practice ciphers at 13 or fewer; the message uses 13). Narrows R34: a key built on purpose for the message is not excluded (see O33).",
+   "evidence": "/lab/cipher/round11/micro-digraph-cells.json, micro-digraph-cells-4x5.json (as R34)",
+   "status": "confirmed",
+   "by": "operator",
+   "ts": "2026-10-15T14:04:14+00:00",
+   "log": [],
+   "links": [
+    {
+     "rel": "supersedes",
+     "to": "R34"
+    }
+   ],
+   "confirmed_by": "operator"
+  },
+  {
+   "id": "O33",
+   "section": "open",
+   "text": "Four-square with a key built on purpose for the message fits every structural clue: hill-climbing the plaintext squares for a given 182-letter text reaches 13 cells in 13 of 100 texts (14 in 59, 15 in 27), all 13 as flat as the cipher (chi-square p 0.85-1.0); and it leaves little order - 12 of 100 such texts flagged by the order test (3 of the 13 flat ones) against 52 of 100 with random keys; the real message is not flagged (family p 0.999). A second construction that fits; unsearched.",
+   "evidence": "/lab/cipher/round12/fsq-full.json (review_checks.py fsq 100 10, 50k steps; job 20261015-103450-9ade), fsq-order.json (fsq_order.py, 2,000 shuffles; job 20261015-135503-fc9c)",
+   "status": "confirmed",
+   "by": "operator",
+   "ts": "2026-10-15T14:04:14+00:00",
+   "log": [],
+   "links": [
+    {
+     "rel": "refutes",
+     "to": "R34"
+    }
+   ],
+   "confirmed_by": "operator"
+  },
+  {
+   "id": "F78",
+   "section": "fact",
+   "text": "Correction to F73 (found in the second review's reproducibility audit): with the polyphonic table given, group 6-gram scoring recovers the grille on 6/6 plants by the benchmark's criterion (>= 45 of 49 orbits up to rotation) - exactly (49/49) on 5, 48/49 on the sixth; 5-grams 6/6 at 47-49 (exact on 3); 4-grams 2/6. At n = 5 and 6 the score never preferred a grille with fewer than 45 orbits right; on one plant a grille one orbit off scored above the truth.",
+   "evidence": "/lab/cipher/grille/bench-ngram.json (bench_ngram.py; lab job 20261014-013414-0e0e): solved_n6 6, orbits 49,49,49,49,48,49; solved_n5 6, orbits 48,49,49,48,49,47",
+   "status": "confirmed",
+   "by": "operator",
+   "ts": "2026-10-15T14:27:24+00:00",
+   "log": [],
+   "links": [
+    {
+     "rel": "supersedes",
+     "to": "F73"
+    }
+   ],
+   "confirmed_by": "operator"
+  },
+  {
+   "id": "F79",
+   "section": "fact",
+   "text": "Scores are comparable across candidate tables (third review, request 1). The model is rebuilt per table from the corpus mapped through it. The six-symbol model's floored mass is not 1 (2.10 corpus A', 1.45 B) but varies across the true table and its 305 neighbors by only 0.002 in log10. Consistency: on held-out Wells prose no neighbor beats the true table at 10,000 or 100,000 symbols (0 of 9,150 comparisons: 2 corpora x 3 scores x 5 true tables), against 1-3% at 182. Normalized rerun: truth kept in the same 200/200 runs.",
+   "evidence": "/lab/cipher/round12/comparability.json (comparability.py; lab job 20261015-153404-0b85)",
+   "status": "confirmed",
+   "by": "operator",
+   "ts": "2026-10-15T15:47:09+00:00",
+   "log": [],
+   "links": [
+    {
+     "rel": "supports",
+     "to": "F76"
+    },
+    {
+     "rel": "supports",
+     "to": "F77"
+    }
+   ],
+   "confirmed_by": "operator"
+  },
+  {
+   "id": "O34",
+   "section": "open",
+   "text": "Supersedes O33's wording (O33 kept as history). Four-square with a key built for the message by hill-climbing the plaintext squares (uses the plaintext): 13/100 passages reach 13 cells with chi-square p >= 0.05 (0.85-1.0). Order test (pair MI both phases + max lag 1-26 MI, 2,000 shuffles, family-wise min-p, alpha 0.05) flags 3 of those 13 (windows 34, 77, 95): 10/100 meet both; 7 of 13 show uncorrected pair dependence p < 0.05. 12/100 vs 52/100 random keys flagged; real message p = 0.999. Non-detection is not absence of order. Feasibility only; unsearched.",
+   "evidence": "/lab/cipher/round12/fsq-full.json, fsq-order.json; internal audit 2026-10-15 (audit_fsq.py: independent rebuild 100/100, same 3 windows flagged with fresh shuffles)",
+   "status": "confirmed",
+   "by": "operator",
+   "ts": "2026-10-15T19:50:33+00:00",
+   "log": [],
+   "links": [
+    {
+     "rel": "supersedes",
+     "to": "O33"
+    }
+   ],
+   "confirmed_by": "operator"
+  },
+  {
+   "id": "F80",
+   "section": "fact",
+   "text": "Qualifies F31's Latin figure (provenance audit 2026-10-16). The Latin stream is a 10-edition Project Gutenberg corpus (four are school/translation editions with English notes; lines mostly English are filtered, leaving 0.5% English words). With the committed tool, a deliberately balanced table matches the cipher's flatness in 345-374 of 1,000 Latin windows across seeds and call orders (F31's 368 came from an earlier ad-hoc run). Drawn only from the six editions without English notes (windows mostly Newton and Virgil): 167-182 of 1,000. The Latin rate depends on the texts sampled; English 364/1",
+   "evidence": "/lab/cipher/provenance/latin_flatness.py, latin_flatness.json (flatness_tools.frequency_flatness, commit 8c4e0fa); release/sources.json (Gutenberg records)",
+   "status": "confirmed",
+   "by": "operator",
+   "ts": "2026-10-16T20:24:39+00:00",
+   "log": [],
+   "links": [
+    {
+     "rel": "supports",
+     "to": "F31"
+    }
+   ],
+   "confirmed_by": "operator"
+  },
+  {
+   "id": "F81",
+   "section": "fact",
+   "text": "Corrects F31's letter range (validation 2026-10-16). F31 and Section 2 said natural 182-letter passages use 17-22 different letters. Recomputed with the standalone port of the F31 tool (validation/flatness_standalone.py, identical counts to the platform): English word stream 18-25 (median 22; 1,000 and 2,000 windows); Latin ten-edition corpus 14-25 (median 20, four seeds); six editions without English notes 16-24 (median 20). Never 13, so the conclusion stands; only the printed range changes.",
+   "evidence": "docs/validation-2026-10-16/results/flatness/*.json (validation/flatness_standalone.py, wordfreq 3.1.1)",
+   "status": "confirmed",
+   "by": "operator",
+   "ts": "2026-10-16T21:05:36+00:00",
+   "log": [
+    {
+     "ts": "2026-10-16T21:05:44+00:00",
+     "by": "operator",
+     "link": "supports:F31",
+     "note": "F81 corrects only the printed letter range of F31; its conclusion (never 13) stands."
+    }
+   ],
+   "confirmed_by": "operator",
+   "links": [
+    {
+     "rel": "supports",
+     "to": "F31"
+    }
+   ]
+  },
+  {
+   "id": "F82",
+   "section": "fact",
+   "text": "Clarifies R29 (2026-10-17). The 40/40 is the result for the original 40 planted texts and seeds (random.Random(9); text t from word-stream letter 120,000 + 1,500t; balanced 13-group table per text; lag-1 mutual information vs 400 shuffles; p<0.05 in 40/40, p<0.01 in 39/40; real message p 0.698). Rerun of that exact code at PegasusDMZ commit c908608 on 2026-10-17: identical. A separately written check within the project (validation/recompute_extra.py: new seeds, practice texts from plain_pool.txt, tables built from the novel corpus, p with +1) found order in 39/40 (38 at p<0.01; real message p ",
+   "evidence": "validation/original/r29_original.py; docs/validation-2026-10-16/recompute_extra.json; docs/validation-2026-10-17/R29-F4-RESPONSE.md",
+   "status": "confirmed",
+   "by": "operator",
+   "ts": "2026-10-17T11:02:07+00:00",
+   "log": [
+    {
+     "ts": "2026-10-17T11:02:08+00:00",
+     "by": "operator",
+     "link": "supports:R29",
+     "note": "Clarifies the scope of the 40/40 count (original plants and seeds) and reports the independent 39/40 check."
+    }
+   ],
+   "confirmed_by": "operator",
+   "links": [
+    {
+     "rel": "supports",
+     "to": "R29"
+    }
+   ]
+  },
+  {
+   "id": "F83",
+   "section": "fact",
+   "text": "Clarifies F4 (2026-10-17). Statistic: for each row length p = 2..20, the largest share of the eight rare occurrences in one column minus 1/p (the share chance puts there), maximized over p; the cipher scores 1 - 1/14 = 0.929 at p = 14. Null: the eight positions are a uniformly random 8-subset of the 196 (symbol counts fixed). Original run (developer session 2026-10-11): 0 of 20,000 seeded placements as high, reported as (0+1)/(20,000+1) = 5.0e-5, i.e. the printed odds below 1 in 20,000 are the simulation floor, not an estimate; rerun 2026-10-17 identical. Exact union bound (a score of 0.929 ne",
+   "evidence": "validation/original/f4_original.py; validation/f4_events.py; docs/validation-2026-10-17/f4_events.json",
+   "status": "confirmed",
+   "by": "operator",
+   "ts": "2026-10-17T11:02:08+00:00",
+   "log": [
+    {
+     "ts": "2026-10-17T11:02:08+00:00",
+     "by": "operator",
+     "link": "supports:F4",
+     "note": "Defines the F4 statistic and separates it from the looser any-period event."
+    }
+   ],
+   "confirmed_by": "operator",
+   "links": [
+    {
+     "rel": "supports",
+     "to": "F4"
+    }
+   ]
+  },
+  {
+   "id": "F84",
+   "section": "fact",
+   "text": "Qualifies the absolute wording of F31 and F65 (\"never this flat\", 2026-10-17, after external AI review). In the standalone flatness runs of the October 16 validation (flatness_standalone.py; same counts as the platform tool), ordinary many-to-one merges (13 commonest letters kept, the rest scattered at random) matched the cipher's flatness in 1/1000 English windows (seed 0) and 2/2000 (2,000-window run); Latin ten-edition corpus 10, 6, 9, 14 per 1000 (seeds 0-3); six editions without English notes 1, 3, 1, 1 per 1000; random two-letters-per-symbol tables 0 in every run. F31 itself recorded mer",
+   "evidence": "docs/validation-2026-10-16/flatness/*.json",
+   "status": "confirmed",
+   "by": "operator",
+   "ts": "2026-10-17T21:26:36+00:00",
+   "log": [
+    {
+     "ts": "2026-10-17T21:26:36+00:00",
+     "by": "operator",
+     "link": "supports:F31",
+     "note": "Replaces never with the observed low rates."
+    },
+    {
+     "ts": "2026-10-17T21:26:37+00:00",
+     "by": "operator",
+     "link": "supports:F65",
+     "note": "Replaces never with the observed low rates for random merges."
+    }
+   ],
+   "confirmed_by": "operator",
+   "links": [
+    {
+     "rel": "supports",
+     "to": "F31"
+    },
+    {
+     "rel": "supports",
+     "to": "F65"
+    }
+   ]
+  }
+ ],
+ "created_at": "2026-10-11T05:04:00+00:00",
+ "match": {
+  "projects": [
+   "cipher"
+  ],
+  "keywords": [
+   "agapeyeff"
+  ]
+ },
+ "confirmers": [
+  "turing",
+  "fisher",
+  "skeptic",
+  "proof"
+ ],
+ "gate": {
+  "example_keys": [
+   "MANCHESTR",
+   "16243897"
+  ]
+ }
+}

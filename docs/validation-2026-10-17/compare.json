@@ -1,0 +1,1219 @@
+{
+ "criteria": "Two predeclared criteria per experiment, fixed before the rerun finished (October 16, 2026):",
+ "summary": {
+  "PASS": 19,
+  "PARTIAL": 2,
+  "FAIL": 1,
+  "NOT RUN": 0,
+  "expected_fail": [
+   "S2-letters"
+  ],
+  "unexpected_fail": []
+ },
+ "checks": [
+  {
+   "id": "F71",
+   "claim": "Turning grille recovered in practice ciphers when the letter key is known",
+   "published_file": "grille/bench-2.json",
+   "rerun_file": "grille/bench-2.json",
+   "expected": {
+    "key_given_exact": 3,
+    "key_given_runs": 3
+   },
+   "criteria": "record identity (all fields except elapsed time) + every printed number recomputed",
+   "note": "",
+   "published_numbers": {
+    "key_given_exact": 3,
+    "key_given_runs": 3
+   },
+   "rerun_numbers": {
+    "key_given_exact": 3,
+    "key_given_runs": 3
+   },
+   "step": [
+    {
+     "step": "F71_bench2",
+     "exit": 0,
+     "seconds": 2168,
+     "command": "python grille/bench2.py"
+    }
+   ],
+   "identity": {
+    "records_published": 6,
+    "records_rerun": 6,
+    "identical_except_timing": 3,
+    "other_fields_identical": true,
+    "differing_records": [
+     3,
+     4,
+     5
+    ]
+   },
+   "source_inspection": "PASS",
+   "status": "PARTIAL"
+  },
+  {
+   "id": "F78",
+   "claim": "Six-symbol scoring recovers 6/6 grilles (5 exact); five-symbol 6/6 (47-49, 3 exact); four-symbol 2/6",
+   "published_file": "grille/bench-ngram.json",
+   "rerun_file": "grille/bench-ngram.json",
+   "expected": {
+    "n4": {
+     "recovered_ge45": 2,
+     "exact": 1,
+     "min": 18,
+     "of": 6
+    },
+    "n5": {
+     "recovered_ge45": 6,
+     "exact": 3,
+     "min": 47,
+     "of": 6
+    },
+    "n6": {
+     "recovered_ge45": 6,
+     "exact": 5,
+     "min": 48,
+     "of": 6
+    }
+   },
+   "criteria": "record identity (all fields except elapsed time) + every printed number recomputed",
+   "note": "",
+   "published_numbers": {
+    "n4": {
+     "recovered_ge45": 2,
+     "exact": 1,
+     "min": 18,
+     "of": 6
+    },
+    "n5": {
+     "recovered_ge45": 6,
+     "exact": 3,
+     "min": 47,
+     "of": 6
+    },
+    "n6": {
+     "recovered_ge45": 6,
+     "exact": 5,
+     "min": 48,
+     "of": 6
+    }
+   },
+   "rerun_numbers": {
+    "n4": {
+     "recovered_ge45": 2,
+     "exact": 1,
+     "min": 18,
+     "of": 6
+    },
+    "n5": {
+     "recovered_ge45": 6,
+     "exact": 3,
+     "min": 47,
+     "of": 6
+    },
+    "n6": {
+     "recovered_ge45": 6,
+     "exact": 5,
+     "min": 48,
+     "of": 6
+    }
+   },
+   "step": [
+    {
+     "step": "F78_bench_ngram",
+     "exit": 0,
+     "seconds": 1490,
+     "command": "python grille/bench_ngram.py"
+    }
+   ],
+   "identity": {
+    "records_published": 18,
+    "records_rerun": 18,
+    "identical_except_timing": 18,
+    "other_fields_identical": true,
+    "differing_records": []
+   },
+   "source_inspection": "PASS",
+   "status": "PASS"
+  },
+  {
+   "id": "F74",
+   "claim": "True table 4/4; 2 misplaced 1/4; 4 misplaced 2/4; 6, 8, 12 misplaced 0/12",
+   "published_file": "grille/bench-tolerance.json",
+   "rerun_file": "grille/bench-tolerance.json",
+   "expected": {
+    "0": [
+     4,
+     4
+    ],
+    "2": [
+     1,
+     4
+    ],
+    "4": [
+     2,
+     4
+    ],
+    "6": [
+     0,
+     4
+    ],
+    "8": [
+     0,
+     4
+    ],
+    "12": [
+     0,
+     4
+    ]
+   },
+   "criteria": "record identity (all fields except elapsed time) + every printed number recomputed",
+   "note": "",
+   "published_numbers": {
+    "0": [
+     4,
+     4
+    ],
+    "2": [
+     1,
+     4
+    ],
+    "4": [
+     2,
+     4
+    ],
+    "6": [
+     0,
+     4
+    ],
+    "8": [
+     0,
+     4
+    ],
+    "12": [
+     0,
+     4
+    ]
+   },
+   "rerun_numbers": {
+    "0": [
+     4,
+     4
+    ],
+    "2": [
+     1,
+     4
+    ],
+    "4": [
+     2,
+     4
+    ],
+    "6": [
+     0,
+     4
+    ],
+    "8": [
+     0,
+     4
+    ],
+    "12": [
+     0,
+     4
+    ]
+   },
+   "step": [
+    {
+     "step": "F74_bench_tolerance",
+     "exit": 0,
+     "seconds": 1840,
+     "command": "python grille/bench_tolerance.py"
+    }
+   ],
+   "identity": {
+    "records_published": 24,
+    "records_rerun": 24,
+    "identical_except_timing": 24,
+    "other_fields_identical": true,
+    "differing_records": []
+   },
+   "source_inspection": "PASS",
+   "status": "PASS"
+  },
+  {
+   "id": "I47",
+   "claim": "Repair from 2 wrong letters: 2 -> 5 with the grille recovered (49/49); 2 -> 8 in a second cipher whose grille was not (19/49)",
+   "published_file": "round11/validate.json",
+   "rerun_file": "round11/validate.json",
+   "expected": [
+    [
+     0,
+     49,
+     2,
+     5
+    ],
+    [
+     1,
+     19,
+     2,
+     8
+    ]
+   ],
+   "criteria": "record identity (all fields except elapsed time) + every printed number recomputed",
+   "note": "",
+   "published_numbers": [
+    [
+     0,
+     49,
+     2,
+     5
+    ],
+    [
+     1,
+     19,
+     2,
+     8
+    ]
+   ],
+   "rerun_numbers": [
+    [
+     0,
+     49,
+     2,
+     5
+    ],
+    [
+     1,
+     19,
+     2,
+     8
+    ]
+   ],
+   "step": [
+    {
+     "step": "I47_table_validate",
+     "exit": 0,
+     "seconds": 1312,
+     "command": "python round11/table_test.py validate"
+    }
+   ],
+   "identity": {
+    "records_published": 7,
+    "records_rerun": 7,
+    "identical_except_timing": 7,
+    "other_fields_identical": true,
+    "differing_records": []
+   },
+   "source_inspection": "PASS",
+   "status": "PASS"
+  },
+  {
+   "id": "F76-A",
+   "claim": "Truth kept, corpus A, 100 practice ciphers per length (%)",
+   "published_file": "round11/identifiability-A-big.json",
+   "rerun_file": "round11/identifiability-A-val.json",
+   "expected": [
+    14,
+    31,
+    46,
+    65,
+    72,
+    84,
+    94
+   ],
+   "criteria": "record identity (all fields except elapsed time) + every printed number recomputed",
+   "note": "",
+   "published_numbers": [
+    14,
+    31,
+    46,
+    65,
+    72,
+    84,
+    94
+   ],
+   "rerun_numbers": [
+    14,
+    31,
+    46,
+    65,
+    72,
+    84,
+    94
+   ],
+   "step": [
+    {
+     "step": "F76_identifiability_A",
+     "exit": 0,
+     "seconds": 3018,
+     "command": "python round11/identifiability.py A 100 182,273,364,455,546,728,1092 -val"
+    }
+   ],
+   "identity": {
+    "records_published": 1400,
+    "records_rerun": 1400,
+    "identical_except_timing": 1400,
+    "other_fields_identical": true,
+    "differing_records": []
+   },
+   "source_inspection": "PASS",
+   "status": "PASS"
+  },
+  {
+   "id": "F76-B",
+   "claim": "Truth kept, corpus B, 100 practice ciphers per length (%)",
+   "published_file": "round11/identifiability-B-big.json",
+   "rerun_file": "round11/identifiability-B-val.json",
+   "expected": [
+    8,
+    22,
+    36,
+    49,
+    54,
+    65,
+    74
+   ],
+   "criteria": "record identity (all fields except elapsed time) + every printed number recomputed",
+   "note": "",
+   "published_numbers": [
+    8,
+    22,
+    36,
+    49,
+    54,
+    65,
+    74
+   ],
+   "rerun_numbers": [
+    8,
+    22,
+    36,
+    49,
+    54,
+    65,
+    74
+   ],
+   "step": [
+    {
+     "step": "F76_identifiability_B",
+     "exit": 0,
+     "seconds": 5806,
+     "command": "python round11/identifiability.py B 100 182,273,364,455,546,728,1092 -val"
+    }
+   ],
+   "identity": {
+    "records_published": 1400,
+    "records_rerun": 1400,
+    "identical_except_timing": 1400,
+    "other_fields_identical": true,
+    "differing_records": []
+   },
+   "source_inspection": "PASS",
+   "status": "PASS"
+  },
+  {
+   "id": "F76-both",
+   "claim": "Both corpora (%); 178 of 200 beaten at 182; one in two at roughly 420 symbols",
+   "expected": {
+    "both_pct": [
+     11.0,
+     26.5,
+     41.0,
+     57.0,
+     63.0,
+     74.5,
+     84.0
+    ],
+    "beaten_at_182": 178,
+    "kept_at_182": 22,
+    "half_crossing_symbols": 420
+   },
+   "published_numbers": {
+    "both_pct": [
+     11.0,
+     26.5,
+     41.0,
+     57.0,
+     63.0,
+     74.5,
+     84.0
+    ],
+    "beaten_at_182": 178,
+    "kept_at_182": 22,
+    "half_crossing_symbols": 420
+   },
+   "rerun_numbers": {
+    "both_pct": [
+     11.0,
+     26.5,
+     41.0,
+     57.0,
+     63.0,
+     74.5,
+     84.0
+    ],
+    "beaten_at_182": 178,
+    "kept_at_182": 22,
+    "half_crossing_symbols": 420
+   },
+   "source_inspection": "PASS",
+   "status": "PASS",
+   "criteria": "printed numbers recomputed from both corpora (linear interpolation, nearest 10)"
+  },
+  {
+   "id": "F77",
+   "claim": "Ten setups x four lengths (2,000 runs): lowest/highest/pooled truth kept; 171/248 other corpus; 82/427 fresh passage",
+   "published_file": "round12/ident-full.json",
+   "rerun_file": "round12/ident-val.json",
+   "expected": {
+    "setups": 10,
+    "L182": {
+     "lowest_pct": 8,
+     "highest_pct": 26,
+     "pooled_pct": 15,
+     "runs": 500
+    },
+    "L273": {
+     "lowest_pct": 10,
+     "highest_pct": 42,
+     "pooled_pct": 26,
+     "runs": 500
+    },
+    "L364": {
+     "lowest_pct": 16,
+     "highest_pct": 44,
+     "pooled_pct": 29,
+     "runs": 500
+    },
+    "L546": {
+     "lowest_pct": 28,
+     "highest_pct": 60,
+     "pooled_pct": 41,
+     "runs": 500
+    },
+    "other_corpus_still_beats": [
+     171,
+     248
+    ],
+    "fresh_passage_beats": [
+     82,
+     427
+    ]
+   },
+   "criteria": "record identity (all fields except elapsed time) + every printed number recomputed",
+   "note": "",
+   "published_numbers": {
+    "setups": 10,
+    "L182": {
+     "lowest_pct": 8,
+     "highest_pct": 26,
+     "pooled_pct": 15,
+     "runs": 500
+    },
+    "L273": {
+     "lowest_pct": 10,
+     "highest_pct": 42,
+     "pooled_pct": 26,
+     "runs": 500
+    },
+    "L364": {
+     "lowest_pct": 16,
+     "highest_pct": 44,
+     "pooled_pct": 29,
+     "runs": 500
+    },
+    "L546": {
+     "lowest_pct": 28,
+     "highest_pct": 60,
+     "pooled_pct": 41,
+     "runs": 500
+    },
+    "other_corpus_still_beats": [
+     171,
+     248
+    ],
+    "fresh_passage_beats": [
+     82,
+     427
+    ]
+   },
+   "rerun_numbers": {
+    "setups": 10,
+    "L182": {
+     "lowest_pct": 8,
+     "highest_pct": 26,
+     "pooled_pct": 15,
+     "runs": 500
+    },
+    "L273": {
+     "lowest_pct": 10,
+     "highest_pct": 42,
+     "pooled_pct": 26,
+     "runs": 500
+    },
+    "L364": {
+     "lowest_pct": 16,
+     "highest_pct": 44,
+     "pooled_pct": 29,
+     "runs": 500
+    },
+    "L546": {
+     "lowest_pct": 28,
+     "highest_pct": 60,
+     "pooled_pct": 41,
+     "runs": 500
+    },
+    "other_corpus_still_beats": [
+     171,
+     248
+    ],
+    "fresh_passage_beats": [
+     82,
+     427
+    ]
+   },
+   "step": [
+    {
+     "step": "F77_robustness",
+     "exit": 0,
+     "seconds": 8489,
+     "command": "python round12/review_checks.py ident 50 182,273,364,546 -val"
+    }
+   ],
+   "identity": {
+    "records_published": 2000,
+    "records_rerun": 2000,
+    "identical_except_timing": 2000,
+    "other_fields_identical": true,
+    "differing_records": []
+   },
+   "source_inspection": "PASS",
+   "status": "PASS"
+  },
+  {
+   "id": "F79",
+   "claim": "Model mass 2.10 (A') / 1.45 (B), spread 0.002 log10; 0 of 9,150 neighbors beat the truth at 10k/100k symbols",
+   "published_file": "round12/comparability.json",
+   "rerun_file": "round12/comparability-val.json",
+   "expected": {
+    "mass_A": 2.1,
+    "mass_B": 1.45,
+    "log10_spread_max": 0.002,
+    "neighbors_tested": 9150,
+    "beat_truth_10k": 0,
+    "beat_truth_100k": 0,
+    "normalized_truth_start_runs": 200
+   },
+   "criteria": "record identity (all fields except elapsed time) + every printed number recomputed",
+   "note": "",
+   "published_numbers": {
+    "mass_A": 2.1,
+    "mass_B": 1.45,
+    "log10_spread_max": 0.002,
+    "neighbors_tested": 9150,
+    "beat_truth_10k": 0,
+    "beat_truth_100k": 0,
+    "normalized_truth_start_runs": 200
+   },
+   "rerun_numbers": {
+    "mass_A": 2.1,
+    "mass_B": 1.45,
+    "log10_spread_max": 0.002,
+    "neighbors_tested": 9150,
+    "beat_truth_10k": 0,
+    "beat_truth_100k": 0,
+    "normalized_truth_start_runs": 200
+   },
+   "step": [
+    {
+     "step": "F79_comparability",
+     "exit": 0,
+     "seconds": 725,
+     "command": "python round12/comparability.py -val"
+    }
+   ],
+   "identity": {
+    "records_published": 1,
+    "records_rerun": 1,
+    "identical_except_timing": 1,
+    "other_fields_identical": true,
+    "differing_records": []
+   },
+   "source_inspection": "PASS",
+   "status": "PASS"
+  },
+  {
+   "id": "R35-5x5",
+   "claim": "5x5 four-square and two-square: 22-25 distinct symbols, none <= 13 (2 x 2,000 plants)",
+   "published_file": "round11/micro-digraph-cells.json",
+   "rerun_file": "round11/micro-digraph-cells.json",
+   "expected": {
+    "four": [
+     22,
+     25,
+     0
+    ],
+    "two": [
+     22,
+     25,
+     0
+    ],
+    "plants_each": 2000
+   },
+   "criteria": "record identity (all fields except elapsed time) + every printed number recomputed",
+   "note": "",
+   "published_numbers": {
+    "four": [
+     22,
+     25,
+     0
+    ],
+    "two": [
+     22,
+     25,
+     0
+    ],
+    "plants_each": 2000
+   },
+   "rerun_numbers": {
+    "four": [
+     22,
+     25,
+     0
+    ],
+    "two": [
+     22,
+     25,
+     0
+    ],
+    "plants_each": 2000
+   },
+   "step": [
+    {
+     "step": "R35_digraph_5x5",
+     "exit": 0,
+     "seconds": 6,
+     "command": "python round11/micro_digraph_cells.py 2000"
+    }
+   ],
+   "identity": {
+    "records_published": 1,
+    "records_rerun": 1,
+    "identical_except_timing": 1,
+    "other_fields_identical": true,
+    "differing_records": []
+   },
+   "source_inspection": "PASS",
+   "status": "PASS"
+  },
+  {
+   "id": "R35-4x5",
+   "claim": "4x5 squares 18-20 symbols; 5x5 with 13-letter text 20-25; none <= 13 (3 x 2,000 plants)",
+   "published_file": "round11/micro-digraph-cells-4x5.json",
+   "rerun_file": "round11/micro-digraph-cells-4x5.json",
+   "expected": {
+    "four_square_4x5_20_letters": [
+     18,
+     20.0,
+     0,
+     2000
+    ],
+    "four_square_4x5_text_13_letters": [
+     18,
+     20.0,
+     0,
+     2000
+    ],
+    "four_square_5x5_text_13_letters": [
+     20,
+     25.0,
+     0,
+     2000
+    ]
+   },
+   "criteria": "record identity (all fields except elapsed time) + every printed number recomputed",
+   "note": "expected filled from the published file; the paper prints the ranges 18-20 and 20-25 and 'none'",
+   "published_numbers": {
+    "four_square_4x5_20_letters": [
+     18,
+     20.0,
+     0,
+     2000
+    ],
+    "four_square_4x5_text_13_letters": [
+     18,
+     20.0,
+     0,
+     2000
+    ],
+    "four_square_5x5_text_13_letters": [
+     20,
+     25.0,
+     0,
+     2000
+    ]
+   },
+   "rerun_numbers": {
+    "four_square_4x5_20_letters": [
+     18,
+     20.0,
+     0,
+     2000
+    ],
+    "four_square_4x5_text_13_letters": [
+     18,
+     20.0,
+     0,
+     2000
+    ],
+    "four_square_5x5_text_13_letters": [
+     20,
+     25.0,
+     0,
+     2000
+    ]
+   },
+   "step": [
+    {
+     "step": "R35_digraph_4x5",
+     "exit": 0,
+     "seconds": 4,
+     "command": "python round11/micro_digraph_cells_4x5.py"
+    }
+   ],
+   "identity": {
+    "records_published": 1,
+    "records_rerun": 1,
+    "identical_except_timing": 1,
+    "other_fields_identical": true,
+    "differing_records": []
+   },
+   "source_inspection": "PASS",
+   "status": "PASS"
+  },
+  {
+   "id": "O34-search",
+   "claim": "Purpose-built four-square reaches 13 symbols in 13 of 100 passages, all as flat as the cipher (p 0.85-1.0)",
+   "published_file": "round12/fsq-full.json",
+   "rerun_file": "round12/fsq-val.json",
+   "expected": {
+    "windows": 100,
+    "with_13_or_fewer": 13,
+    "all_13_flat": true,
+    "flat_p_range": [
+     0.848,
+     1.0
+    ],
+    "windows_13": [
+     0,
+     3,
+     4,
+     13,
+     34,
+     57,
+     72,
+     77,
+     80,
+     87,
+     95,
+     97,
+     99
+    ]
+   },
+   "criteria": "record identity (all fields except elapsed time) + every printed number recomputed",
+   "note": "windows_13 and the flat-p range are taken from the published file",
+   "published_numbers": {
+    "windows": 100,
+    "with_13_or_fewer": 13,
+    "all_13_flat": true,
+    "flat_p_range": [
+     0.848,
+     1.0
+    ],
+    "windows_13": [
+     0,
+     3,
+     4,
+     13,
+     34,
+     57,
+     72,
+     77,
+     80,
+     87,
+     95,
+     97,
+     99
+    ]
+   },
+   "rerun_numbers": {
+    "windows": 100,
+    "with_13_or_fewer": 13,
+    "all_13_flat": true,
+    "flat_p_range": [
+     0.848,
+     1.0
+    ],
+    "windows_13": [
+     0,
+     3,
+     4,
+     13,
+     34,
+     57,
+     72,
+     77,
+     80,
+     87,
+     95,
+     97,
+     99
+    ]
+   },
+   "step": [
+    {
+     "step": "O34_fsq_search",
+     "exit": 0,
+     "seconds": 2757,
+     "command": "python round12/review_checks.py fsq 100 10 -val 50000"
+    }
+   ],
+   "identity": {
+    "records_published": 100,
+    "records_rerun": 100,
+    "identical_except_timing": 100,
+    "other_fields_identical": true,
+    "differing_records": []
+   },
+   "source_inspection": "PASS",
+   "status": "PASS"
+  },
+  {
+   "id": "O34-order",
+   "claim": "Order test: purpose-built 12/100 vs random 52/100 flagged; 3 of 13 flat (34, 77, 95); 7 of 13 pair stats; real p = 0.999",
+   "published_file": "round12/fsq-order.json",
+   "rerun_file": "round12/fsq-order.json",
+   "expected": {
+    "purpose_built_flagged": [
+     12,
+     100
+    ],
+    "random_key_flagged": [
+     52,
+     100
+    ],
+    "flat13_flagged": [
+     3,
+     13
+    ],
+    "flat13_flagged_windows": [
+     34,
+     77,
+     95
+    ],
+    "flat13_pair_stat_p_below_0.05": 7,
+    "real_family_p": 0.999
+   },
+   "criteria": "record identity (all fields except elapsed time) + every printed number recomputed",
+   "note": "",
+   "published_numbers": {
+    "purpose_built_flagged": [
+     12,
+     100
+    ],
+    "random_key_flagged": [
+     52,
+     100
+    ],
+    "flat13_flagged": [
+     3,
+     13
+    ],
+    "flat13_flagged_windows": [
+     34,
+     77,
+     95
+    ],
+    "flat13_pair_stat_p_below_0.05": 7,
+    "real_family_p": 0.999
+   },
+   "rerun_numbers": {
+    "purpose_built_flagged": [
+     12,
+     100
+    ],
+    "random_key_flagged": [
+     52,
+     100
+    ],
+    "flat13_flagged": [
+     3,
+     13
+    ],
+    "flat13_flagged_windows": [
+     34,
+     77,
+     95
+    ],
+    "flat13_pair_stat_p_below_0.05": 7,
+    "real_family_p": 0.999
+   },
+   "step": [
+    {
+     "step": "O34_fsq_order",
+     "exit": 0,
+     "seconds": 351,
+     "command": "python round12/fsq_order.py 2000"
+    }
+   ],
+   "identity": {
+    "records_published": 1,
+    "records_rerun": 1,
+    "identical_except_timing": 1,
+    "other_fields_identical": true,
+    "differing_records": []
+   },
+   "source_inspection": "PASS",
+   "status": "PASS"
+  },
+  {
+   "id": "F4",
+   "kind": "independent recomputation",
+   "claim": "All 8 rare symbols in column 14; odds below 1 in 20,000 after scanning row lengths 2-20",
+   "expected": "p < 1/20,000",
+   "rerun_numbers": {
+    "real_statistic": 0.9286,
+    "exact_union_bound_p": 1.8183324943854527e-09,
+    "shuffles": 200000,
+    "shuffles_reaching_real": 0
+   },
+   "status": "PASS",
+   "note": "A cruder statistic - 'all eight on one residue for ANY p in 2..20' - is reached by chance in about 0.7% of shuffles, almost all at p = 2 (same parity, 1 in 64); the real text meets it at p = 2, 7, 14. The published odds rest on the excess-over-1/p statistic."
+  },
+  {
+   "id": "F32",
+   "kind": "independent recomputation",
+   "claim": "No order: rows p 0.08, columns 0.30, halves 0.10 / 0.60; lags 1-26 family-wise p 0.91",
+   "expected": "all p > 0.05; lag family p near 0.91",
+   "rerun_numbers": {
+    "rows_p": 0.087,
+    "columns_p": 0.304,
+    "top_vs_bottom_p": 0.094,
+    "left_vs_right_p": 0.494,
+    "lag_family_p": 0.9022
+   },
+   "status": "PASS",
+   "note": "left vs right = columns 1-6 vs 8-13 (the published split of 13 columns is not recorded)"
+  },
+  {
+   "id": "R29",
+   "kind": "independent recomputation",
+   "claim": "Polyphonic table without transposition: lag-1 dependence in 40 of 40 planted texts; real message p = 0.70",
+   "expected": ">= 38 of 40 at p < 0.05 and real p > 0.05 (predeclared tolerance for new seeds)",
+   "rerun_numbers": {
+    "p_below_0.05": 39,
+    "p_below_0.01": 38,
+    "real_message_lag1_p": 0.716
+   },
+   "status": "PARTIAL",
+   "note": "new seeds and new code: 39 of 40 here against 40 of 40 printed; the conclusion holds, the exact count is seed-dependent"
+  },
+  {
+   "id": "F66",
+   "kind": "rerun of the original script (unseeded) from a copy writing elsewhere",
+   "claim": "Hendrick's 30-statistic no-message test replicated: family-wise p = 0.29 (Hendrick 0.28)",
+   "expected": "family-wise p > 0.05 in every replication; published 0.291 inside the replication range",
+   "rerun_numbers": {
+    "replications": 20,
+    "family_p_min": 0.251,
+    "family_p_median": 0.388,
+    "family_p_max": 0.594,
+    "smallest_stat_always_info_lag_3": true
+   },
+   "status": "PASS",
+   "note": "the script draws its 1,000 dealings without a seed, so 0.29 is one draw; 20 reruns give the spread"
+  },
+  {
+   "id": "F31/F80",
+   "kind": "standalone recomputation (validation/flatness_standalone.py; wordfreq 3.1.1 + scipy only)",
+   "claim": "Balanced table as flat as the cipher: English 364/1,000; Latin 345-374 (ten editions), 167-182 (six without English notes)",
+   "expected": "English 364; Latin all in 345-374; six editions in 167-182",
+   "rerun_numbers": {
+    "english_balanced": "364/1000",
+    "english_top": "1/1000",
+    "latin_all": [
+     "358/1000",
+     "374/1000",
+     "366/1000",
+     "357/1000"
+    ],
+    "latin_six": [
+     "182/1000",
+     "167/1000",
+     "172/1000",
+     "174/1000"
+    ]
+   },
+   "status": "PASS"
+  },
+  {
+   "id": "S2-letters",
+   "kind": "standalone recomputation",
+   "claim": "Section 2 as predeclared (October 16): natural passages use 17 to 22 different letters",
+   "expected": "range within 17-22",
+   "rerun_numbers": {
+    "min_median_max_per_run": [
+     [
+      18,
+      22,
+      25
+     ],
+     [
+      14,
+      20,
+      25
+     ],
+     [
+      15,
+      20,
+      25
+     ],
+     [
+      16,
+      20,
+      24
+     ],
+     [
+      16,
+      20,
+      24
+     ]
+    ]
+   },
+   "status": "FAIL",
+   "superseded_by": "S2-letters-v2 (the text was corrected in F81)",
+   "note": "the predeclared check of the claim as it then stood; its FAIL led to F81 and is expected"
+  },
+  {
+   "id": "S2-letters-v2",
+   "kind": "standalone recomputation (added October 17 for the corrected text)",
+   "claim": "Section 2 as corrected (F81): English 18 to 25 different letters (median 22), Latin 14 to 25 (median 20)",
+   "expected": {
+    "english": [
+     18,
+     [
+      22
+     ],
+     25
+    ],
+    "latin": [
+     14,
+     [
+      20
+     ],
+     25
+    ]
+   },
+   "rerun_numbers": {
+    "english": [
+     18,
+     [
+      22
+     ],
+     25
+    ],
+    "latin": [
+     14,
+     [
+      20
+     ],
+     25
+    ]
+   },
+   "status": "PASS"
+  },
+  {
+   "id": "F84",
+   "kind": "standalone recomputation (added October 17)",
+   "claim": "Random merges match the flatness in about 1 of 1,000 English windows and 1-14 of 1,000 Latin ones; fixed-pattern letter pairs in none",
+   "expected": {
+    "english": [
+     "1/1000",
+     "2/2000"
+    ],
+    "latin_per_1000": "1-14",
+    "two_letter_cells": 0
+   },
+   "rerun_numbers": {
+    "ordinary_merges": {
+     "en_seed0": "1/1000",
+     "en_seed0_w2000": "2/2000",
+     "la_clean6_seed0": "1/1000",
+     "la_clean6_seed1": "3/1000",
+     "la_clean6_seed2": "1/1000",
+     "la_clean6_seed3": "1/1000",
+     "la_full_seed0": "10/1000",
+     "la_full_seed1": "6/1000",
+     "la_full_seed2": "9/1000",
+     "la_full_seed3": "14/1000"
+    },
+    "two_letter_cells": {
+     "en_seed0": "0/1000",
+     "en_seed0_w2000": "0/2000",
+     "la_clean6_seed0": "0/1000",
+     "la_clean6_seed1": "0/1000",
+     "la_clean6_seed2": "0/1000",
+     "la_clean6_seed3": "0/1000",
+     "la_full_seed0": "0/1000",
+     "la_full_seed1": "0/1000",
+     "la_full_seed2": "0/1000",
+     "la_full_seed3": "0/1000"
+    }
+   },
+   "status": "PASS"
+  },
+  {
+   "id": "F68",
+   "kind": "rerun of the original lab job's configuration with the platform engine (not in this repository)",
+   "claim": "Joint grille-and-table search recovers 0 of 3 practice ciphers at every budget (60, 300, 1,200 s per phase)",
+   "expected": [
+    [
+     60.0,
+     "0/3"
+    ],
+    [
+     300.0,
+     "0/3"
+    ],
+    [
+     1200.0,
+     "0/3"
+    ]
+   ],
+   "rerun_numbers": [
+    [
+     60.0,
+     "0/3"
+    ],
+    [
+     300.0,
+     "0/3"
+    ],
+    [
+     1200.0,
+     "0/3"
+    ]
+   ],
+   "step": [
+    {
+     "step": "F68_power",
+     "exit": 0,
+     "seconds": 4686,
+     "command": "python compound/compound_engine.py compound/results/power-rerun.cfg.json"
+    }
+   ],
+   "status": "PASS",
+   "note": "budgets are wall-clock seconds, so the outcome depends on the hardware; the original ran on the same GPU"
+  }
+ ]
+}

@@ -1,0 +1,32 @@
+{
+ "tool": "flatness_tools.frequency_flatness (windows=1000)",
+ "default_call_seed0": {
+  "en": "364/1000",
+  "en-r17": "44/1000",
+  "fr": "2/1000",
+  "de": "37/1000",
+  "la": "372/1000",
+  "ru-latfr": "66/1000"
+ },
+ "full_latin_by_seed": {
+  "0": "358/1000",
+  "1": "374/1000",
+  "2": "366/1000",
+  "3": "357/1000"
+ },
+ "full_latin_stream_english_marker_pct_words": [
+  0.53,
+  508309
+ ],
+ "clean_six_english_marker_pct_words": [
+  0.2,
+  362940
+ ],
+ "clean_six_letters": 1969059,
+ "clean_six_by_seed": {
+  "0": "182/1000",
+  "1": "167/1000",
+  "2": "172/1000",
+  "3": "174/1000"
+ }
+}

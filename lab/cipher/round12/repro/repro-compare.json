@@ -1,0 +1,48 @@
+{
+ "F78_grille_benchmark": {
+  "runs": 18,
+  "same_orbits": 18
+ },
+ "F76_corpus_A": {
+  "runs": 40,
+  "same_outcome": 40
+ },
+ "F76_corpus_B": {
+  "runs": 40,
+  "same_outcome": 40
+ },
+ "F77_robustness": {
+  "runs": 200,
+  "same_outcome": 200
+ },
+ "O33_purpose_built_four_square": {
+  "passages": 30,
+  "same_min_cells": 30
+ },
+ "O33_order_test_summary_identical": true,
+ "field_level": {
+  "bench-ngram": {
+   "identical_except_timing": true,
+   "bytes_identical": false
+  },
+  "identifiability-A": {
+   "records": 80,
+   "identical_except_timing": 80
+  },
+  "identifiability-B": {
+   "records": 80,
+   "identical_except_timing": 80
+  },
+  "ident-full": {
+   "records": 200,
+   "identical_except_timing": 200
+  },
+  "fsq-full": {
+   "records": 30,
+   "identical_except_timing": 30
+  },
+  "fsq-order": {
+   "bytes_identical": true
+  }
+ }
+}

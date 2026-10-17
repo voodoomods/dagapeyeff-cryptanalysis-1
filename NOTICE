@@ -1,0 +1,35 @@
+dagapeyeff-cryptanalysis-1
+Copyright (c) 2026 VoodooMods LLC
+Research conceived and directed by Nicolas Houghtaling.
+
+This product includes software developed by VoodooMods LLC for the study "The D'Agapeyeff Cipher (1939): grille recovery and polyphonic-table identifiability under n-gram scoring" (doi:10.5281/zenodo.23306263). Any redistribution or
+derivative work of the code must retain this NOTICE and credit Nicolas Houghtaling and VoodooMods LLC.
+
+THIRD-PARTY MATERIAL INCLUDED (not covered by this repository's copyright):
+* lab/cipher/lm/corpus/*.txt - 11 novels from Project Gutenberg (eBooks 35, 36, 98, 108, 834, 974, 1400, 1661, 1695,
+  2600 and 2852; War and Peace in the translation by Louise and Aylmer Maude), retrieved 2026-10-11, Gutenberg license
+  header and footer removed. Public domain in the USA per their Gutenberg records; status elsewhere not legally
+  reviewed. Listed with fingerprints and catalog details in lab/cipher/lm/CORPUS.md and docs/sources.json.
+* lab/cipher/grille/plain_pool.txt, lab/cipher/grille/quad_en.npy, and the short practice-cipher plaintexts quoted
+  in lab/cipher/grille/bench-2.json - generated from word frequencies in the `wordfreq` package (version 3.1.1;
+  Speer, R. (2022), rspeer/wordfreq, doi:10.5281/zenodo.7199437). wordfreq's code is Apache-2.0 and its data is
+  licensed CC BY-SA 4.0; these derived files are shared under CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/),
+  not under this repository's CC BY 4.0. wordfreq's English data includes SUBTLEX-US (Brysbaert & New 2009) and
+  SUBTLEX-UK (van Heuven et al. 2014) - freely available data, credited here as its terms require - and Google Books
+  Ngrams (http://books.google.com/ngrams), OpenSubtitles (http://www.opensubtitles.org/) and other sources listed in
+  the wordfreq README.
+* docs/literature/gariazzo2026/Report_Agapeyeff.pdf - R. Gariazzo (2026), CC BY 4.0, doi:10.5281/zenodo.22011904;
+  included unmodified with attribution (see ATTRIBUTION.md beside it).
+* docs/literature/novelty-search-2026-10-14.metadata.json - bibliographic metadata (titles, authors, years, venues,
+  DOIs) from OpenAlex, Semantic Scholar and arXiv searches.
+* data/ciphertext.txt - the challenge cipher printed in A. D'Agapeyeff, *Codes and Ciphers* (1939).
+
+NOT INCLUDED (listed by fingerprint only):
+* C. Hendrick (2026) manuscript - all rights reserved by its author; doi:10.5281/zenodo.23241303.
+* Extracts from D'Agapeyeff's *Codes and Ciphers* (1939) retrieved by full-text search.
+* The literature search results with their abstracts (the abstracts belong to their authors and publishers).
+* Two corpus novels by Agatha Christie (Gutenberg eBooks 863 and 1155), public domain in the USA but in copyright in
+  the UK and EU, and lab/cipher/grille/model_text_big.txt, which contains their text - rebuild with
+  tools/build_model_text.py.
+* Ten Latin editions from Project Gutenberg used for the Latin comparison (case F31 / F80) - listed with eBook numbers
+  and fingerprints in lab/cipher/lm/CORPUS.md.
